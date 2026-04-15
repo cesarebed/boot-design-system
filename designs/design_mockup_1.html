@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OffTheBoot — Style Preview v1.0</title>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── TOKENS ── */
+:root {
+  /* Colours */
+  --color-primary:       #2E5855;
+  --color-accent:        #C4920A;
+  --color-cta:           #D4701A;
+  --color-ink:           #1E1C16;
+  --color-parchment:     #EDE5D0;
+  --color-bg:            #FAFAF4;
+  --color-muted:         #6B6457;
+  --color-border:        #DDD5C2;
+
+  --color-yellow-butter: #FDF5CC;
+  --color-yellow-straw:  #F8EDA0;
+  --color-yellow-wheat:  #F5E8A8;
+  --color-yellow-pollen: #EDD878;
+  --color-green-mist:    #EAF3EC;
+  --color-green-sage:    #D8ECD8;
+  --color-green-fern:    #C0DEC0;
+  --color-green-meadow:  #9AC49A;
+
+  /* Typography */
+  --font-display: 'Young Serif', Georgia, serif;
+  --font-body:    'Geist', system-ui, sans-serif;
+
+  --text-hero:   4rem;
+  --text-h1:     2.5rem;
+  --text-h2:     1.75rem;
+  --text-h3:     1.25rem;
+  --text-body:   1rem;
+  --text-ui:     0.875rem;
+  --text-label:  0.75rem;
+  --text-xs:     0.625rem;
+
+  --lh-tight:    1.0;
+  --lh-snug:     1.15;
+  --lh-normal:   1.5;
+  --lh-relaxed:  1.75;
+  --lh-loose:    1.9;
+
+  --ls-tight:    -0.02em;
+  --ls-snug:     -0.01em;
+  --ls-normal:   0em;
+  --ls-wide:     0.12em;
+  --ls-wider:    0.18em;
+
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  /* Spacing */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2.5rem;
+  --space-xl:  4rem;
+  --space-2xl: 6rem;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-weight: var(--fw-light);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  line-height: var(--lh-relaxed);
+  font-size: var(--text-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── UTILITY ── */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+.badge {
+  display: inline-flex;
+  padding: 3px 9px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.badge-green { background: var(--color-green-mist); color: var(--color-primary); }
+.badge-gold  { background: var(--color-accent); color: var(--color-ink); }
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-cta);
+  color: white;
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.1s;
+}
+.btn-primary:hover { background: #c06215; transform: translateY(-1px); }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: var(--color-parchment);
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: var(--fw-medium);
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid rgba(237,229,208,0.3);
+  cursor: pointer;
+  text-decoration: none;
+  padding-bottom: 2px;
+  transition: border-color 0.15s;
+}
+.btn-ghost:hover { border-color: var(--color-parchment); }
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+/* ── NOTICE BAR ── */
+.notice {
+  background: var(--color-yellow-pollen);
+  text-align: center;
+  padding: 10px 2rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: var(--fw-medium);
+  color: var(--color-ink);
+  letter-spacing: 0.03em;
+}
+.notice strong { font-weight: var(--fw-bold); }
+
+/* ── NAVBAR ── */
+.navbar {
+  background: var(--color-primary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  gap: 2rem;
+}
+.navbar-logo {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-bg);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  flex-shrink: 0;
+}
+.navbar-links {
+  display: flex;
+  gap: 0;
+  margin-left: auto;
+}
+.navbar-link {
+  font-family: var(--font-body);
+  font-size: var(--text-ui);
+  font-weight: var(--fw-regular);
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  padding: 0 1.1rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.navbar-link:hover { color: rgba(255,255,255,0.9); border-bottom-color: var(--color-cta); }
+.navbar-cta {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  background: var(--color-cta);
+  color: white;
+  padding: 9px 18px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  margin-left: 0.5rem;
+  transition: background 0.15s;
+}
+.navbar-cta:hover { background: #c06215; }
+
+/* ── HERO ── */
+.hero {
+  background: var(--color-ink);
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-2xl) 0;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 45%;
+  height: 100%;
+  background: radial-gradient(ellipse at top right, rgba(46,88,85,0.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 60%;
+  height: 40%;
+  background: radial-gradient(ellipse at bottom left, rgba(212,112,26,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.hero-left { }
+.hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: #5a9988;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: #5a9988;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  color: var(--color-parchment);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  margin-bottom: 1.5rem;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--color-green-meadow);
+}
+.hero-body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: var(--fw-light);
+  color: #5a5448;
+  line-height: var(--lh-loose);
+  margin-bottom: 2rem;
+  max-width: 420px;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.hero-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  opacity: 0.9;
+}
+.hero-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.2s;
+}
+.hero-card:hover { transform: translateY(-3px); }
+.hero-card:first-child {
+  grid-column: span 2;
+}
+.hero-card-img {
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  position: relative;
+}
+.hero-card:first-child .hero-card-img {
+  aspect-ratio: 16/7;
+}
+.hero-card-label {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  background: rgba(30,28,22,0.6);
+  backdrop-filter: blur(4px);
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+.hero-card-body {
+  padding: 10px 12px;
+}
+.hero-card-title {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  color: rgba(237,229,208,0.85);
+  line-height: 1.3;
+}
+.hero-stats {
+  display: flex;
+  gap: 0;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+.hero-stat {
+  flex: 1;
+  padding-right: 1.5rem;
+  border-right: 1px solid rgba(255,255,255,0.07);
+}
+.hero-stat:last-child { border-right: none; padding-right: 0; padding-left: 1.5rem; }
+.hero-stat:not(:first-child) { padding-left: 1.5rem; }
+.hero-stat-val {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--color-parchment);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.hero-stat-label {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: var(--fw-medium);
+  color: #5a5448;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── MARQUEE ── */
+.marquee-wrap {
+  background: var(--color-accent);
+  overflow: hidden;
+  padding: 11px 0;
+}
+.marquee-track {
+  display: flex;
+  gap: 0;
+  animation: marquee 22s linear infinite;
+  white-space: nowrap;
+}
+.marquee-item {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  padding: 0 2rem;
+  flex-shrink: 0;
+}
+.marquee-dot {
+  color: rgba(30,28,22,0.4);
+  font-size: 0.5rem;
+  vertical-align: middle;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── ITINERARIES ── */
+.section-itineraries {
+  background: var(--color-yellow-wheat);
+  padding: var(--space-2xl) 0;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+  gap: 2rem;
+}
+.section-header-left { }
+.section-eyebrow { margin-bottom: 0.75rem; }
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+  color: var(--color-ink);
+}
+.section-link {
+  font-family: var(--font-body);
+  font-size: var(--text-ui);
+  font-weight: var(--fw-medium);
+  color: var(--color-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-ink);
+  padding-bottom: 2px;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+.section-link:hover { opacity: 1; }
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(180,160,40,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(30,28,22,0.1);
+}
+.card-img {
+  aspect-ratio: 4/3;
+  position: relative;
+  overflow: hidden;
+}
+.card-img-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+}
+.card-img-top { display: flex; justify-content: flex-end; }
+.card-img-bottom { }
+.card-type {
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(30,28,22,0.55);
+  backdrop-filter: blur(4px);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 3px;
+  align-self: flex-start;
+}
+.card-region {
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
+}
+.card-body {
+  padding: 1.1rem 1.25rem 1.25rem;
+}
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--color-ink);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.005em;
+}
+.card-desc {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: var(--fw-light);
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: 0.85rem;
+}
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+}
+.card-badges { display: flex; gap: 5px; }
+.card-price {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--color-primary);
+}
+
+/* ── VALUES ── */
+.section-values {
+  background: var(--color-green-sage);
+  padding: var(--space-2xl) 0;
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.values-left { }
+.values-title {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+  color: var(--color-ink);
+  margin-bottom: 1.25rem;
+}
+.values-body {
+  font-size: 0.95rem;
+  font-weight: var(--fw-light);
+  color: var(--color-muted);
+  line-height: var(--lh-loose);
+  margin-bottom: 1.75rem;
+  max-width: 440px;
+}
+.values-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 2rem;
+}
+.values-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(46,88,85,0.15);
+}
+.values-item:last-child { border-bottom: none; }
+.values-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.values-item-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--color-ink);
+  margin-bottom: 3px;
+}
+.values-item-desc {
+  font-size: 0.8rem;
+  font-weight: var(--fw-light);
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+.values-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.stat-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  border: 1px solid rgba(46,88,85,0.1);
+}
+.stat-val {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  color: var(--color-primary);
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 90px;
+}
+.stat-body { }
+.stat-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  margin-bottom: 2px;
+}
+.stat-desc {
+  font-size: 0.75rem;
+  font-weight: var(--fw-light);
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+/* ── TESTIMONIAL ── */
+.section-testimonial {
+  background: var(--color-ink);
+  padding: var(--space-xl) 0;
+}
+.testimonial-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+.testimonial-card {
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.testimonial-quote {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--color-parchment);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+.testimonial-author {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5a5448;
+}
+.testimonial-location {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  color: #3a3830;
+  margin-top: 2px;
+}
+.testimonial-stars {
+  font-size: 0.7rem;
+  color: var(--color-accent);
+  margin-bottom: 0.85rem;
+  letter-spacing: 2px;
+}
+
+/* ── BLOG ── */
+.section-blog {
+  background: var(--color-bg);
+  padding: var(--space-2xl) 0;
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+.blog-featured {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: white;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.blog-featured:hover { box-shadow: 0 8px 30px rgba(30,28,22,0.08); }
+.blog-featured-img {
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, var(--color-green-fern) 0%, var(--color-primary) 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+.blog-featured-tag {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--color-cta);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 3px;
+}
+.blog-featured-body { padding: 1.5rem 1.75rem 1.75rem; }
+.blog-featured-meta {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+}
+.blog-featured-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-ink);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+  margin-bottom: 0.85rem;
+}
+.blog-featured-excerpt {
+  font-size: 0.88rem;
+  font-weight: var(--fw-light);
+  color: var(--color-muted);
+  line-height: var(--lh-loose);
+  margin-bottom: 1.25rem;
+}
+.blog-read-link {
+  font-family: var(--font-body);
+  font-size: var(--text-ui);
+  font-weight: var(--fw-semibold);
+  color: var(--color-cta);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-cta);
+  padding-bottom: 1px;
+}
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.blog-item {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: border-color 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+.blog-item:hover { border-color: var(--color-primary); }
+.blog-item-tag {
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-cta);
+}
+.blog-item-title {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--color-ink);
+  line-height: 1.3;
+}
+.blog-item-meta {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: var(--fw-regular);
+  color: var(--color-muted);
+}
+
+/* ── NEWSLETTER ── */
+.section-newsletter {
+  background: var(--color-yellow-butter);
+  padding: var(--space-xl) 0;
+  border-top: 1px solid rgba(180,160,40,0.2);
+  border-bottom: 1px solid rgba(180,160,40,0.2);
+}
+.newsletter-inner {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.newsletter-left { flex: 1; }
+.newsletter-title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  color: var(--color-ink);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+  margin-bottom: 0.5rem;
+}
+.newsletter-sub {
+  font-size: 0.88rem;
+  font-weight: var(--fw-light);
+  color: var(--color-muted);
+  line-height: var(--lh-relaxed);
+}
+.newsletter-right {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.newsletter-input {
+  font-family: var(--font-body);
+  font-size: var(--text-ui);
+  font-weight: var(--fw-light);
+  background: white;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 11px 16px;
+  min-width: 260px;
+  color: var(--color-ink);
+  outline: none;
+  transition: border-color 0.15s;
+}
+.newsletter-input:focus { border-color: var(--color-primary); }
+.newsletter-input::placeholder { color: var(--color-muted); opacity: 0.7; }
+.newsletter-btn {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  background: var(--color-cta);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 11px 22px;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.newsletter-btn:hover { background: #c0621f; }
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--color-ink);
+  padding: var(--space-2xl) 0 var(--space-lg);
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  margin-bottom: 2rem;
+}
+.footer-brand { }
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--color-bg);
+  margin-bottom: 0.85rem;
+  display: block;
+}
+.footer-tagline {
+  font-size: 0.82rem;
+  font-weight: var(--fw-light);
+  color: #5A5248;
+  line-height: var(--lh-relaxed);
+  margin-bottom: 1.25rem;
+  max-width: 260px;
+}
+.footer-social {
+  display: flex;
+  gap: 8px;
+}
+.footer-social-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #5A5248;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.footer-social-btn:hover { background: rgba(255,255,255,0.1); color: var(--color-parchment); }
+.footer-col-title {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-parchment);
+  margin-bottom: 1rem;
+}
+.footer-links { display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-link {
+  font-size: 0.82rem;
+  font-weight: var(--fw-light);
+  color: #5A5248;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-link:hover { color: var(--color-parchment); }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-copy {
+  font-size: 0.72rem;
+  font-weight: var(--fw-light);
+  color: #3A3830;
+}
+.footer-legal {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer-legal-link {
+  font-size: 0.72rem;
+  font-weight: var(--fw-light);
+  color: #3A3830;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-legal-link:hover { color: #5A5248; }
+
+/* ── ANNOTATIONS (design system notes) ── */
+.ds-label {
+  position: absolute;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.58rem;
+  background: rgba(212,112,26,0.9);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 2px;
+  z-index: 10;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* ── ANNOTATIONS PANEL ── */
+.ds-panel {
+  background: var(--color-ink);
+  border-top: 3px solid var(--color-cta);
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+.ds-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: #5A5248;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ds-chip-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.ds-chip-name { color: var(--color-parchment); font-weight: 500; }
+.ds-chip-hex { color: #3A3830; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .cards-grid { grid-template-columns: 1fr 1fr; }
+  .values-grid { grid-template-columns: 1fr; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .newsletter-inner { flex-direction: column; gap: 2rem; }
+  .newsletter-right { width: 100%; }
+  .newsletter-input { flex: 1; min-width: 0; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .testimonial-inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .container { padding: 0 1.25rem; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NOTICE -->
+<div class="notice">
+  <strong>Style Preview v1.0</strong> — Design System approval document. Colours + Typography applied. Not for public use.
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-logo">Off the Boot</a>
+      <div class="navbar-links">
+        <a href="#" class="navbar-link">Itineraries</a>
+        <a href="#" class="navbar-link">Blog</a>
+        <a href="#" class="navbar-link">About</a>
+        <a href="#" class="navbar-link">FAQ</a>
+      </div>
+      <a href="#" class="navbar-cta">Plan your trip</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-eyebrow">Northeast Italy · Slow travel experts</div>
+        <h1 class="hero-title">Italy off the<br><em>beaten path.</em></h1>
+        <p class="hero-body">Away from the crowds. Away from the tourist traps. Italians who left, saw the world, and came back with different eyes — showing you the Italy most Italians don't even know.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn-primary">Plan your trip →</a>
+          <a href="#" class="btn-ghost">Explore itineraries</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-val">48+</div>
+            <div class="hero-stat-label">Itineraries</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-val">★ 4.9</div>
+            <div class="hero-stat-label">Average rating</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-val">100%</div>
+            <div class="hero-stat-label">Car-free travel</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-card-img" style="background: linear-gradient(160deg, #3a7060 0%, #1E1C16 100%);">
+            <div class="hero-card-img-inner" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:14px;">
+              <div style="display:flex;gap:6px;">
+                <span style="font-family:var(--font-body);font-size:0.55rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:rgba(212,112,26,0.9);color:white;padding:3px 8px;border-radius:3px;">Custom</span>
+              </div>
+              <div>
+                <div style="font-family:var(--font-body);font-size:0.58rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:3px;">Veneto · Dolomiti</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card-body">
+            <div class="hero-card-title">Dolomiti in 7 giorni senza auto</div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-img" style="background: linear-gradient(160deg, #8a7040 0%, #3a2a10 100%); aspect-ratio:1/1;">
+            <div style="position:absolute;inset:0;padding:10px;display:flex;flex-direction:column;justify-content:flex-end;">
+              <div style="font-family:var(--font-body);font-size:0.55rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Friuli VG</div>
+            </div>
+          </div>
+          <div class="hero-card-body">
+            <div class="hero-card-title">Friuli autentico</div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-img" style="background: linear-gradient(160deg, #4a8090 0%, #1a3040 100%); aspect-ratio:1/1;">
+            <div style="position:absolute;inset:0;padding:10px;display:flex;flex-direction:column;justify-content:flex-end;">
+              <div style="font-family:var(--font-body);font-size:0.55rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Venezia</div>
+            </div>
+          </div>
+          <div class="hero-card-body">
+            <div class="hero-card-title">Venezia nascosta</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Slow travel <span class="marquee-dot">●</span></span>
+    <span class="marquee-item">Northeast Italy <span class="marquee-dot">●</span></span>
+    <span class="marquee-item">No car needed <span class="marquee-dot">●</span></span>
+    <span class="marquee-item">Real locals <span class="marquee-dot">●</span></span>
+    <span class="marquee-item">Veneto <span class="marquee-dot">●</span></span>
+    <span class="marquee-item">Dolomiti <span class="marquee-dot">●</span></span>
+    <span class="marquee-item">Friuli Venezia Giulia <span class="marquee-dot">●</span></span>
+    <span class="marquee-item">Authentic experiences <span class="marquee-dot">●</span></span>
+    <span class="marquee-item">Away from the crowds <span class="marquee-dot">●</span></span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item">Slow travel <span class="marquee-dot">●</span></span>
+    <span class="marquee-item">Northeast Italy <span class="marquee-dot">●</span></span>
+    <span class="marquee-item">No car needed <span class="marquee-dot">●</span></span>
+    <span class="marquee-item">Real locals <span class="marquee-dot">●</span></span>
+    <span class="marquee-item">Veneto <span class="marquee-dot">●</span></span>
+    <span class="marquee-item">Dolomiti <span class="marquee-dot">●</span></span>
+    <span class="marquee-item">Friuli Venezia Giulia <span class="marquee-dot">●</span></span>
+    <span class="marquee-item">Authentic experiences <span class="marquee-dot">●</span></span>
+    <span class="marquee-item">Away from the crowds <span class="marquee-dot">●</span></span>
+  </div>
+</div>
+
+<!-- ITINERARIES -->
+<section class="section-itineraries">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-header-left">
+        <div class="eyebrow section-eyebrow" style="color:#8a7820;">Our itineraries</div>
+        <h2 class="section-title">Discover the<br>authentic Northeast</h2>
+      </div>
+      <a href="#" class="section-link">View all itineraries →</a>
+    </div>
+    <div class="cards-grid">
+
+      <div class="card">
+        <div class="card-img" style="background: linear-gradient(150deg, #5a9080 0%, #2a5040 100%);">
+          <div class="card-img-inner">
+            <div class="card-img-top">
+              <span class="card-type">Custom itinerary</span>
+            </div>
+            <div class="card-img-bottom">
+              <span class="card-region">Veneto · Trentino</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Dolomiti in 7 giorni senza auto</div>
+          <div class="card-desc">Trails, rifugi, local food and no car required. The Dolomites as most tourists never see them.</div>
+          <div class="card-footer">
+            <div class="card-badges">
+              <span class="badge badge-green">Slow</span>
+              <span class="badge badge-green">7 days</span>
+            </div>
+            <div class="card-price">€1.200</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background: linear-gradient(150deg, #c8a060 0%, #6a4820 100%);">
+          <div class="card-img-inner">
+            <div class="card-img-top">
+              <span class="card-type">Self-organised</span>
+            </div>
+            <div class="card-img-bottom">
+              <span class="card-region">Friuli VG</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Friuli autentico: vino, castelli e borghi</div>
+          <div class="card-desc">Wine producers, medieval villages and culinary traditions far from any tourist map.</div>
+          <div class="card-footer">
+            <div class="card-badges">
+              <span class="badge badge-green">5 days</span>
+              <span class="badge badge-green">No car</span>
+            </div>
+            <div class="card-price">€350</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img" style="background: linear-gradient(150deg, #6090a0 0%, #203040 100%);">
+          <div class="card-img-inner">
+            <div class="card-img-top">
+              <span class="card-type">Custom itinerary</span>
+            </div>
+            <div class="card-img-bottom">
+              <span class="card-region">Venezia</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Venezia senza turisti — i sestieri nascosti</div>
+          <div class="card-desc">The neighbourhoods, bacari and courtyards that most visitors walk past without ever noticing.</div>
+          <div class="card-footer">
+            <div class="card-badges">
+              <span class="badge badge-green">3 days</span>
+              <span class="badge badge-green">Walking only</span>
+            </div>
+            <div class="card-price">€800</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section-values">
+  <div class="container">
+    <div class="values-grid">
+      <div class="values-left">
+        <div class="eyebrow" style="color:#3a6848;margin-bottom:0.75rem;">Why Off the Boot</div>
+        <h2 class="values-title">We are not<br>travel planners.</h2>
+        <p class="values-body">We are Italians who left, saw the world, and came back on purpose — with different eyes and a new appreciation for what we had always taken for granted.</p>
+        <div class="values-list">
+          <div class="values-item">
+            <div class="values-icon">🏔️</div>
+            <div>
+              <div class="values-item-title">Real local knowledge</div>
+              <div class="values-item-desc">Not aggregated from the internet. From years of living, eating and walking these places.</div>
+            </div>
+          </div>
+          <div class="values-item">
+            <div class="values-icon">🚂</div>
+            <div>
+              <div class="values-item-title">100% car-free</div>
+              <div class="values-item-desc">Every itinerary works by train, bus or foot. No rental car, no driving stress, no parking.</div>
+            </div>
+          </div>
+          <div class="values-item">
+            <div class="values-icon">🤝</div>
+            <div>
+              <div class="values-item-title">Community-first travel</div>
+              <div class="values-item-desc">We only recommend places where your money goes directly to local producers and families.</div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn-primary" style="background:var(--color-primary);">Meet the team →</a>
+      </div>
+      <div class="values-right">
+        <div class="stat-card">
+          <div class="stat-val">48+</div>
+          <div class="stat-body">
+            <div class="stat-title">Itineraries created</div>
+            <div class="stat-desc">Across Veneto, Dolomiti, Friuli Venezia Giulia and beyond.</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">★ 4.9</div>
+          <div class="stat-body">
+            <div class="stat-title">Average rating</div>
+            <div class="stat-desc">From travellers who trusted us with their Italian adventure.</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">3+</div>
+          <div class="stat-body">
+            <div class="stat-title">Years of experience</div>
+            <div class="stat-desc">Curating slow travel routes in Northeast Italy since 2022.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section-testimonial">
+  <div class="container">
+    <div class="eyebrow" style="color:#3a3830;margin-bottom:1.5rem;">What travellers say</div>
+    <div class="testimonial-inner">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"You felt like you actually lived there for a week, not just visited. The kind of trip that changes how you travel forever."</div>
+        <div class="testimonial-author">Sarah K.</div>
+        <div class="testimonial-location">London, UK · Dolomiti 7-day itinerary</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"Every recommendation was perfect. Not a single tourist trap. We ate at places we never would have found on our own."</div>
+        <div class="testimonial-author">Marcus & Lena B.</div>
+        <div class="testimonial-location">Berlin, DE · Friuli wine route</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"The Venice guide completely changed our experience of a city we thought we already knew. Absolutely essential."</div>
+        <div class="testimonial-author">Priya N.</div>
+        <div class="testimonial-location">New York, US · Venice without tourists</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="section-blog">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-header-left">
+        <div class="eyebrow section-eyebrow">From the journal</div>
+        <h2 class="section-title">Stories from the field</h2>
+      </div>
+      <a href="#" class="section-link">Read all stories →</a>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-featured">
+        <div class="blog-featured-img">
+          <span class="blog-featured-tag">Culture</span>
+        </div>
+        <div class="blog-featured-body">
+          <div class="blog-featured-meta">13 April 2026 · 8 min read</div>
+          <h3 class="blog-featured-title">The forgotten villages of Friuli that nobody talks about</h3>
+          <p class="blog-featured-excerpt">Hidden between the Julian Alps and the Adriatic, Friuli hides a world of wine producers, stone villages and traditions that have never made it onto any tourist map. We spent a week on the back roads and found something extraordinary.</p>
+          <a href="#" class="blog-read-link">Read the full story →</a>
+        </div>
+      </div>
+      <div class="blog-list">
+        <div class="blog-item">
+          <div class="blog-item-tag">Travel tips</div>
+          <div class="blog-item-title">The best time to visit the Dolomites (and it's not summer)</div>
+          <div class="blog-item-meta">8 April 2026 · 5 min read</div>
+        </div>
+        <div class="blog-item">
+          <div class="blog-item-tag">Food</div>
+          <div class="blog-item-title">Cicchetti, spritz and bacari — the real Venice food culture</div>
+          <div class="blog-item-meta">2 April 2026 · 6 min read</div>
+        </div>
+        <div class="blog-item">
+          <div class="blog-item-tag">Nature</div>
+          <div class="blog-item-title">Hiking the Alta Via 1 without a guide — everything you need to know</div>
+          <div class="blog-item-meta">24 March 2026 · 10 min read</div>
+        </div>
+        <div class="blog-item">
+          <div class="blog-item-tag">Slow travel</div>
+          <div class="blog-item-title">Why the night train from Vienna to Venezia changed how I travel</div>
+          <div class="blog-item-meta">15 March 2026 · 4 min read</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section-newsletter">
+  <div class="container">
+    <div class="newsletter-inner">
+      <div class="newsletter-left">
+        <div class="eyebrow" style="color:#8a7820;margin-bottom:0.6rem;">Newsletter</div>
+        <h2 class="newsletter-title">Stories from authentic Italy.<br>Every week.</h2>
+        <p class="newsletter-sub">No sponsored content. No ads. Just honest writing about places worth visiting and people worth meeting.</p>
+      </div>
+      <div class="newsletter-right">
+        <input type="email" class="newsletter-input" placeholder="Your email address">
+        <button class="newsletter-btn">Subscribe →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">Off the Boot</span>
+        <p class="footer-tagline">Italians who left, saw the world, and came back with different eyes — showing you the Northeast Italy most visitors never find.</p>
+        <div class="footer-social">
+          <div class="footer-social-btn">IG</div>
+          <div class="footer-social-btn">✉</div>
+          <div class="footer-social-btn">in</div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <div class="footer-links">
+          <a href="#" class="footer-link">All itineraries</a>
+          <a href="#" class="footer-link">Custom trips</a>
+          <a href="#" class="footer-link">Self-organised</a>
+          <a href="#" class="footer-link">Blog & Journal</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="#" class="footer-link">About us</a>
+          <a href="#" class="footer-link">Our approach</a>
+          <a href="#" class="footer-link">FAQ</a>
+          <a href="#" class="footer-link">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Regions</div>
+        <div class="footer-links">
+          <a href="#" class="footer-link">Veneto</a>
+          <a href="#" class="footer-link">Dolomiti</a>
+          <a href="#" class="footer-link">Friuli VG</a>
+          <a href="#" class="footer-link">Venezia</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Off the Boot · All rights reserved</div>
+      <div class="footer-legal">
+        <a href="#" class="footer-legal-link">Privacy Policy</a>
+        <a href="#" class="footer-legal-link">Cookie Policy</a>
+        <a href="#" class="footer-legal-link">Terms of use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- DESIGN SYSTEM PANEL -->
+<div class="ds-panel">
+  <div class="ds-chip"><div class="ds-chip-dot" style="background:#2E5855;"></div><span class="ds-chip-name">--color-primary</span><span class="ds-chip-hex">#2E5855</span></div>
+  <div class="ds-chip"><div class="ds-chip-dot" style="background:#C4920A;"></div><span class="ds-chip-name">--color-accent</span><span class="ds-chip-hex">#C4920A</span></div>
+  <div class="ds-chip"><div class="ds-chip-dot" style="background:#D4701A;"></div><span class="ds-chip-name">--color-cta</span><span class="ds-chip-hex">#D4701A</span></div>
+  <div class="ds-chip"><div class="ds-chip-dot" style="background:#1E1C16;"></div><span class="ds-chip-name">--color-ink</span><span class="ds-chip-hex">#1E1C16</span></div>
+  <div class="ds-chip"><div class="ds-chip-dot" style="background:#EDE5D0;border:1px solid #ccc;"></div><span class="ds-chip-name">--color-parchment</span><span class="ds-chip-hex">#EDE5D0</span></div>
+  <div class="ds-chip"><div class="ds-chip-dot" style="background:#FAFAF4;border:1px solid #ccc;"></div><span class="ds-chip-name">--color-bg</span><span class="ds-chip-hex">#FAFAF4</span></div>
+  <div class="ds-chip"><div class="ds-chip-dot" style="background:#F5E8A8;border:1px solid #ccc;"></div><span class="ds-chip-name">--yellow-wheat</span><span class="ds-chip-hex">#F5E8A8</span></div>
+  <div class="ds-chip"><div class="ds-chip-dot" style="background:#D8ECD8;border:1px solid #ccc;"></div><span class="ds-chip-name">--green-sage</span><span class="ds-chip-hex">#D8ECD8</span></div>
+  <div class="ds-chip"><div class="ds-chip-dot" style="background:#FDF5CC;border:1px solid #ccc;"></div><span class="ds-chip-name">--yellow-butter</span><span class="ds-chip-hex">#FDF5CC</span></div>
+  <div style="width:1px;background:rgba(255,255,255,0.07);flex-shrink:0;"></div>
+  <div class="ds-chip"><span class="ds-chip-name">Display</span><span class="ds-chip-hex">Young Serif 400</span></div>
+  <div class="ds-chip"><span class="ds-chip-name">Body</span><span class="ds-chip-hex">Geist 300</span></div>
+  <div class="ds-chip"><span class="ds-chip-name">UI</span><span class="ds-chip-hex">Geist 500</span></div>
+  <div class="ds-chip"><span class="ds-chip-name">CTA</span><span class="ds-chip-hex">Geist 600 · ls:0.12em · UC</span></div>
+</div>
+
+</body>
+</html>
