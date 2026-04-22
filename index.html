@@ -229,6 +229,14 @@
     line-height: 1;
   }
 
+  .card--canva::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: var(--color-green-meadow);
+  }
+
   /* ── Footer ── */
   footer {
     background: var(--color-ink);
@@ -303,6 +311,13 @@
         <h3>Design Brief</h3>
         <p>The full OffTheBoot brand and design brief — voice, values, colour rules, typography rules, and section rhythm.</p>
         <span class="card-link">Read the brief</span>
+      </a>
+
+      <a class="card card--canva" href="canva-brand-kit.html">
+        <span class="card-tag">05 · Canva</span>
+        <h3>Canva Brand Kit</h3>
+        <p>One-page summary ready to plug into Canva — palettes with click-to-copy hex codes, font assignments and brand voice.</p>
+        <span class="card-link">Open Canva reference</span>
       </a>
 
     </div>

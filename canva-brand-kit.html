@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OffTheBoot — Canva Brand Kit Reference</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--color-bg);
+    color: var(--color-ink);
+    line-height: var(--lh-relaxed);
+    font-size: var(--text-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--color-primary); }
+
+  /* ── Hero ── */
+  .hero {
+    background: var(--color-ink);
+    color: var(--color-bg);
+    padding: clamp(3rem, 7vw, 5rem) clamp(1.5rem, 5vw, 4rem) clamp(3rem, 7vw, 5rem);
+  }
+  .hero-inner { max-width: 1100px; margin: 0 auto; }
+  .back-link {
+    display: inline-block;
+    color: var(--color-green-meadow);
+    text-decoration: none;
+    font-size: var(--text-ui);
+    margin-bottom: 2rem;
+  }
+  .back-link:hover { text-decoration: underline; }
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-green-meadow);
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    line-height: var(--lh-tight);
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+  }
+  .hero h1 em { font-style: italic; color: var(--color-green-meadow); }
+  .hero p {
+    max-width: 62ch;
+    color: var(--color-parchment);
+    font-size: 1.0625rem;
+  }
+
+  /* ── Layout ── */
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 5vw, 4rem);
+  }
+
+  section + section { margin-top: clamp(3rem, 6vw, 4.5rem); }
+
+  .section-head { margin-bottom: 2rem; }
+  .section-head .kicker {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-muted);
+    margin-bottom: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .section-head .kicker::before {
+    content: "";
+    width: 20px; height: 1px;
+    background: currentColor;
+    display: inline-block;
+  }
+  .section-head h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: var(--text-h1);
+    line-height: var(--lh-snug);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.5rem;
+  }
+  .section-head p {
+    color: var(--color-muted);
+    max-width: 62ch;
+  }
+
+  /* ── Palette groups ── */
+  .palette-group { margin-bottom: 2.5rem; }
+  .palette-group h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-h2);
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.01em;
+  }
+  .palette-group .sub {
+    color: var(--color-muted);
+    font-size: var(--text-ui);
+    margin-bottom: 1rem;
+  }
+
+  .swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.85rem;
+  }
+
+  .swatch {
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    cursor: pointer;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+    text-align: left;
+    font-family: var(--font-body);
+    color: inherit;
+    padding: 0;
+    width: 100%;
+    display: block;
+  }
+  .swatch:hover { transform: translateY(-2px); border-color: var(--color-border-strong); }
+  .swatch:focus { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+
+  .swatch-chip {
+    height: 90px;
+    position: relative;
+  }
+  .swatch-chip .copy-hint {
+    position: absolute;
+    top: 8px; right: 10px;
+    font-size: var(--text-xs);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: rgba(30, 28, 22, 0.75);
+    color: var(--color-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+  .swatch:hover .copy-hint { opacity: 1; }
+  .swatch.copied .copy-hint { opacity: 1; background: var(--color-primary); }
+
+  .swatch-meta { padding: 0.75rem 0.9rem 0.9rem; }
+  .swatch-meta .name {
+    font-size: var(--text-ui);
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  .swatch-meta .hex {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: var(--text-ui);
+    color: var(--color-muted);
+  }
+  .swatch-meta .use {
+    font-size: var(--text-xs);
+    color: var(--color-muted);
+    margin-top: 6px;
+    letter-spacing: 0.04em;
+  }
+
+  .swatch.border-light .swatch-chip { border-bottom: 1px solid var(--color-border); }
+
+  /* ── Fonts ── */
+  .font-block {
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 1.75rem;
+    background: #fff;
+    margin-bottom: 1rem;
+  }
+  .font-block .label {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--color-muted);
+    margin-bottom: 0.75rem;
+  }
+  .font-block .preview {
+    line-height: var(--lh-tight);
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+  .font-block.display .preview {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+  }
+  .font-block.display .preview em {
+    font-style: italic;
+    color: var(--color-primary);
+  }
+  .font-block.body .preview {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: var(--lh-relaxed);
+    letter-spacing: 0;
+  }
+  .font-block dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.35rem 1rem;
+    font-size: var(--text-ui);
+    margin-top: 1rem;
+  }
+  .font-block dt { color: var(--color-muted); }
+  .font-block dd { color: var(--color-ink); }
+
+  .font-note {
+    font-size: var(--text-ui);
+    color: var(--color-muted);
+    margin-top: 1rem;
+  }
+  .font-note code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--color-parchment);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: var(--color-ink);
+  }
+
+  /* ── Tone lists ── */
+  .tone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  .tone-card {
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 1.5rem;
+    background: #fff;
+  }
+  .tone-card.yes { background: var(--color-green-sage); border-color: transparent; }
+  .tone-card.no  { background: var(--color-parchment);  border-color: transparent; }
+  .tone-card h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .tone-card ul { list-style: none; padding: 0; }
+  .tone-card li {
+    font-size: var(--text-ui);
+    line-height: var(--lh-relaxed);
+    padding-left: 1.25rem;
+    position: relative;
+    margin-bottom: 0.4rem;
+  }
+  .tone-card.yes li::before {
+    content: "✓"; position: absolute; left: 0; color: var(--color-primary); font-weight: 600;
+  }
+  .tone-card.no li::before {
+    content: "×"; position: absolute; left: 0; color: var(--color-cta); font-weight: 600;
+  }
+
+  /* ── Canva steps ── */
+  .steps {
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 1.75rem;
+    background: #fff;
+  }
+  .steps ol {
+    list-style: none;
+    counter-reset: step;
+    padding: 0;
+  }
+  .steps li {
+    counter-increment: step;
+    padding-left: 2.5rem;
+    position: relative;
+    margin-bottom: 1rem;
+    font-size: var(--text-ui);
+    line-height: var(--lh-relaxed);
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 0;
+    width: 1.75rem; height: 1.75rem;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+  }
+
+  /* ── Tagline strip ── */
+  .strip {
+    background: var(--color-parchment);
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    font-size: var(--text-ui);
+    color: var(--color-ink);
+  }
+  .strip em {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.05rem;
+  }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--color-ink);
+    color: var(--color-parchment);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    font-size: var(--text-ui);
+  }
+  footer a { color: var(--color-green-meadow); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  .toast {
+    position: fixed;
+    bottom: 2rem; left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--color-ink);
+    color: var(--color-bg);
+    padding: 0.6rem 1.1rem;
+    border-radius: 999px;
+    font-size: var(--text-ui);
+    opacity: 0;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    pointer-events: none;
+    z-index: 100;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <a href="index.html" class="back-link">← Back to design system</a>
+      <div class="eyebrow">Canva · Brand Kit Reference</div>
+      <h1>Everything you need<br>to set up the <em>Canva Brand Kit.</em></h1>
+      <p>A one-page summary of every value you need to plug into Canva → <strong>Brand → Brand Kit</strong>. Click any colour swatch to copy its hex. Fonts link straight to Google Fonts for upload or selection inside Canva.</p>
+    </div>
+  </header>
+
+  <div class="strip">
+    <em>"Italy is one of the most visited countries in the world, and one of the least discovered."</em>
+  </div>
+
+  <main>
+
+    <!-- ── SECTION: How to apply in Canva ── -->
+    <section>
+      <div class="section-head">
+        <span class="kicker">Setup</span>
+        <h2>How to apply this in Canva</h2>
+        <p>Canva Pro is required for custom Brand Kits. You'll do this once, then every design snaps to the kit.</p>
+      </div>
+      <div class="steps">
+        <ol>
+          <li>In Canva, open <strong>Brand → Brand Kit</strong> (create one called <em>OffTheBoot</em>).</li>
+          <li>Under <strong>Brand colours</strong>, create the four palettes below and paste each hex. Name each palette as shown.</li>
+          <li>Under <strong>Brand fonts</strong>, set <em>Young Serif</em> for headings and <em>Geist</em> for body / subheadings. If a font isn't in Canva's library, upload the <code>.ttf</code> or <code>.otf</code> from Google Fonts.</li>
+          <li>Paste the brand voice bullets below into <strong>Brand voice</strong> so Canva's Magic Write respects the tone.</li>
+          <li>Upload the OffTheBoot logo (when ready) under <strong>Logos</strong>. Use the primary on Warm White and a parchment-coloured version on Ink.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ── SECTION: Palettes ── -->
+    <section>
+      <div class="section-head">
+        <span class="kicker">01 · Colour</span>
+        <h2>Brand colours</h2>
+        <p>Click any swatch to copy its hex code. Create four separate palettes in Canva — don't merge them into one long list, the grouping is what keeps usage rules readable.</p>
+      </div>
+
+      <div class="palette-group">
+        <h3>Palette 1 — Core</h3>
+        <p class="sub">The identity-defining colours. Use these first.</p>
+        <div class="swatches" id="palette-core"></div>
+      </div>
+
+      <div class="palette-group">
+        <h3>Palette 2 — Neutrals</h3>
+        <p class="sub">Backgrounds, text, borders.</p>
+        <div class="swatches" id="palette-neutrals"></div>
+      </div>
+
+      <div class="palette-group">
+        <h3>Palette 3 — Yellow tints</h3>
+        <p class="sub">Backgrounds only. Never use as text colour.</p>
+        <div class="swatches" id="palette-yellows"></div>
+      </div>
+
+      <div class="palette-group">
+        <h3>Palette 4 — Green tints</h3>
+        <p class="sub">Backgrounds and decorative accents only.</p>
+        <div class="swatches" id="palette-greens"></div>
+      </div>
+    </section>
+
+    <!-- ── SECTION: Fonts ── -->
+    <section>
+      <div class="section-head">
+        <span class="kicker">02 · Typography</span>
+        <h2>Brand fonts</h2>
+        <p>Two families — never introduce a third. Assign them in Canva's Brand Kit to the roles below.</p>
+      </div>
+
+      <div class="font-block display">
+        <div class="label">Heading font</div>
+        <div class="preview">Young Serif <em>regular.</em></div>
+        <dl>
+          <dt>Family</dt><dd>Young Serif</dd>
+          <dt>Weight</dt><dd>400 only (no bold variant exists)</dd>
+          <dt>Style</dt><dd>Regular + Italic</dd>
+          <dt>Canva role</dt><dd>Heading</dd>
+          <dt>Tracking</dt><dd>−0.02em at 40px+ · −0.01em at 28px</dd>
+          <dt>Download</dt><dd><a href="https://fonts.google.com/specimen/Young+Serif" target="_blank" rel="noopener">fonts.google.com/specimen/Young+Serif</a></dd>
+        </dl>
+        <p class="font-note">Use italic for pull quotes, testimonials and H3 accents. Never use Young Serif for body text, buttons, labels or nav.</p>
+      </div>
+
+      <div class="font-block body">
+        <div class="label">Body font</div>
+        <div class="preview">Geist — used for paragraphs, nav, buttons, labels, and every piece of UI copy across OffTheBoot.</div>
+        <dl>
+          <dt>Family</dt><dd>Geist</dd>
+          <dt>Weights</dt><dd>300 (body) · 400 (nav) · 500 (meta) · 600 (buttons) · 700 (labels / overlines)</dd>
+          <dt>Canva role</dt><dd>Subheading + Body</dd>
+          <dt>Tracking</dt><dd>0 for body · 0.16–0.18em uppercase for labels</dd>
+          <dt>Download</dt><dd><a href="https://fonts.google.com/specimen/Geist" target="_blank" rel="noopener">fonts.google.com/specimen/Geist</a></dd>
+        </dl>
+        <p class="font-note">Never use Geist for page headings or section titles.</p>
+      </div>
+    </section>
+
+    <!-- ── SECTION: Voice ── -->
+    <section>
+      <div class="section-head">
+        <span class="kicker">03 · Voice</span>
+        <h2>Brand voice</h2>
+        <p>Paste these into Canva's Brand Voice field — they guide Magic Write and help anyone designing in the kit write on-brand.</p>
+      </div>
+      <div class="tone-grid">
+        <div class="tone-card yes">
+          <h4>We sound like this</h4>
+          <ul>
+            <li>Warm, direct, personal — written by a human, not a marketing team</li>
+            <li>"Away from the crowds"</li>
+            <li>"The Italy most Italians overlook"</li>
+            <li>"Real local knowledge"</li>
+            <li>Action-first CTAs: "Plan your trip", "See itineraries", "Read the story"</li>
+            <li>Use "slow", "local", "community", "human", "ethical"</li>
+          </ul>
+        </div>
+        <div class="tone-card no">
+          <h4>We never sound like this</h4>
+          <ul>
+            <li>"Discover amazing experiences"</li>
+            <li>"Unforgettable adventures"</li>
+            <li>"Best-in-class service"</li>
+            <li>Generic superlatives or marketing clichés</li>
+            <li>The word "sustainability" — use "slow" / "local" / "ethical" instead</li>
+            <li>Mixed languages — copy is English only, even for Italian place names</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION: Usage rules quick ref ── -->
+    <section>
+      <div class="section-head">
+        <span class="kicker">04 · Reminders</span>
+        <h2>Critical rules to respect in Canva</h2>
+        <p>The few rules that are easy to break inside Canva if you're not paying attention.</p>
+      </div>
+      <div class="tone-grid">
+        <div class="tone-card no">
+          <h4>Don't</h4>
+          <ul>
+            <li>Use pure white <code style="font-family:ui-monospace;font-size:0.9em">#FFFFFF</code> — always use Warm White <code style="font-family:ui-monospace;font-size:0.9em">#FAFAF4</code></li>
+            <li>Put Stone Gold <code style="font-family:ui-monospace;font-size:0.9em">#C4920A</code> as text on white — fails WCAG contrast</li>
+            <li>Use more than one Terracotta CTA element per layout</li>
+            <li>Use yellow or green tints as text colour — backgrounds only</li>
+            <li>Mix more than two fonts in a design</li>
+          </ul>
+        </div>
+        <div class="tone-card yes">
+          <h4>Do</h4>
+          <ul>
+            <li>Alternate section backgrounds (Ink → Parchment → Warm White → Sage…)</li>
+            <li>Pair every section title with a small uppercase eyebrow in Muted Ink</li>
+            <li>Keep Young Serif at one weight — vary size and tracking, not weight</li>
+            <li>Use italic Young Serif for pull quotes and H3 accents</li>
+            <li>Keep tracking tight on large serif titles (−0.02em at 40px+)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Canva Brand Kit reference · <a href="index.html">Back to design system</a> · <a href="https://github.com/cesarebed/boot-design-system">View on GitHub</a>
+  </footer>
+
+  <div class="toast" id="toast">Copied</div>
+
+<script>
+  const palettes = {
+    core: [
+      { name: "Forest Teal",  hex: "#2E5855", use: "Primary — navbar, structural" },
+      { name: "Stone Gold",   hex: "#C4920A", use: "Accent — price/duration badges" },
+      { name: "Terracotta",   hex: "#D4701A", use: "CTA — buttons only, one per section" },
+    ],
+    neutrals: [
+      { name: "Ink",           hex: "#1E1C16", use: "Text + dark backgrounds" },
+      { name: "Warm White",    hex: "#FAFAF4", use: "Page background (never #fff)" },
+      { name: "Parchment",     hex: "#EDE5D0", use: "Tagline strip, surfaces" },
+      { name: "Muted Ink",     hex: "#6B6457", use: "Secondary text, eyebrows" },
+      { name: "Border Light",  hex: "#E8E0D0", use: "Card borders" },
+      { name: "Border Strong", hex: "#DDD5C2", use: "Dividers, input borders" },
+    ],
+    yellows: [
+      { name: "Yellow Butter", hex: "#FDF5CC", use: "Newsletter bg" },
+      { name: "Yellow Straw",  hex: "#F8EDA0", use: "Journal/blog bg" },
+      { name: "Yellow Wheat",  hex: "#F5E8A8", use: "Itinerary bg — primary yellow" },
+      { name: "Yellow Pollen", hex: "#EDD878", use: "Featured callouts" },
+    ],
+    greens: [
+      { name: "Green Mist",   hex: "#EAF3EC", use: "Category badges" },
+      { name: "Green Sage",   hex: "#D8ECD8", use: "Values/features bg" },
+      { name: "Green Fern",   hex: "#C0DEC0", use: "Card image placeholder" },
+      { name: "Green Meadow", hex: "#9AC49A", use: "Italic accent colour" },
+    ],
+  };
+
+  function renderPalette(key, mountId) {
+    const mount = document.getElementById(mountId);
+    palettes[key].forEach(c => {
+      const btn = document.createElement("button");
+      btn.className = "swatch";
+      btn.type = "button";
+      btn.setAttribute("aria-label", `Copy ${c.hex}`);
+      btn.innerHTML = `
+        <div class="swatch-chip" style="background:${c.hex}">
+          <span class="copy-hint">Click to copy</span>
+        </div>
+        <div class="swatch-meta">
+          <div class="name">${c.name}</div>
+          <div class="hex">${c.hex}</div>
+          <div class="use">${c.use}</div>
+        </div>`;
+      btn.addEventListener("click", () => copyHex(c.hex, btn));
+      mount.appendChild(btn);
+    });
+  }
+
+  const toast = document.getElementById("toast");
+  let toastTimer;
+  function copyHex(hex, el) {
+    navigator.clipboard.writeText(hex).then(() => {
+      toast.textContent = `Copied ${hex}`;
+      toast.classList.add("show");
+      el.classList.add("copied");
+      const hint = el.querySelector(".copy-hint");
+      if (hint) hint.textContent = "Copied";
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove("show");
+        el.classList.remove("copied");
+        if (hint) hint.textContent = "Click to copy";
+      }, 1400);
+    });
+  }
+
+  renderPalette("core",     "palette-core");
+  renderPalette("neutrals", "palette-neutrals");
+  renderPalette("yellows",  "palette-yellows");
+  renderPalette("greens",   "palette-greens");
+</script>
+
+</body>
+</html>
