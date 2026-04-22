@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OffTheBoot — Design System</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--color-bg);
+    color: var(--color-ink);
+    line-height: var(--lh-relaxed);
+    font-size: var(--text-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Header / Hero ── */
+  .hero {
+    background: var(--color-ink);
+    color: var(--color-bg);
+    padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 4rem) clamp(4rem, 10vw, 7rem);
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-green-meadow);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.5rem, 6vw, var(--text-hero));
+    line-height: var(--lh-tight);
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--color-green-meadow);
+  }
+
+  .hero p {
+    max-width: 60ch;
+    color: var(--color-parchment);
+    font-size: 1.125rem;
+    line-height: var(--lh-relaxed);
+  }
+
+  /* ── Tagline strip ── */
+  .strip {
+    background: var(--color-parchment);
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    font-size: var(--text-ui);
+    color: var(--color-ink);
+    letter-spacing: 0.02em;
+  }
+
+  .strip em {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.05rem;
+  }
+
+  /* ── Sections grid ── */
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: clamp(3rem, 7vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+  }
+
+  .section-head {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-head h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: var(--text-h1);
+    line-height: var(--lh-snug);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-head p {
+    color: var(--color-muted);
+    max-width: 60ch;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.75rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-border-strong);
+    background: #fff;
+  }
+
+  .card-tag {
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-muted);
+    margin-bottom: 1rem;
+  }
+
+  .card h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: var(--text-h2);
+    line-height: var(--lh-snug);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.5rem;
+  }
+
+  .card p {
+    color: var(--color-muted);
+    font-size: var(--text-ui);
+    line-height: var(--lh-relaxed);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .card-link {
+    font-size: var(--text-ui);
+    color: var(--color-primary);
+    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .card-link::after {
+    content: "→";
+    transition: transform 0.18s ease;
+  }
+
+  .card:hover .card-link::after {
+    transform: translateX(3px);
+  }
+
+  /* Card swatches as visual accent */
+  .card--palette::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(
+      90deg,
+      var(--color-primary) 0%,
+      var(--color-primary) 20%,
+      var(--color-accent) 20%,
+      var(--color-accent) 40%,
+      var(--color-cta) 40%,
+      var(--color-cta) 60%,
+      var(--color-yellow-wheat) 60%,
+      var(--color-yellow-wheat) 80%,
+      var(--color-green-sage) 80%,
+      var(--color-green-sage) 100%
+    );
+  }
+
+  .card--typography::before {
+    content: "Aa";
+    position: absolute;
+    top: 1rem; right: 1.25rem;
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--color-green-sage);
+    line-height: 1;
+  }
+
+  .card--mockup::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: var(--color-cta);
+  }
+
+  .card--brief::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: var(--color-primary);
+  }
+
+  .card--tokens::before {
+    content: "{ }";
+    position: absolute;
+    top: 1rem; right: 1.25rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 2rem;
+    color: var(--color-green-sage);
+    line-height: 1;
+  }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--color-ink);
+    color: var(--color-parchment);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    font-size: var(--text-ui);
+  }
+
+  footer a {
+    color: var(--color-green-meadow);
+    text-decoration: none;
+  }
+
+  footer a:hover { text-decoration: underline; }
+
+  footer .muted {
+    color: var(--color-muted);
+    display: block;
+    margin-top: 0.5rem;
+    font-size: var(--text-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Design System · v1.0 · April 2026</div>
+      <h1>OffTheBoot<br><em>design system.</em></h1>
+      <p>The shared visual language behind OffTheBoot — colours, typography, tokens, and reference mockups. Pick a section to explore.</p>
+    </div>
+  </header>
+
+  <div class="strip">
+    <em>"Italy is one of the most visited countries in the world, and one of the least discovered."</em>
+  </div>
+
+  <main>
+    <div class="section-head">
+      <h2>Sections</h2>
+      <p>Every piece of the system lives in this repo. Click through to see each one in detail.</p>
+    </div>
+
+    <div class="grid">
+
+      <a class="card card--palette" href="palette_system.html">
+        <span class="card-tag">01 · Colour</span>
+        <h3>Palette System</h3>
+        <p>Core palette, yellow and green tint families, usage rules, and accessibility notes for every surface and text context.</p>
+        <span class="card-link">View palette</span>
+      </a>
+
+      <a class="card card--typography" href="typography_system.html">
+        <span class="card-tag">02 · Typography</span>
+        <h3>Typography System</h3>
+        <p>Young Serif for display, Geist for body. Scale, line heights, tracking rules, and the italic accent pattern.</p>
+        <span class="card-link">View typography</span>
+      </a>
+
+      <a class="card card--tokens" href="tokens.css">
+        <span class="card-tag">03 · Tokens</span>
+        <h3>CSS Tokens</h3>
+        <p>The single source of truth. All colours, fonts, sizes, spacings and radii exposed as CSS variables ready to import.</p>
+        <span class="card-link">Open tokens.css</span>
+      </a>
+
+      <a class="card card--brief" href="offtheboot-design-brief.md">
+        <span class="card-tag">04 · Brief</span>
+        <h3>Design Brief</h3>
+        <p>The full OffTheBoot brand and design brief — voice, values, colour rules, typography rules, and section rhythm.</p>
+        <span class="card-link">Read the brief</span>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    Built with the OffTheBoot design system · <a href="https://github.com/cesarebed/boot-design-system">View on GitHub</a>
+    <span class="muted">Respect · Connection · Curiosity</span>
+  </footer>
+
+</body>
+</html>
