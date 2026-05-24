@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>OffTheBoot — Typography System v1.0</title>
-<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Geist:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>OffTheBoot — Typography System v1.1</title>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Lora:ital,wght@0,400..700;1,400..700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,900,94.9,1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -28,7 +28,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Lora', serif;
   background: var(--page-bg);
   color: var(--ink);
   line-height: 1.6;
@@ -55,12 +55,12 @@ code, .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.82em; }
 .cover-logo { font-family: 'Young Serif', serif; font-size: 1.1rem; color: var(--warm-white); }
 .cover-meta { text-align: right; font-size: 0.72rem; color: #5A5248; line-height: 1.8; }
 .cover-body { }
-.cover-eyebrow { font-family: 'Geist', sans-serif; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5A5248; margin-bottom: 1.25rem; }
+.cover-eyebrow { font-family: 'Lora', serif; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5A5248; margin-bottom: 1.25rem; }
 .cover-title { font-family: 'Young Serif', serif; font-size: clamp(3.5rem, 8vw, 7rem); color: var(--warm-white); line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
 .cover-title em { font-style: italic; color: var(--forest-teal); }
-.cover-sub { font-family: 'Geist', sans-serif; font-size: 0.88rem; font-weight: 300; color: #5A5248; max-width: 480px; line-height: 1.8; }
+.cover-sub { font-family: 'Lora', serif; font-size: 0.88rem; font-weight: 400; color: #5A5248; max-width: 480px; line-height: 1.8; }
 .cover-footer { display: flex; justify-content: space-between; align-items: flex-end; }
-.cover-version { font-family: 'Geist', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #3A3830; }
+.cover-version { font-family: 'Lora', serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #3A3830; }
 
 /* ── NAV ── */
 .nav {
@@ -74,16 +74,16 @@ code, .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.82em; }
 }
 .nav-brand { font-family: 'Young Serif', serif; font-size: 0.95rem; color: var(--ink); margin-right: 2rem; white-space: nowrap; }
 .nav-links { display: flex; gap: 0; overflow-x: auto; flex: 1; }
-.nav-link { font-family: 'Geist', sans-serif; font-size: 0.72rem; font-weight: 500; color: var(--muted); text-decoration: none; padding: 0 0.9rem; height: 54px; display: flex; align-items: center; border-bottom: 2px solid transparent; white-space: nowrap; transition: color 0.15s, border-color 0.15s; }
+.nav-link { font-family: 'Lora', serif; font-size: 0.72rem; font-weight: 500; color: var(--muted); text-decoration: none; padding: 0 0.9rem; height: 54px; display: flex; align-items: center; border-bottom: 2px solid transparent; white-space: nowrap; transition: color 0.15s, border-color 0.15s; }
 .nav-link:hover { color: var(--ink); border-bottom-color: var(--forest-teal); }
 
 /* ── LAYOUT ── */
 .main { max-width: 1080px; margin: 0 auto; padding: 5rem 3.5rem 8rem; }
 .section { margin-bottom: 5rem; }
 .section-header { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
-.eyebrow { font-family: 'Geist', sans-serif; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.6rem; }
+.eyebrow { font-family: 'Lora', serif; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.6rem; }
 .section-title { font-family: 'Young Serif', serif; font-size: clamp(1.8rem, 2.5vw, 2.4rem); color: var(--ink); line-height: 1.05; letter-spacing: -0.01em; margin-bottom: 0.6rem; }
-.section-desc { font-family: 'Geist', sans-serif; font-size: 0.88rem; font-weight: 300; color: var(--muted); max-width: 580px; line-height: 1.8; }
+.section-desc { font-family: 'Lora', serif; font-size: 0.88rem; font-weight: 400; color: var(--muted); max-width: 580px; line-height: 1.8; }
 
 hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
 
@@ -92,24 +92,24 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
 .font-intro-card { border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
 .fic-header { padding: 1.5rem; }
 .fic-name-big { line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
-.fic-role { font-family: 'Geist', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.5rem; }
-.fic-desc { font-family: 'Geist', sans-serif; font-size: 0.78rem; font-weight: 300; line-height: 1.7; }
+.fic-role { font-family: 'Lora', serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.5rem; }
+.fic-desc { font-family: 'Lora', serif; font-size: 0.78rem; font-weight: 400; line-height: 1.7; }
 .fic-body { padding: 1.25rem 1.5rem; background: var(--warm-white); border-top: 1px solid var(--border); }
 .fic-meta-row { display: flex; gap: 1.5rem; flex-wrap: wrap; }
 .fic-meta { }
-.fic-meta-label { font-family: 'Geist', sans-serif; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+.fic-meta-label { font-family: 'Lora', serif; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
 .fic-meta-val { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--ink); }
 
 /* ── TYPE SCALE TABLE ── */
 .scale-table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; }
 .scale-table thead tr { border-bottom: 2px solid var(--border); }
-.scale-table th { font-family: 'Geist', sans-serif; text-align: left; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 0.6rem 1rem; }
+.scale-table th { font-family: 'Lora', serif; text-align: left; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 0.6rem 1rem; }
 .scale-table td { padding: 1rem; border-bottom: 0.5px solid var(--border); vertical-align: middle; }
 .scale-table tr:last-child td { border-bottom: none; }
 .scale-table tbody tr:hover { background: rgba(46,88,85,0.02); }
-.scale-name { font-family: 'Geist', sans-serif; font-size: 0.75rem; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+.scale-name { font-family: 'Lora', serif; font-size: 0.75rem; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
 .scale-specs { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--muted); line-height: 1.6; }
-.scale-use { font-family: 'Geist', sans-serif; font-size: 0.72rem; color: var(--muted); line-height: 1.5; }
+.scale-use { font-family: 'Lora', serif; font-size: 0.72rem; color: var(--muted); line-height: 1.5; }
 
 /* ── CODE BOX ── */
 .code-box {
@@ -121,7 +121,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
   overflow: hidden;
 }
 .code-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--forest-teal), var(--stone-gold), var(--terracotta)); }
-.code-label { font-family: 'Geist', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #5A5248; margin-bottom: 1.25rem; }
+.code-label { font-family: 'Lora', serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #5A5248; margin-bottom: 1.25rem; }
 .code-line { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; line-height: 2.1; }
 .code-comment { color: #4A4840; font-style: italic; }
 .code-selector { color: #9AC49A; }
@@ -138,81 +138,81 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
 .rule-icon { width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 800; flex-shrink: 0; }
 .rule-icon.do { background: #EAF3DE; color: #27500A; }
 .rule-icon.dont { background: #FCEBEB; color: #791F1F; }
-.rule-title { font-family: 'Geist', sans-serif; font-size: 0.78rem; font-weight: 600; color: var(--ink); }
+.rule-title { font-family: 'Lora', serif; font-size: 0.78rem; font-weight: 600; color: var(--ink); }
 .rule-body { padding: 14px; }
 .rule-demo { margin-bottom: 10px; padding: 12px; border-radius: 6px; background: var(--warm-white); }
-.rule-desc { font-family: 'Geist', sans-serif; font-size: 0.72rem; font-weight: 300; color: var(--muted); line-height: 1.6; }
+.rule-desc { font-family: 'Lora', serif; font-size: 0.72rem; font-weight: 400; color: var(--muted); line-height: 1.6; }
 
 /* ── USE CASES ── */
 .uc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 2rem; }
 .uc-card { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
 .uc-demo { padding: 1.5rem; min-height: 130px; display: flex; flex-direction: column; justify-content: center; }
 .uc-footer { padding: 10px 14px; background: white; border-top: 0.5px solid var(--border); }
-.uc-name { font-family: 'Geist', sans-serif; font-size: 0.75rem; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
-.uc-desc { font-family: 'Geist', sans-serif; font-size: 0.68rem; font-weight: 300; color: var(--muted); line-height: 1.5; }
+.uc-name { font-family: 'Lora', serif; font-size: 0.75rem; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
+.uc-desc { font-family: 'Lora', serif; font-size: 0.68rem; font-weight: 400; color: var(--muted); line-height: 1.5; }
 .uc-tokens { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--forest-teal); margin-top: 4px; }
 
 /* ── PAIRING TABLE ── */
 .pair-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 2rem; }
 .pair-card { border: 0.5px solid var(--border); border-radius: 8px; padding: 14px; background: white; }
-.pair-label { font-family: 'Geist', sans-serif; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.pair-label { font-family: 'Lora', serif; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
 .pair-demo { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; }
-.pair-note { font-family: 'Geist', sans-serif; font-size: 0.68rem; font-weight: 300; color: var(--muted); line-height: 1.5; }
+.pair-note { font-family: 'Lora', serif; font-size: 0.68rem; font-weight: 400; color: var(--muted); line-height: 1.5; }
 
 /* ── FULL PREVIEW ── */
 .preview-frame { border-radius: 12px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 40px rgba(30,28,22,0.08); }
 .pnav { background: var(--forest-teal); padding: 12px 24px; display: flex; align-items: center; gap: 16px; }
 .pnav-logo { font-family: 'Young Serif', serif; font-size: 1.1rem; color: var(--warm-white); }
 .pnav-links { display: flex; gap: 20px; margin-left: auto; }
-.pnav-link { font-family: 'Geist', sans-serif; font-size: 0.75rem; font-weight: 400; color: rgba(255,255,255,0.55); }
-.pnav-cta { font-family: 'Geist', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; background: var(--terracotta); color: white; padding: 7px 16px; border-radius: 4px; }
+.pnav-link { font-family: 'Lora', serif; font-size: 0.75rem; font-weight: 400; color: rgba(255,255,255,0.55); }
+.pnav-cta { font-family: 'Lora', serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; background: var(--terracotta); color: white; padding: 7px 16px; border-radius: 4px; }
 .phero { background: var(--ink); padding: 3.5rem 2.5rem; }
-.phero-over { font-family: 'Geist', sans-serif; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #4a8878; margin-bottom: 12px; }
+.phero-over { font-family: 'Lora', serif; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #4a8878; margin-bottom: 12px; }
 .phero-h1 { font-family: 'Young Serif', serif; font-size: 3rem; color: var(--parchment); line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 1.25rem; }
-.phero-body { font-family: 'Geist', sans-serif; font-size: 0.9rem; font-weight: 300; color: #5a5448; line-height: 1.8; margin-bottom: 1.75rem; max-width: 420px; }
-.phero-cta { font-family: 'Geist', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; background: var(--terracotta); color: white; display: inline-block; padding: 12px 26px; border-radius: 4px; }
+.phero-body { font-family: 'Lora', serif; font-size: 0.9rem; font-weight: 400; color: #5a5448; line-height: 1.8; margin-bottom: 1.75rem; max-width: 420px; }
+.phero-cta { font-family: 'Lora', serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; background: var(--terracotta); color: white; display: inline-block; padding: 12px 26px; border-radius: 4px; }
 .pjournal { background: var(--yellow-wheat); padding: 2.5rem 2.5rem; }
-.pjour-over { font-family: 'Geist', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8a7820; margin-bottom: 8px; }
+.pjour-over { font-family: 'Lora', serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8a7820; margin-bottom: 8px; }
 .pjour-h2 { font-family: 'Young Serif', serif; font-size: 1.75rem; color: var(--ink); letter-spacing: -0.01em; margin-bottom: 1.5rem; line-height: 1.1; }
 .pjour-cards { display: flex; gap: 12px; }
 .pjour-card { flex: 1; background: white; border-radius: 8px; overflow: hidden; border: 0.5px solid rgba(180,160,40,0.2); }
 .pjour-img { height: 56px; }
 .pjour-body { padding: 10px 12px; }
-.pjour-tag { font-family: 'Geist', sans-serif; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 4px; }
+.pjour-tag { font-family: 'Lora', serif; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 4px; }
 .pjour-title { font-family: 'Young Serif', serif; font-size: 0.85rem; color: var(--ink); line-height: 1.3; margin-bottom: 6px; }
-.pjour-meta { font-family: 'Geist', sans-serif; font-size: 0.65rem; font-weight: 400; color: var(--muted); }
-.pbadge { display: inline-flex; padding: 2px 7px; border-radius: 3px; font-family: 'Geist', sans-serif; font-size: 0.6rem; font-weight: 600; margin-right: 3px; }
+.pjour-meta { font-family: 'Lora', serif; font-size: 0.65rem; font-weight: 400; color: var(--muted); }
+.pbadge { display: inline-flex; padding: 2px 7px; border-radius: 3px; font-family: 'Lora', serif; font-size: 0.6rem; font-weight: 600; margin-right: 3px; }
 .pfeatures { background: var(--green-sage); padding: 2rem 2.5rem; display: flex; gap: 2rem; align-items: center; }
 .pfeat-left { flex: 1; }
-.pfeat-over { font-family: 'Geist', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #3a6848; margin-bottom: 8px; }
+.pfeat-over { font-family: 'Lora', serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #3a6848; margin-bottom: 8px; }
 .pfeat-h2 { font-family: 'Young Serif', serif; font-size: 1.5rem; color: var(--ink); line-height: 1.1; letter-spacing: -0.01em; }
-.pfeat-body { font-family: 'Geist', sans-serif; font-size: 0.82rem; font-weight: 300; color: var(--muted); line-height: 1.7; margin-top: 8px; }
+.pfeat-body { font-family: 'Lora', serif; font-size: 0.82rem; font-weight: 400; color: var(--muted); line-height: 1.7; margin-top: 8px; }
 .pfeat-right { display: flex; gap: 10px; flex-shrink: 0; }
 .pfeat-stat { background: white; border-radius: 8px; padding: 14px 18px; text-align: center; }
 .pfeat-stat-val { font-family: 'Young Serif', serif; font-size: 1.5rem; color: var(--forest-teal); }
-.pfeat-stat-label { font-family: 'Geist', sans-serif; font-size: 0.62rem; font-weight: 500; color: var(--muted); margin-top: 3px; }
+.pfeat-stat-label { font-family: 'Lora', serif; font-size: 0.62rem; font-weight: 500; color: var(--muted); margin-top: 3px; }
 .pblog { background: var(--warm-white); padding: 2.5rem 2.5rem; }
-.pblog-over { font-family: 'Geist', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.pblog-over { font-family: 'Lora', serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
 .pblog-h2 { font-family: 'Young Serif', serif; font-size: 1.5rem; color: var(--ink); letter-spacing: -0.01em; margin-bottom: 1rem; }
-.pblog-excerpt { font-family: 'Geist', sans-serif; font-size: 0.85rem; font-weight: 300; color: var(--muted); line-height: 1.8; max-width: 520px; margin-bottom: 1rem; }
-.pblog-read { font-family: 'Geist', sans-serif; font-size: 0.75rem; font-weight: 600; color: var(--terracotta); border-bottom: 1px solid var(--terracotta); display: inline-block; padding-bottom: 1px; }
+.pblog-excerpt { font-family: 'Lora', serif; font-size: 0.85rem; font-weight: 400; color: var(--muted); line-height: 1.8; max-width: 520px; margin-bottom: 1rem; }
+.pblog-read { font-family: 'Lora', serif; font-size: 0.75rem; font-weight: 600; color: var(--terracotta); border-bottom: 1px solid var(--terracotta); display: inline-block; padding-bottom: 1px; }
 .pnews { background: var(--yellow-butter); padding: 2rem 2.5rem; display: flex; align-items: center; gap: 2rem; }
 .pnews-left { flex: 1; }
-.pnews-over { font-family: 'Geist', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8a7820; margin-bottom: 6px; }
+.pnews-over { font-family: 'Lora', serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8a7820; margin-bottom: 6px; }
 .pnews-title { font-family: 'Young Serif', serif; font-size: 1.1rem; color: var(--ink); line-height: 1.2; }
 .pnews-right { display: flex; gap: 8px; align-items: center; }
-.pnews-input { font-family: 'Geist', sans-serif; font-size: 0.8rem; font-weight: 300; background: white; border: 1px solid var(--border); border-radius: 4px; padding: 9px 14px; min-width: 220px; color: var(--muted); }
-.pnews-btn { font-family: 'Geist', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; background: var(--terracotta); color: white; padding: 9px 18px; border-radius: 4px; white-space: nowrap; }
+.pnews-input { font-family: 'Lora', serif; font-size: 0.8rem; font-weight: 400; background: white; border: 1px solid var(--border); border-radius: 4px; padding: 9px 14px; min-width: 220px; color: var(--muted); }
+.pnews-btn { font-family: 'Lora', serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; background: var(--terracotta); color: white; padding: 9px 18px; border-radius: 4px; white-space: nowrap; }
 .pfooter { background: var(--ink); padding: 2.5rem 2.5rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem; }
 .pfooter-logo { font-family: 'Young Serif', serif; font-size: 1.1rem; color: var(--warm-white); margin-bottom: 6px; }
-.pfooter-sub { font-family: 'Geist', sans-serif; font-size: 0.72rem; font-weight: 300; color: #5A5248; line-height: 1.8; }
+.pfooter-sub { font-family: 'Lora', serif; font-size: 0.72rem; font-weight: 400; color: #5A5248; line-height: 1.8; }
 .pfooter-links { display: flex; gap: 20px; }
-.pfooter-link { font-family: 'Geist', sans-serif; font-size: 0.72rem; font-weight: 400; color: #5A5248; }
+.pfooter-link { font-family: 'Lora', serif; font-size: 0.72rem; font-weight: 400; color: #5A5248; }
 
 /* ── FOOTER ── */
 .footer { background: var(--ink); padding: 3rem 3.5rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem; }
 .footer-logo { font-family: 'Young Serif', serif; font-size: 1.1rem; color: var(--warm-white); }
-.footer-meta { font-family: 'Geist', sans-serif; font-size: 0.72rem; color: #5A5248; line-height: 1.8; text-align: right; }
+.footer-meta { font-family: 'Lora', serif; font-size: 0.72rem; color: #5A5248; line-height: 1.8; text-align: right; }
 
 @media (max-width: 700px) {
   .cover, .main, .nav { padding-left: 1.5rem; padding-right: 1.5rem; }
@@ -236,11 +236,11 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
   <div class="cover-body">
     <div class="cover-eyebrow">Design System · Phase 01</div>
     <h1 class="cover-title">Typo<em>graphy</em><br>System</h1>
-    <p class="cover-sub">This document defines the official typefaces, scale, spacing, and usage rules for OffTheBoot. Young Serif for headings. Geist for UI and body. Two fonts — one voice.</p>
+    <p class="cover-sub">This document defines the official typefaces, scale, spacing, and usage rules for OffTheBoot. Young Serif for headings. Lora for UI and body. Three fonts — one voice.</p>
   </div>
   <div class="cover-footer">
     <div class="cover-version">v1.0 · Final · Approved</div>
-    <div style="font-family:'Geist',sans-serif;font-size:0.72rem;color:#3A3830;">Young Serif + Geist · 7 scale levels · All use cases documented</div>
+    <div style="font-family:'Lora',serif;font-size:0.72rem;color:#3A3830;">Young Serif + Lora + Fraunces · 7 scale levels · All use cases documented</div>
   </div>
   <div class="cover-stripe">
     <span style="background:#2E5855;flex:3;"></span>
@@ -271,8 +271,8 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
   <section class="section" id="typefaces">
     <div class="section-header">
       <div class="eyebrow">01 · Typefaces</div>
-      <h2 class="section-title">Two fonts. One voice.</h2>
-      <p class="section-desc">OffTheBoot uses exactly two typefaces. Young Serif carries the brand's warmth, character and humanity — it appears in every heading and display element. Geist handles everything functional — body text, UI, labels, buttons. The contrast between them creates the visual tension that makes the site memorable.</p>
+      <h2 class="section-title">Three fonts. One voice.</h2>
+      <p class="section-desc">OffTheBoot uses three typefaces. Young Serif carries the brand's warmth and humanity — it appears in every heading. Lora is the all-serif body voice — body, UI, labels, buttons. Fraunces is reserved for the logo wordmark only. The contrast between them creates the visual tension that makes the site memorable.</p>
     </div>
 
     <div class="font-intro-grid">
@@ -315,13 +315,13 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         </div>
       </div>
 
-      <!-- GEIST -->
+      <!-- LORA -->
       <div class="font-intro-card">
         <div class="fic-header" style="background:#2E5855;">
           <div class="fic-role" style="color:#9AC49A;">UI, Body & Labels</div>
-          <div class="fic-name-big" style="font-family:'Geist',sans-serif;font-size:3rem;font-weight:700;color:#FAFAF4;letter-spacing:-0.03em;">Geist</div>
-          <div style="font-family:'Geist',sans-serif;font-size:1rem;font-weight:300;color:#9ab5af;margin-top:4px;letter-spacing:0.02em;">Away from the tourist traps.</div>
-          <div class="fic-desc" style="color:#9ab5af;margin-top:12px;">A geometric sans-serif by Vercel — clean, precise, highly legible at any size. Used at weight 300 for body text, 500 for UI elements, 600–700 for buttons and labels. The functional backbone of the system.</div>
+          <div class="fic-name-big" style="font-family:'Lora',serif;font-size:3rem;font-weight:600;color:#FAFAF4;letter-spacing:-0.02em;">Lora</div>
+          <div style="font-family:'Lora',serif;font-size:1rem;font-weight:400;font-style:italic;color:#9ab5af;margin-top:4px;letter-spacing:0.02em;">Away from the tourist traps.</div>
+          <div class="fic-desc" style="color:#9ab5af;margin-top:12px;">A contemporary serif with calligraphic roots — warm, readable, with proper italics. Used at weight 400 for body, 500 for UI metadata, 600 for buttons and CTAs, 700 for uppercase labels. The serif-everywhere counterpoint that keeps the brand quietly literary.</div>
         </div>
         <div class="fic-body">
           <div class="fic-meta-row">
@@ -331,11 +331,11 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
             </div>
             <div class="fic-meta">
               <div class="fic-meta-label">Weights available</div>
-              <div class="fic-meta-val">100–900</div>
+              <div class="fic-meta-val">400 · 500 · 600 · 700 (+ italics)</div>
             </div>
             <div class="fic-meta">
               <div class="fic-meta-label">Used weights</div>
-              <div class="fic-meta-val">300 · 400 · 500 · 600 · 700</div>
+              <div class="fic-meta-val">400 · 500 · 600 · 700</div>
             </div>
             <div class="fic-meta">
               <div class="fic-meta-label">Cost</div>
@@ -353,10 +353,48 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         </div>
       </div>
 
+      <!-- FRAUNCES (logo only) -->
+      <div class="font-intro-card">
+        <div class="fic-header" style="background:#1E1C16;">
+          <div class="fic-role" style="color:#C4920A;">Logo Wordmark Only</div>
+          <div class="fic-name-big" style="font-family:'Fraunces',serif;font-size:3rem;font-weight:900;font-optical-sizing:auto;font-variation-settings:'SOFT' 94.9, 'WONK' 1;color:#FAFAF4;letter-spacing:-0.02em;">OffTheBoot</div>
+          <div style="font-family:'Lora',serif;font-size:1rem;font-weight:400;color:#9C9484;margin-top:4px;letter-spacing:0.02em;">Wordmark only — never headings, body, or UI.</div>
+          <div class="fic-desc" style="color:#9C9484;margin-top:12px;">A variable serif by Undercase Type, used here exclusively for the OffTheBoot brand wordmark in navbar and footer. Locked to weight 900 with optical sizing auto and the SOFT (94.9) and WONK (1) axes engaged for a slightly sculptural, almost-handmade silhouette.</div>
+        </div>
+        <div class="fic-body">
+          <div class="fic-meta-row">
+            <div class="fic-meta">
+              <div class="fic-meta-label">Source</div>
+              <div class="fic-meta-val">Google Fonts</div>
+            </div>
+            <div class="fic-meta">
+              <div class="fic-meta-label">Axes used</div>
+              <div class="fic-meta-val">opsz · wght · SOFT · WONK</div>
+            </div>
+            <div class="fic-meta">
+              <div class="fic-meta-label">Locked settings</div>
+              <div class="fic-meta-val">weight 900 · SOFT 94.9 · WONK 1</div>
+            </div>
+            <div class="fic-meta">
+              <div class="fic-meta-label">Utility class</div>
+              <div class="fic-meta-val">.logo-wordmark</div>
+            </div>
+            <div class="fic-meta">
+              <div class="fic-meta-label">Used for</div>
+              <div class="fic-meta-val">Navbar wordmark · footer wordmark</div>
+            </div>
+            <div class="fic-meta">
+              <div class="fic-meta-label">Never used for</div>
+              <div class="fic-meta-val">Headings, body, nav links, buttons, badges, anything that isn't the wordmark</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div style="background:#FDF5CC;border:1px solid rgba(180,160,40,0.3);border-radius:10px;padding:1.25rem 1.5rem;border-left:3px solid var(--stone-gold);">
-      <p style="font-family:'Geist',sans-serif;font-size:0.78rem;font-weight:300;color:#6a5810;line-height:1.8;"><strong style="font-weight:600;color:var(--ink);">Why these two?</strong> Young Serif communicates warmth, authenticity and place — qualities central to OffTheBoot's identity. Geist communicates precision, clarity and modernity — qualities needed in a digital product. The contrast between a rounded serif and a geometric sans creates visual tension that keeps the eye engaged. Neither font alone would capture the full brand.</p>
+      <p style="font-family:'Lora',serif;font-size:0.78rem;font-weight:400;color:#6a5810;line-height:1.8;"><strong style="font-weight:600;color:var(--ink);">Why this trio?</strong> Young Serif communicates warmth, authenticity and place — qualities central to OffTheBoot's identity. Lora is the all-serif body voice — warm, readable, with proper italics for editorial accents. Fraunces (logo only) gives the wordmark a distinctive sculptural shape via its SOFT and WONK variation axes. Together they keep the brand quietly literary.</p>
     </div>
   </section>
 
@@ -431,22 +469,22 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         <tr>
           <td>
             <div class="scale-name">Body</div>
-            <div class="scale-specs">Geist 300<br>16px / 1.8 lh<br>ls: 0em</div>
+            <div class="scale-specs">Lora 400<br>16px / 1.8 lh<br>ls: 0em</div>
           </td>
           <td style="padding:1.25rem 1rem;">
-            <div style="font-family:'Geist',sans-serif;font-size:0.88rem;font-weight:300;line-height:1.8;color:var(--muted);max-width:320px;">Italians who left, travelled 50 countries, and came back with different eyes. We show you the real Italy — away from the tourist traps.</div>
+            <div style="font-family:'Lora',serif;font-size:0.88rem;font-weight:400;line-height:1.8;color:var(--muted);max-width:320px;">Italians who left, travelled 50 countries, and came back with different eyes. We show you the real Italy — away from the tourist traps.</div>
           </td>
           <td>
-            <div class="scale-use">All descriptive text, paragraph copy, blog post body, itinerary descriptions. Geist Light always.</div>
+            <div class="scale-use">All descriptive text, paragraph copy, blog post body, itinerary descriptions. Lora 400 always.</div>
           </td>
         </tr>
         <tr style="background:rgba(46,88,85,0.02);">
           <td>
             <div class="scale-name">UI Text</div>
-            <div class="scale-specs">Geist 500<br>14px / 1.5 lh<br>ls: 0em</div>
+            <div class="scale-specs">Lora 500<br>14px / 1.5 lh<br>ls: 0em</div>
           </td>
           <td style="padding:1.25rem 1rem;">
-            <div style="font-family:'Geist',sans-serif;font-size:0.85rem;font-weight:500;color:var(--ink);">Itineraries · Blog · About · Contact</div>
+            <div style="font-family:'Lora',serif;font-size:0.85rem;font-weight:500;color:var(--ink);">Itineraries · Blog · About · Contact</div>
           </td>
           <td>
             <div class="scale-use">Navigation links, card metadata, form labels, secondary information. Medium weight for clarity.</div>
@@ -455,11 +493,11 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         <tr>
           <td>
             <div class="scale-name">Label / Overline</div>
-            <div class="scale-specs">Geist 600–700<br>10–12px / 1.4 lh<br>ls: +0.12–0.18em<br>text-transform: uppercase</div>
+            <div class="scale-specs">Lora 600–700<br>10–12px / 1.4 lh<br>ls: +0.12–0.18em<br>text-transform: uppercase</div>
           </td>
           <td style="padding:1.25rem 1rem;">
-            <div style="font-family:'Geist',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--forest-teal);margin-bottom:4px;">Northeast Italy · Slow travel</div>
-            <div style="font-family:'Geist',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);">Journal · April 2026</div>
+            <div style="font-family:'Lora',serif;font-size:0.65rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--forest-teal);margin-bottom:4px;">Northeast Italy · Slow travel</div>
+            <div style="font-family:'Lora',serif;font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);">Journal · April 2026</div>
           </td>
           <td>
             <div class="scale-use">Section overlines, category labels, badge text, CTA button text, metadata tags. Always uppercase with wide tracking.</div>
@@ -469,7 +507,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
     </table>
 
     <div style="background:#EAF3EC;border:1px solid var(--green-mist);border-radius:10px;padding:1.25rem 1.5rem;border-left:3px solid var(--forest-teal);">
-      <p style="font-family:'Geist',sans-serif;font-size:0.78rem;font-weight:300;color:#3a5848;line-height:1.8;"><strong style="font-weight:600;color:var(--ink);">Letter spacing rule:</strong> Large text (40px+) always gets negative tracking (-0.01 to -0.02em) — this pulls the letters together and adds visual weight. Small uppercase labels (10–12px) always get wide positive tracking (+0.12 to +0.18em) — uppercase letters are designed for lower tracking and need extra space to breathe at small sizes. Body text always stays at 0.</p>
+      <p style="font-family:'Lora',serif;font-size:0.78rem;font-weight:400;color:#3a5848;line-height:1.8;"><strong style="font-weight:600;color:var(--ink);">Letter spacing rule:</strong> Large text (40px+) always gets negative tracking (-0.01 to -0.02em) — this pulls the letters together and adds visual weight. Small uppercase labels (10–12px) always get wide positive tracking (+0.12 to +0.18em) — uppercase letters are designed for lower tracking and need extra space to breathe at small sizes. Body text always stays at 0.</p>
     </div>
   </section>
 
@@ -486,7 +524,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
     <div class="code-box">
       <div class="code-label">Document &lt;head&gt; — Google Fonts import</div>
       <div class="code-line"><span style="color:#9AC49A;">&lt;link</span> <span style="color:#EDE5D0;">href=</span><span style="color:#F5E8A8;">"https://fonts.googleapis.com/css2?family=Young+Serif:ital@0;1</span></div>
-      <div class="code-line"><span style="color:#F5E8A8;">&amp;family=Geist:wght@300;400;500;600;700&amp;display=swap"</span></div>
+      <div class="code-line"><span style="color:#F5E8A8;">&amp;family=Lora:ital,wght@0,400..700;1,400..700&amp;display=swap"</span></div>
       <div class="code-line"><span style="color:#EDE5D0;">rel=</span><span style="color:#F5E8A8;">"stylesheet"</span><span style="color:#9AC49A;">&gt;</span></div>
     </div>
 
@@ -498,7 +536,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
       <br>
       <div class="code-line"><span class="code-comment">&nbsp;&nbsp;/* Font families */</span></div>
       <div class="code-line">&nbsp;&nbsp;<span class="code-prop">--font-display:</span><span class="code-val"> 'Young Serif', Georgia, serif;</span></div>
-      <div class="code-line">&nbsp;&nbsp;<span class="code-prop">--font-body:</span><span class="code-val"> 'Geist', system-ui, sans-serif;</span></div>
+      <div class="code-line">&nbsp;&nbsp;<span class="code-prop">--font-body:</span><span class="code-val"> 'Lora', Georgia, serif;</span></div>
       <br>
       <div class="code-line"><span class="code-comment">&nbsp;&nbsp;/* Font sizes — Hero to Label */</span></div>
       <div class="code-line">&nbsp;&nbsp;<span class="code-prop">--text-hero:</span><span class="code-val"> 4rem;</span><span class="code-comment">&nbsp;&nbsp;&nbsp;&nbsp;/* 64px — hero display */</span></div>
@@ -524,7 +562,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
       <div class="code-line">&nbsp;&nbsp;<span class="code-prop">--ls-wide:</span><span class="code-val"> 0.12em;</span><span class="code-comment">&nbsp;&nbsp;&nbsp;/* labels, buttons */</span></div>
       <div class="code-line">&nbsp;&nbsp;<span class="code-prop">--ls-wider:</span><span class="code-val"> 0.18em;</span><span class="code-comment">&nbsp;&nbsp;/* overlines */</span></div>
       <br>
-      <div class="code-line"><span class="code-comment">&nbsp;&nbsp;/* Font weights — Geist only */</span></div>
+      <div class="code-line"><span class="code-comment">&nbsp;&nbsp;/* Font weights — Lora only (Young Serif always 400; Fraunces logo-only at 900) */</span></div>
       <div class="code-line">&nbsp;&nbsp;<span class="code-prop">--fw-light:</span><span class="code-val"> 300;</span><span class="code-comment">&nbsp;&nbsp;&nbsp;&nbsp;/* body text */</span></div>
       <div class="code-line">&nbsp;&nbsp;<span class="code-prop">--fw-regular:</span><span class="code-val"> 400;</span><span class="code-comment">&nbsp;&nbsp;&nbsp;/* nav links */</span></div>
       <div class="code-line">&nbsp;&nbsp;<span class="code-prop">--fw-medium:</span><span class="code-val"> 500;</span><span class="code-comment">&nbsp;&nbsp;&nbsp;/* UI text */</span></div>
@@ -566,7 +604,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
   <section class="section" id="pairing">
     <div class="section-header">
       <div class="eyebrow">04 · Pairing logic</div>
-      <h2 class="section-title">How the two fonts work together</h2>
+      <h2 class="section-title">How the three fonts work together</h2>
       <p class="section-desc">The pairing works through contrast — warm vs precise, rounded vs geometric, single-weight vs multi-weight. Here are the key combinations and the logic behind each.</p>
     </div>
 
@@ -575,12 +613,12 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
       <div class="pair-card">
         <div class="pair-label">Hero — most used pattern</div>
         <div style="margin-bottom:12px;">
-          <div style="font-family:'Geist',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#4a8878;margin-bottom:6px;">Northeast Italy · Slow travel</div>
+          <div style="font-family:'Lora',serif;font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#4a8878;margin-bottom:6px;">Northeast Italy · Slow travel</div>
           <div style="font-family:'Young Serif',serif;font-size:1.8rem;color:#EDE5D0;letter-spacing:-0.02em;line-height:1.0;background:#1E1C16;padding:14px 16px;border-radius:6px;margin-bottom:8px;">Italy off the beaten path.</div>
-          <div style="font-family:'Geist',sans-serif;font-size:0.82rem;font-weight:300;color:var(--muted);line-height:1.8;margin-bottom:10px;">Away from the crowds. We show you the Italy most Italians don't even know.</div>
-          <div style="font-family:'Geist',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:var(--terracotta);color:white;display:inline-block;padding:8px 18px;border-radius:4px;">Plan your trip</div>
+          <div style="font-family:'Lora',serif;font-size:0.82rem;font-weight:400;color:var(--muted);line-height:1.8;margin-bottom:10px;">Away from the crowds. We show you the Italy most Italians don't even know.</div>
+          <div style="font-family:'Lora',serif;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:var(--terracotta);color:white;display:inline-block;padding:8px 18px;border-radius:4px;">Plan your trip</div>
         </div>
-        <div class="pair-note">Geist overline (uppercase, wide tracking) → Young Serif hero → Geist body (light) → Geist CTA (bold, uppercase). Three Geist roles, one Young Serif moment.</div>
+        <div class="pair-note">Lora overline (uppercase, wide tracking) → Young Serif hero → Lora body (light) → Lora CTA (bold, uppercase). Three Lora roles, one Young Serif moment.</div>
       </div>
 
       <div class="pair-card">
@@ -588,16 +626,16 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         <div style="border:0.5px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:12px;">
           <div style="height:60px;background:var(--green-mist);"></div>
           <div style="padding:12px;">
-            <div style="font-family:'Geist',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--terracotta);margin-bottom:4px;">Custom itinerary</div>
+            <div style="font-family:'Lora',serif;font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--terracotta);margin-bottom:4px;">Custom itinerary</div>
             <div style="font-family:'Young Serif',serif;font-size:1.05rem;color:var(--ink);line-height:1.25;margin-bottom:8px;">Dolomiti in 7 giorni senza auto</div>
-            <div style="font-family:'Geist',sans-serif;font-size:0.75rem;font-weight:300;color:var(--muted);line-height:1.6;margin-bottom:10px;">Veneto · 7 days · No car needed</div>
+            <div style="font-family:'Lora',serif;font-size:0.75rem;font-weight:400;color:var(--muted);line-height:1.6;margin-bottom:10px;">Veneto · 7 days · No car needed</div>
             <div style="display:flex;gap:5px;">
-              <span style="font-family:'Geist',sans-serif;font-size:0.6rem;font-weight:700;background:var(--green-mist);color:var(--forest-teal);padding:2px 7px;border-radius:3px;">Slow</span>
-              <span style="font-family:'Geist',sans-serif;font-size:0.6rem;font-weight:700;background:var(--stone-gold);color:var(--ink);padding:2px 7px;border-radius:3px;">€1.200</span>
+              <span style="font-family:'Lora',serif;font-size:0.6rem;font-weight:700;background:var(--green-mist);color:var(--forest-teal);padding:2px 7px;border-radius:3px;">Slow</span>
+              <span style="font-family:'Lora',serif;font-size:0.6rem;font-weight:700;background:var(--stone-gold);color:var(--ink);padding:2px 7px;border-radius:3px;">€1.200</span>
             </div>
           </div>
         </div>
-        <div class="pair-note">Geist tag → Young Serif title → Geist description → Geist badges. The card title is the only Young Serif element — it anchors the card.</div>
+        <div class="pair-note">Lora tag → Young Serif title → Lora description → Lora badges. The card title is the only Young Serif element — it anchors the card.</div>
       </div>
 
       <div class="pair-card">
@@ -605,27 +643,27 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         <div style="background:var(--green-sage);border-radius:8px;padding:16px;margin-bottom:12px;display:flex;gap:12px;">
           <div style="background:white;border-radius:6px;padding:12px 16px;text-align:center;flex:1;">
             <div style="font-family:'Young Serif',serif;font-size:1.75rem;color:var(--forest-teal);line-height:1;">48+</div>
-            <div style="font-family:'Geist',sans-serif;font-size:0.65rem;font-weight:500;color:var(--muted);margin-top:4px;">Itineraries</div>
+            <div style="font-family:'Lora',serif;font-size:0.65rem;font-weight:500;color:var(--muted);margin-top:4px;">Itineraries</div>
           </div>
           <div style="background:white;border-radius:6px;padding:12px 16px;text-align:center;flex:1;">
             <div style="font-family:'Young Serif',serif;font-size:1.75rem;color:var(--forest-teal);line-height:1;">★ 4.9</div>
-            <div style="font-family:'Geist',sans-serif;font-size:0.65rem;font-weight:500;color:var(--muted);margin-top:4px;">Rating</div>
+            <div style="font-family:'Lora',serif;font-size:0.65rem;font-weight:500;color:var(--muted);margin-top:4px;">Rating</div>
           </div>
           <div style="background:white;border-radius:6px;padding:12px 16px;text-align:center;flex:1;">
             <div style="font-family:'Young Serif',serif;font-size:1.75rem;color:var(--forest-teal);line-height:1;">100%</div>
-            <div style="font-family:'Geist',sans-serif;font-size:0.65rem;font-weight:500;color:var(--muted);margin-top:4px;">No car</div>
+            <div style="font-family:'Lora',serif;font-size:0.65rem;font-weight:500;color:var(--muted);margin-top:4px;">No car</div>
           </div>
         </div>
-        <div class="pair-note">Numbers and stats always in Young Serif — they deserve the character and warmth. Labels always in Geist. This is a key brand pattern.</div>
+        <div class="pair-note">Numbers and stats always in Young Serif — they deserve the character and warmth. Labels always in Lora. This is a key brand pattern.</div>
       </div>
 
       <div class="pair-card">
         <div class="pair-label">Pull quote — italic H3</div>
         <div style="padding:16px;background:var(--yellow-butter);border-radius:8px;margin-bottom:12px;border-left:3px solid var(--stone-gold);">
           <div style="font-family:'Young Serif',serif;font-size:1.1rem;font-style:italic;color:var(--ink);line-height:1.5;margin-bottom:8px;">"You felt like you actually lived there for a week, not visited."</div>
-          <div style="font-family:'Geist',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);">— Sarah K. · UK · 2025</div>
+          <div style="font-family:'Lora',serif;font-size:0.68rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);">— Sarah K. · UK · 2025</div>
         </div>
-        <div class="pair-note">Young Serif italic for the quote itself — it reads like a handwritten testimonial. Geist uppercase for the attribution — precise and secondary.</div>
+        <div class="pair-note">Young Serif italic for the quote itself — it reads like a handwritten testimonial. Lora uppercase for the attribution — precise and secondary.</div>
       </div>
 
     </div>
@@ -648,7 +686,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         <div class="rule-body">
           <div class="rule-demo">
             <div style="font-family:'Young Serif',serif;font-size:1.6rem;letter-spacing:-0.02em;color:var(--ink);line-height:1.0;">Italy off the beaten path.</div>
-            <div style="font-family:'Geist',sans-serif;font-size:0.65rem;color:var(--forest-teal);margin-top:4px;font-weight:600;">letter-spacing: -0.02em ✓</div>
+            <div style="font-family:'Lora',serif;font-size:0.65rem;color:var(--forest-teal);margin-top:4px;font-weight:600;">letter-spacing: -0.02em ✓</div>
           </div>
           <div class="rule-desc">At 40px and above, always apply -0.01em to -0.02em. The letters pull together and the title gains visual weight and authority.</div>
         </div>
@@ -659,41 +697,41 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         <div class="rule-body">
           <div class="rule-demo">
             <div style="font-family:'Young Serif',serif;font-size:0.88rem;color:var(--muted);line-height:1.8;">Italians who left, travelled 50 countries, and came back with different eyes. We show you the Italy most Italians don't even know.</div>
-            <div style="font-family:'Geist',sans-serif;font-size:0.65rem;color:#E24B4A;margin-top:4px;font-weight:600;">Young Serif as body text ✗</div>
+            <div style="font-family:'Lora',serif;font-size:0.65rem;color:#E24B4A;margin-top:4px;font-weight:600;">Young Serif as body text ✗</div>
           </div>
-          <div class="rule-desc">Young Serif is not optimised for long-form reading at small sizes. It loses legibility below 18px. Body text must always be Geist.</div>
+          <div class="rule-desc">Young Serif is not optimised for long-form reading at small sizes. It loses legibility below 18px. Body text must always be Lora.</div>
         </div>
       </div>
 
       <div class="rule-card do">
-        <div class="rule-header"><div class="rule-icon do">✓</div><div class="rule-title">Use Geist 300 (Light) for body copy</div></div>
+        <div class="rule-header"><div class="rule-icon do">✓</div><div class="rule-title">Use Lora 400 (Light) for body copy</div></div>
         <div class="rule-body">
           <div class="rule-demo">
-            <div style="font-family:'Geist',sans-serif;font-size:0.88rem;font-weight:300;color:var(--muted);line-height:1.8;">Away from the crowds. We show you the real Italy — away from the tourist traps and Instagram hotspots.</div>
-            <div style="font-family:'Geist',sans-serif;font-size:0.65rem;color:var(--forest-teal);margin-top:4px;font-weight:600;">font-weight: 300 ✓</div>
+            <div style="font-family:'Lora',serif;font-size:0.88rem;font-weight:400;color:var(--muted);line-height:1.8;">Away from the crowds. We show you the real Italy — away from the tourist traps and Instagram hotspots.</div>
+            <div style="font-family:'Lora',serif;font-size:0.65rem;color:var(--forest-teal);margin-top:4px;font-weight:600;">font-weight: 400 ✓</div>
           </div>
-          <div class="rule-desc">Geist Light (300) creates strong contrast with the visual weight of Young Serif headings. It also reads as more refined and less corporate than Regular (400).</div>
+          <div class="rule-desc">Lora (400) creates strong contrast with the visual weight of Young Serif headings. It also reads as more refined and less corporate than Regular (400).</div>
         </div>
       </div>
 
       <div class="rule-card dont">
-        <div class="rule-header"><div class="rule-icon dont">✗</div><div class="rule-title">Never use Geist for headings</div></div>
+        <div class="rule-header"><div class="rule-icon dont">✗</div><div class="rule-title">Never use Lora for headings</div></div>
         <div class="rule-body">
           <div class="rule-demo">
-            <div style="font-family:'Geist',sans-serif;font-size:1.4rem;font-weight:700;color:var(--ink);line-height:1.1;">Italy off the beaten path.</div>
-            <div style="font-family:'Geist',sans-serif;font-size:0.65rem;color:#E24B4A;margin-top:4px;font-weight:600;">Geist as heading ✗</div>
+            <div style="font-family:'Lora',serif;font-size:1.4rem;font-weight:700;color:var(--ink);line-height:1.1;">Italy off the beaten path.</div>
+            <div style="font-family:'Lora',serif;font-size:0.65rem;color:#E24B4A;margin-top:4px;font-weight:600;">Lora as heading ✗</div>
           </div>
-          <div class="rule-desc">Geist headings look like a generic tech website. The entire character of the brand depends on Young Serif being the face of every title. No exceptions.</div>
+          <div class="rule-desc">Lora headings would erase Young Serif's editorial weight. The entire character of the brand depends on Young Serif being the face of every title. No exceptions.</div>
         </div>
       </div>
 
       <div class="rule-card do">
-        <div class="rule-header"><div class="rule-icon do">✓</div><div class="rule-title">Wide tracking on all uppercase Geist labels</div></div>
+        <div class="rule-header"><div class="rule-icon do">✓</div><div class="rule-title">Wide tracking on all uppercase Lora labels</div></div>
         <div class="rule-body">
           <div class="rule-demo" style="display:flex;flex-direction:column;gap:6px;">
-            <div style="font-family:'Geist',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--forest-teal);">Northeast Italy · Slow travel</div>
-            <div style="font-family:'Geist',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--terracotta);">Custom itinerary</div>
-            <div style="font-family:'Geist',sans-serif;font-size:0.65rem;color:var(--forest-teal);font-weight:600;">letter-spacing: 0.12–0.18em ✓</div>
+            <div style="font-family:'Lora',serif;font-size:0.65rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--forest-teal);">Northeast Italy · Slow travel</div>
+            <div style="font-family:'Lora',serif;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--terracotta);">Custom itinerary</div>
+            <div style="font-family:'Lora',serif;font-size:0.65rem;color:var(--forest-teal);font-weight:600;">letter-spacing: 0.12–0.18em ✓</div>
           </div>
           <div class="rule-desc">Uppercase letters need room to breathe at small sizes. Always pair text-transform: uppercase with letter-spacing of at least 0.12em.</div>
         </div>
@@ -705,9 +743,9 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
           <div class="rule-demo" style="display:flex;flex-direction:column;gap:4px;">
             <div style="font-family:'Playfair Display',Georgia,serif;font-size:1rem;color:var(--ink);">A third serif font in headings ✗</div>
             <div style="font-family:'Inter',system-ui,sans-serif;font-size:0.88rem;color:var(--muted);">A different sans-serif for body ✗</div>
-            <div style="font-family:'Geist',sans-serif;font-size:0.65rem;color:#E24B4A;margin-top:4px;font-weight:600;">Third font — never ✗</div>
+            <div style="font-family:'Lora',serif;font-size:0.65rem;color:#E24B4A;margin-top:4px;font-weight:600;">Third font — never ✗</div>
           </div>
-          <div class="rule-desc">Two fonts is the maximum. Adding a third creates visual noise, slows page load, and dilutes brand identity. If a use case isn't covered by Young Serif or Geist, solve it with weight and size — not a new font.</div>
+          <div class="rule-desc">Three fonts is the maximum. Adding a fourth creates visual noise, slows page load, and dilutes brand identity. If a use case isn't covered by Young Serif, Lora, or the .logo-wordmark (Fraunces), solve it with weight and size — not a new font.</div>
         </div>
       </div>
 
@@ -729,7 +767,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
             <div style="font-family:'Young Serif',serif;font-size:1.1rem;color:white;background:var(--forest-teal);padding:8px 14px;border-radius:5px;">Off the Boot</div>
             <div style="font-family:'Young Serif',serif;font-size:1.1rem;color:var(--parchment);background:var(--ink);padding:8px 14px;border-radius:5px;">Off the Boot</div>
           </div>
-          <div class="rule-desc">The wordmark is Young Serif regular at the navbar size (approximately 16–18px). It works on all three background colours. Never bold, never italic, never Geist.</div>
+          <div class="rule-desc">The wordmark is Young Serif regular at the navbar size (approximately 16–18px). It works on all three background colours. Never bold, never italic, never Lora.</div>
         </div>
       </div>
 
@@ -752,49 +790,49 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         <div class="uc-demo" style="background:var(--forest-teal);">
           <div style="font-family:'Young Serif',serif;font-size:1.1rem;color:var(--warm-white);margin-bottom:8px;">Off the Boot</div>
           <div style="display:flex;gap:16px;align-items:center;">
-            <span style="font-family:'Geist',sans-serif;font-size:0.75rem;font-weight:400;color:rgba(255,255,255,0.55);">Itineraries</span>
-            <span style="font-family:'Geist',sans-serif;font-size:0.75rem;font-weight:400;color:rgba(255,255,255,0.55);">Blog</span>
-            <span style="font-family:'Geist',sans-serif;font-size:0.75rem;font-weight:400;color:rgba(255,255,255,0.55);">About</span>
-            <span style="font-family:'Geist',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:var(--terracotta);color:white;padding:6px 12px;border-radius:4px;margin-left:auto;">Plan your trip</span>
+            <span style="font-family:'Lora',serif;font-size:0.75rem;font-weight:400;color:rgba(255,255,255,0.55);">Itineraries</span>
+            <span style="font-family:'Lora',serif;font-size:0.75rem;font-weight:400;color:rgba(255,255,255,0.55);">Blog</span>
+            <span style="font-family:'Lora',serif;font-size:0.75rem;font-weight:400;color:rgba(255,255,255,0.55);">About</span>
+            <span style="font-family:'Lora',serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:var(--terracotta);color:white;padding:6px 12px;border-radius:4px;margin-left:auto;">Plan your trip</span>
           </div>
         </div>
         <div class="uc-footer">
           <div class="uc-name">Navigation bar</div>
-          <div class="uc-desc">Logo: Young Serif 400 18px · Nav links: Geist 400 13px · CTA: Geist 600 11px uppercase ls:0.1em</div>
+          <div class="uc-desc">Logo: Young Serif 400 18px · Nav links: Lora 400 13px · CTA: Lora 600 11px uppercase ls:0.1em</div>
           <div class="uc-tokens">--font-display · --font-body 400/600 · --ls-wide</div>
         </div>
       </div>
 
       <div class="uc-card">
         <div class="uc-demo" style="background:var(--ink);">
-          <div style="font-family:'Geist',sans-serif;font-size:0.6rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#4a8878;margin-bottom:8px;">Northeast Italy · Slow travel</div>
+          <div style="font-family:'Lora',serif;font-size:0.6rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#4a8878;margin-bottom:8px;">Northeast Italy · Slow travel</div>
           <div style="font-family:'Young Serif',serif;font-size:1.75rem;color:var(--parchment);line-height:1.0;letter-spacing:-0.02em;margin-bottom:10px;">Italy off the beaten path.</div>
-          <div style="font-family:'Geist',sans-serif;font-size:0.8rem;font-weight:300;color:#5a5448;line-height:1.75;margin-bottom:12px;max-width:320px;">Away from the crowds. We show you the real Italy.</div>
-          <span style="font-family:'Geist',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:var(--terracotta);color:white;padding:9px 18px;border-radius:4px;">Plan your trip</span>
+          <div style="font-family:'Lora',serif;font-size:0.8rem;font-weight:400;color:#5a5448;line-height:1.75;margin-bottom:12px;max-width:320px;">Away from the crowds. We show you the real Italy.</div>
+          <span style="font-family:'Lora',serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:var(--terracotta);color:white;padding:9px 18px;border-radius:4px;">Plan your trip</span>
         </div>
         <div class="uc-footer">
           <div class="uc-name">Hero section</div>
-          <div class="uc-desc">Overline: Geist 600 10px ls:0.18em · Title: Young Serif 64px ls:-0.02em · Body: Geist 300 16px · CTA: Geist 600 uppercase</div>
+          <div class="uc-desc">Overline: Lora 600 10px ls:0.18em · Title: Young Serif 64px ls:-0.02em · Body: Lora 400 16px · CTA: Lora 600 uppercase</div>
           <div class="uc-tokens">--text-hero --ls-tight · --fw-light --lh-relaxed</div>
         </div>
       </div>
 
       <div class="uc-card">
         <div class="uc-demo" style="background:var(--yellow-wheat);">
-          <div style="font-family:'Geist',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#8a7820;margin-bottom:6px;">Our itineraries</div>
+          <div style="font-family:'Lora',serif;font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#8a7820;margin-bottom:6px;">Our itineraries</div>
           <div style="font-family:'Young Serif',serif;font-size:1.3rem;color:var(--ink);letter-spacing:-0.01em;margin-bottom:12px;">Discover the authentic Northeast</div>
           <div style="display:flex;gap:8px;">
             <div style="flex:1;background:white;border-radius:6px;overflow:hidden;border:0.5px solid rgba(180,160,40,0.2);">
               <div style="height:32px;background:var(--green-fern,#C0DEC0);"></div>
               <div style="padding:7px 8px;">
-                <div style="font-family:'Geist',sans-serif;font-size:0.55rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--terracotta);margin-bottom:2px;">Custom</div>
+                <div style="font-family:'Lora',serif;font-size:0.55rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--terracotta);margin-bottom:2px;">Custom</div>
                 <div style="font-family:'Young Serif',serif;font-size:0.75rem;color:var(--ink);line-height:1.2;">Dolomiti in 7 giorni</div>
               </div>
             </div>
             <div style="flex:1;background:white;border-radius:6px;overflow:hidden;border:0.5px solid rgba(180,160,40,0.2);">
               <div style="height:32px;background:var(--parchment);"></div>
               <div style="padding:7px 8px;">
-                <div style="font-family:'Geist',sans-serif;font-size:0.55rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--terracotta);margin-bottom:2px;">Self-organised</div>
+                <div style="font-family:'Lora',serif;font-size:0.55rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--terracotta);margin-bottom:2px;">Self-organised</div>
                 <div style="font-family:'Young Serif',serif;font-size:0.75rem;color:var(--ink);line-height:1.2;">Friuli autentico</div>
               </div>
             </div>
@@ -802,21 +840,21 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         </div>
         <div class="uc-footer">
           <div class="uc-name">Journal / itinerary section</div>
-          <div class="uc-desc">Overline: Geist 700 10px · Section title: Young Serif 28px · Card tag: Geist 700 9px uppercase · Card title: Young Serif 16px</div>
+          <div class="uc-desc">Overline: Lora 700 10px · Section title: Young Serif 28px · Card tag: Lora 700 9px uppercase · Card title: Young Serif 16px</div>
           <div class="uc-tokens">--text-h1 --ls-snug · --text-xs --ls-wider</div>
         </div>
       </div>
 
       <div class="uc-card">
         <div class="uc-demo" style="background:var(--warm-white);">
-          <div style="font-family:'Geist',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Journal · 13 April 2026</div>
+          <div style="font-family:'Lora',serif;font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Journal · 13 April 2026</div>
           <div style="font-family:'Young Serif',serif;font-size:1.2rem;color:var(--ink);letter-spacing:-0.01em;line-height:1.15;margin-bottom:8px;">The forgotten villages of Friuli that nobody talks about</div>
-          <div style="font-family:'Geist',sans-serif;font-size:0.8rem;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:10px;">Hidden between the Julian Alps and the Adriatic, Friuli hides a world of wine producers, stone villages and traditions that have never made it onto any tourist map.</div>
-          <div style="font-family:'Geist',sans-serif;font-size:0.75rem;font-weight:600;color:var(--terracotta);border-bottom:1px solid var(--terracotta);display:inline-block;padding-bottom:1px;">Read more →</div>
+          <div style="font-family:'Lora',serif;font-size:0.8rem;font-weight:400;color:var(--muted);line-height:1.75;margin-bottom:10px;">Hidden between the Julian Alps and the Adriatic, Friuli hides a world of wine producers, stone villages and traditions that have never made it onto any tourist map.</div>
+          <div style="font-family:'Lora',serif;font-size:0.75rem;font-weight:600;color:var(--terracotta);border-bottom:1px solid var(--terracotta);display:inline-block;padding-bottom:1px;">Read more →</div>
         </div>
         <div class="uc-footer">
           <div class="uc-name">Blog post card / excerpt</div>
-          <div class="uc-desc">Date: Geist 700 10px uppercase · Title: Young Serif 22px · Excerpt: Geist 300 15px lh:1.75 · Read more: Geist 600 underlined</div>
+          <div class="uc-desc">Date: Lora 700 10px uppercase · Title: Young Serif 22px · Excerpt: Lora 400 15px lh:1.75 · Read more: Lora 600 underlined</div>
           <div class="uc-tokens">--text-h2 · --fw-light --lh-relaxed</div>
         </div>
       </div>
@@ -824,33 +862,33 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
       <div class="uc-card">
         <div class="uc-demo" style="background:var(--warm-white);display:flex;flex-direction:column;gap:10px;">
           <div style="display:flex;gap:6px;flex-wrap:wrap;">
-            <span style="font-family:'Geist',sans-serif;font-size:0.6rem;font-weight:700;background:var(--green-mist);color:var(--forest-teal);padding:3px 8px;border-radius:3px;letter-spacing:0.06em;text-transform:uppercase;">Slow travel</span>
-            <span style="font-family:'Geist',sans-serif;font-size:0.6rem;font-weight:700;background:var(--green-mist);color:var(--forest-teal);padding:3px 8px;border-radius:3px;letter-spacing:0.06em;text-transform:uppercase;">No car</span>
-            <span style="font-family:'Geist',sans-serif;font-size:0.6rem;font-weight:700;background:var(--stone-gold);color:var(--ink);padding:3px 8px;border-radius:3px;letter-spacing:0.06em;text-transform:uppercase;">€1.200</span>
-            <span style="font-family:'Geist',sans-serif;font-size:0.6rem;font-weight:700;background:var(--stone-gold);color:var(--ink);padding:3px 8px;border-radius:3px;letter-spacing:0.06em;text-transform:uppercase;">7 days</span>
+            <span style="font-family:'Lora',serif;font-size:0.6rem;font-weight:700;background:var(--green-mist);color:var(--forest-teal);padding:3px 8px;border-radius:3px;letter-spacing:0.06em;text-transform:uppercase;">Slow travel</span>
+            <span style="font-family:'Lora',serif;font-size:0.6rem;font-weight:700;background:var(--green-mist);color:var(--forest-teal);padding:3px 8px;border-radius:3px;letter-spacing:0.06em;text-transform:uppercase;">No car</span>
+            <span style="font-family:'Lora',serif;font-size:0.6rem;font-weight:700;background:var(--stone-gold);color:var(--ink);padding:3px 8px;border-radius:3px;letter-spacing:0.06em;text-transform:uppercase;">€1.200</span>
+            <span style="font-family:'Lora',serif;font-size:0.6rem;font-weight:700;background:var(--stone-gold);color:var(--ink);padding:3px 8px;border-radius:3px;letter-spacing:0.06em;text-transform:uppercase;">7 days</span>
           </div>
-          <div style="font-family:'Geist',sans-serif;font-size:0.72rem;font-weight:500;color:var(--muted);">Itineraries · Blog · About · Contact</div>
-          <div style="font-family:'Geist',sans-serif;font-size:0.72rem;font-weight:300;color:var(--muted);">Veneto · Dolomiti · Friuli VG</div>
+          <div style="font-family:'Lora',serif;font-size:0.72rem;font-weight:500;color:var(--muted);">Itineraries · Blog · About · Contact</div>
+          <div style="font-family:'Lora',serif;font-size:0.72rem;font-weight:400;color:var(--muted);">Veneto · Dolomiti · Friuli VG</div>
         </div>
         <div class="uc-footer">
           <div class="uc-name">Badges, nav links, metadata</div>
-          <div class="uc-desc">Badges: Geist 700 10px uppercase ls:0.06em · Nav: Geist 400 13px · Meta: Geist 300 13px</div>
+          <div class="uc-desc">Badges: Lora 700 10px uppercase ls:0.06em · Nav: Lora 400 13px · Meta: Lora 400 13px</div>
           <div class="uc-tokens">--fw-bold --ls-wide · --fw-regular · --fw-light</div>
         </div>
       </div>
 
       <div class="uc-card">
         <div class="uc-demo" style="background:var(--yellow-butter);">
-          <div style="font-family:'Geist',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#8a7820;margin-bottom:6px;">Newsletter</div>
+          <div style="font-family:'Lora',serif;font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#8a7820;margin-bottom:6px;">Newsletter</div>
           <div style="font-family:'Young Serif',serif;font-size:1.1rem;color:var(--ink);line-height:1.2;margin-bottom:12px;">Stories from authentic Italy.<br>Every week.</div>
           <div style="display:flex;gap:8px;">
-            <div style="font-family:'Geist',sans-serif;font-size:0.78rem;font-weight:300;color:var(--muted);background:white;border:1px solid var(--border);border-radius:4px;padding:8px 12px;flex:1;">Your email address</div>
-            <div style="font-family:'Geist',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:var(--terracotta);color:white;padding:8px 14px;border-radius:4px;white-space:nowrap;">Subscribe</div>
+            <div style="font-family:'Lora',serif;font-size:0.78rem;font-weight:400;color:var(--muted);background:white;border:1px solid var(--border);border-radius:4px;padding:8px 12px;flex:1;">Your email address</div>
+            <div style="font-family:'Lora',serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:var(--terracotta);color:white;padding:8px 14px;border-radius:4px;white-space:nowrap;">Subscribe</div>
           </div>
         </div>
         <div class="uc-footer">
           <div class="uc-name">Newsletter / CTA block</div>
-          <div class="uc-desc">Overline: Geist 700 10px · Title: Young Serif 20px · Input: Geist 300 14px · Button: Geist 600 11px uppercase ls:0.1em</div>
+          <div class="uc-desc">Overline: Lora 700 10px · Title: Young Serif 20px · Input: Lora 400 14px · Button: Lora 600 11px uppercase ls:0.1em</div>
           <div class="uc-tokens">--text-h3 · --fw-light · --fw-semibold --ls-wide</div>
         </div>
       </div>
@@ -865,7 +903,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
     <div class="section-header">
       <div class="eyebrow">07 · Full preview</div>
       <h2 class="section-title">Complete site — typography in action</h2>
-      <p class="section-desc">Every typographic element of the homepage shown in context. This is the visual reference for how Young Serif and Geist work together across the full page.</p>
+      <p class="section-desc">Every typographic element of the homepage shown in context. This is the visual reference for how Young Serif and Lora work together across the full page.</p>
     </div>
 
     <div class="preview-frame">
@@ -977,10 +1015,10 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
 <footer class="footer">
   <div>
     <div class="footer-logo">Off the Boot</div>
-    <div style="font-family:'Geist',sans-serif;font-size:0.72rem;color:#5A5248;margin-top:0.5rem;line-height:1.8;">Typography System v1.0 · Confirmed · April 2026<br>Design System — Phase 01</div>
+    <div style="font-family:'Lora',serif;font-size:0.72rem;color:#5A5248;margin-top:0.5rem;line-height:1.8;">Typography System v1.0 · Confirmed · April 2026<br>Design System — Phase 01</div>
   </div>
   <div class="footer-meta">
-    Young Serif + Geist<br>
+    Young Serif + Lora + Fraunces<br>
     7 scale levels · All use cases documented<br>
     Internal use only — OffTheBoot
   </div>

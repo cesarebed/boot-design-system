@@ -379,7 +379,7 @@
         <ol>
           <li>In Canva, open <strong>Brand → Brand Kit</strong> (create one called <em>OffTheBoot</em>).</li>
           <li>Under <strong>Brand colours</strong>, create the four palettes below and paste each hex. Name each palette as shown.</li>
-          <li>Under <strong>Brand fonts</strong>, set <em>Young Serif</em> for headings and <em>Geist</em> for body / subheadings. If a font isn't in Canva's library, upload the <code>.ttf</code> or <code>.otf</code> from Google Fonts.</li>
+          <li>Under <strong>Brand fonts</strong>, set <em>Young Serif</em> for headings and <em>Lora</em> for body / subheadings. The wordmark uses <em>Fraunces</em> at weight 900 with SOFT 94.9 / WONK 1 — Canva typically doesn't expose variable font axes, so upload pre-rendered wordmark SVGs to <strong>Logos</strong> instead of trying to set Fraunces as a brand font. If Young Serif or Lora aren't in Canva's library, upload the <code>.ttf</code> or <code>.otf</code> from Google Fonts.</li>
           <li>Paste the brand voice bullets below into <strong>Brand voice</strong> so Canva's Magic Write respects the tone.</li>
           <li>Upload the OffTheBoot logo (when ready) under <strong>Logos</strong>. Use the primary on Warm White and a parchment-coloured version on Ink.</li>
         </ol>
@@ -424,7 +424,7 @@
       <div class="section-head">
         <span class="kicker">02 · Typography</span>
         <h2>Brand fonts</h2>
-        <p>Two families — never introduce a third. Assign them in Canva's Brand Kit to the roles below.</p>
+        <p>Three families — never introduce a fourth. Young Serif and Lora are the two you assign in Canva's Brand Kit; Fraunces is logo-only and lives in your uploaded wordmark SVGs.</p>
       </div>
 
       <div class="font-block display">
@@ -443,15 +443,28 @@
 
       <div class="font-block body">
         <div class="label">Body font</div>
-        <div class="preview">Geist — used for paragraphs, nav, buttons, labels, and every piece of UI copy across OffTheBoot.</div>
+        <div class="preview">Lora — used for paragraphs, nav, buttons, labels, and every piece of UI copy across OffTheBoot.</div>
         <dl>
-          <dt>Family</dt><dd>Geist</dd>
-          <dt>Weights</dt><dd>300 (body) · 400 (nav) · 500 (meta) · 600 (buttons) · 700 (labels / overlines)</dd>
+          <dt>Family</dt><dd>Lora</dd>
+          <dt>Weights</dt><dd>400 (body / nav) · 500 (meta) · 600 (buttons) · 700 (labels / overlines) — italics available at every weight</dd>
           <dt>Canva role</dt><dd>Subheading + Body</dd>
-          <dt>Tracking</dt><dd>0 for body · 0.16–0.18em uppercase for labels</dd>
-          <dt>Download</dt><dd><a href="https://fonts.google.com/specimen/Geist" target="_blank" rel="noopener">fonts.google.com/specimen/Geist</a></dd>
+          <dt>Tracking</dt><dd>0 for body · 0.10em for buttons · 0.16–0.18em for uppercase labels</dd>
+          <dt>Download</dt><dd><a href="https://fonts.google.com/specimen/Lora" target="_blank" rel="noopener">fonts.google.com/specimen/Lora</a></dd>
         </dl>
-        <p class="font-note">Never use Geist for page headings or section titles.</p>
+        <p class="font-note">Never use Lora for page headings or section titles. Lora has no weight 300 — 400 is the lightest weight in the kit.</p>
+      </div>
+
+      <div class="font-block body">
+        <div class="label">Logo wordmark font</div>
+        <div class="preview" style="font-family:'Fraunces',serif;font-weight:900;font-optical-sizing:auto;font-variation-settings:'SOFT' 94.9, 'WONK' 1;letter-spacing:-0.02em;">OffTheBoot</div>
+        <dl>
+          <dt>Family</dt><dd>Fraunces</dd>
+          <dt>Locked settings</dt><dd>weight 900 · SOFT 94.9 · WONK 1 · optical sizing auto</dd>
+          <dt>Canva role</dt><dd>None — upload pre-rendered SVG wordmarks instead</dd>
+          <dt>Tracking</dt><dd>−0.02em</dd>
+          <dt>Download</dt><dd><a href="https://fonts.google.com/specimen/Fraunces" target="_blank" rel="noopener">fonts.google.com/specimen/Fraunces</a></dd>
+        </dl>
+        <p class="font-note">Logo wordmark ONLY (navbar + footer). Never use Fraunces for headings, body, buttons or anything else — and never use Young Serif or Lora <em>as</em> the wordmark.</p>
       </div>
     </section>
 
@@ -503,7 +516,7 @@
             <li>Put Stone Gold <code style="font-family:ui-monospace;font-size:0.9em">#C4920A</code> as text on white — fails WCAG contrast</li>
             <li>Use more than one Terracotta CTA element per layout</li>
             <li>Use yellow or green tints as text colour — backgrounds only</li>
-            <li>Mix more than two fonts in a design</li>
+            <li>Mix more than three fonts in a design (Young Serif + Lora + Fraunces is the maximum, and Fraunces is wordmark-only)</li>
           </ul>
         </div>
         <div class="tone-card yes">

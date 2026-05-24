@@ -1,7 +1,7 @@
 /* ============================================================
-   OffTheBoot — Design System Tokens v1.0
-   Last updated: April 2026
-   
+   OffTheBoot — Design System Tokens v1.1
+   Last updated: May 2026
+
    USAGE RULES:
    - Always use variables. Never hardcode hex values, font names,
      sizes, or spacing values directly in component files.
@@ -11,9 +11,12 @@
    - For Tailwind CSS: reference these via arbitrary values
      e.g. bg-[var(--color-primary)] or use the tailwind.config
      extensions below.
+   - In the live Next.js site, fonts are loaded via `next/font/google`
+     in `app/layout.tsx`. Strip the @import below when porting these
+     tokens into `globals.css`.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Young+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&family=Lora:ital,wght@0,400..700;1,400..700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,900,94.9,1&display=swap');
 
 :root {
 
@@ -54,7 +57,8 @@
      ---------------------------------------------------------- */
 
   --font-display:   'Young Serif', Georgia, serif;
-  --font-body:      'Geist', system-ui, -apple-system, sans-serif;
+  --font-body:      'Lora', Georgia, serif;
+  --font-logo:      'Fraunces', Georgia, serif;   /* Logo wordmark ONLY — use via .logo-wordmark */
 
   /* ----------------------------------------------------------
      TYPOGRAPHY — Scale
@@ -92,11 +96,13 @@
   --ls-widest:      0.20em;     /* Hero eyebrow overlines */
 
   /* ----------------------------------------------------------
-     TYPOGRAPHY — Font weights (Geist only)
+     TYPOGRAPHY — Font weights (Lora body font)
      Young Serif is always weight 400 — no exceptions.
+     Fraunces is logo-only at weight 900 with variation axes.
+     Lora has no weight 300 — body uses 400 as its lightest weight.
      ---------------------------------------------------------- */
 
-  --fw-light:       300;        /* Body text, descriptions, footer links */
+  --fw-light:       400;        /* Body text, descriptions, footer links (Lora has no 300) */
   --fw-regular:     400;        /* Nav links, general UI text */
   --fw-medium:      500;        /* Card metadata, secondary UI */
   --fw-semibold:    600;        /* Buttons, emphasis text */
@@ -264,27 +270,40 @@ img, video {
   line-height: var(--lh-snug);
 }
 
+/* Logo wordmark — Fraunces, weight 900, SOFT 94.9, WONK 1, optical sizing auto.
+   Use ONLY for the OffTheBoot wordmark in navbar + footer. */
+.logo-wordmark {
+  font-family: var(--font-logo), Georgia, serif;
+  font-weight: 900;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-variation-settings: 'SOFT' 94.9, 'WONK' 1;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
 /* ============================================================
    COMPONENT UTILITIES
    ============================================================ */
 
-/* Buttons */
+/* Buttons — pill shape, uppercase, semibold Lora */
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 7px;
   font-family: var(--font-body);
-  font-size: var(--text-label);
+  font-size: 0.85rem;
   font-weight: var(--fw-semibold);
   letter-spacing: var(--ls-wide);
   text-transform: uppercase;
-  padding: 13px 26px;
-  border-radius: var(--radius-sm);
+  padding: 13px 28px;
+  border-radius: 999px; /* pill */
   border: none;
   cursor: pointer;
   text-decoration: none;
   transition: all var(--transition-normal);
   white-space: nowrap;
+  line-height: 1.2;
 }
 
 .btn-cta {
@@ -351,6 +370,60 @@ img, video {
 }
 
 /* ============================================================
+   SECTION PRIMITIVES — canonical backgrounds for page sections
+   The live site rotates these four to avoid two adjacent
+   sections sharing a background.
+   ============================================================ */
+
+.section            { padding: 5.5rem 0; }
+.section-warm       { background: var(--color-bg); }
+.section-sage       { background: var(--color-green-sage); }
+.section-parchment  { background: var(--color-parchment); }
+.section-ink        { background: var(--color-ink); color: var(--color-parchment); }
+
+.section-header { margin-bottom: 3rem; max-width: 700px; }
+.section-header.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+  color: var(--color-ink);
+  font-weight: 400;
+}
+.section-ink .section-title { color: var(--color-parchment); }
+
+.section-lead {
+  font-family: var(--font-body);
+  font-weight: var(--fw-light);
+  font-size: 1.05rem;
+  line-height: var(--lh-relaxed);
+  color: var(--color-muted);
+  margin-top: 1rem;
+  max-width: 640px;
+}
+.section-ink .section-lead { color: rgba(237, 229, 208, 0.75); }
+
+@media (min-width: 900px) {
+  .section-lead { font-size: 1.125rem; }
+}
+
+@media (max-width: 900px) {
+  .section { padding: 4rem 0; }
+}
+
+/* Desktop comfort bump for body/content text — headings unchanged */
+@media (min-width: 900px) {
+  body { font-size: 1.0625rem; }
+  p    { font-size: 1.0625rem; }
+}
+
+/* ============================================================
    TAILWIND CONFIG EXTENSION
    Add this to tailwind.config.ts to use tokens as Tailwind classes
    ============================================================
@@ -374,8 +447,9 @@ img, video {
            'green-mist':    'var(--color-green-mist)',
          },
          fontFamily: {
-           display: 'var(--font-display)',
-           body:    'var(--font-body)',
+           display: 'var(--font-display)',  // Young Serif
+           body:    'var(--font-body)',     // Lora
+           logo:    'var(--font-logo)',     // Fraunces — wordmark only
          },
          borderRadius: {
            sm: 'var(--radius-sm)',

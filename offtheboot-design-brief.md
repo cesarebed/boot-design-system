@@ -66,12 +66,13 @@ Avoid two consecutive sections with the same background colour.
 
 ### Typography
 
-**Two fonts only. Never introduce a third.**
+**Three fonts. Never introduce a fourth.** Fraunces is logo-only — never use it for headings, body, or UI.
 
 | Variable | Value | Use |
 |---|---|---|
-| `--font-display` | `'Young Serif', Georgia, serif` | All headings, logo, card titles, stat numbers |
-| `--font-body` | `'Geist', system-ui, sans-serif` | Body text, nav, buttons, labels, badges |
+| `--font-display` | `'Young Serif', Georgia, serif` | All headings, card titles, stat numbers |
+| `--font-body` | `'Lora', Georgia, serif` | Body text, nav, buttons, labels, badges (italic available) |
+| `--font-logo` | `'Fraunces', Georgia, serif` | Logo wordmark ONLY (navbar + footer) — applied via `.logo-wordmark` utility: weight 900, `font-optical-sizing: auto`, `font-variation-settings: 'SOFT' 94.9, 'WONK' 1` |
 
 **Young Serif rules:**
 - Single weight 400 only — there is no bold variant
@@ -80,13 +81,21 @@ Avoid two consecutive sections with the same background colour.
 - Use italic (`font-style: italic`) for pull quotes, testimonials, H3 accents
 - NEVER use for body text, buttons, labels, or nav links
 
-**Geist rules:**
-- Weight 300 for body text and descriptions
-- Weight 400 for nav links and general UI
+**Lora rules:**
+- Available weights: 400, 500, 600, 700 — italics available at every weight
+- Lora has no weight 300; use 400 as the lightest weight (body)
+- Weight 400 for body text, descriptions, and nav links
 - Weight 500 for card metadata and secondary UI
-- Weight 600 for button labels
+- Weight 600 for button labels and CTA links
 - Weight 700 for badges, eyebrows, and overlines
+- Use italic for inline emphasis, pull-quote attributions, and editorial accents
 - NEVER use for page headings or section titles
+
+**Fraunces rules:**
+- Logo wordmark ONLY — never for headings, body, or UI
+- Always applied via the `.logo-wordmark` utility class (handles weight + variation axes)
+- Loaded with axes `opsz`, `SOFT`, `WONK` — locked to weight 900, SOFT 94.9, WONK 1
+- Used in the brand wordmark in navbar and footer; nothing else
 
 **Type scale:**
 ```css
@@ -94,10 +103,10 @@ Avoid two consecutive sections with the same background colour.
 --text-h1:     2.5rem    /* 40px */
 --text-h2:     1.75rem   /* 28px */
 --text-h3:     1.25rem   /* 20px — italic, Forest Teal */
---text-body:   1rem      /* 16px — Geist 300 */
---text-ui:     0.875rem  /* 14px — Geist 400/500 */
---text-label:  0.75rem   /* 12px — Geist 600, uppercase */
---text-xs:     0.625rem  /* 10px — Geist 700, uppercase, wide tracking */
+--text-body:   1rem      /* 16px — Lora 400 (bumped to 17px on ≥900px screens) */
+--text-ui:     0.875rem  /* 14px — Lora 400/500 */
+--text-label:  0.75rem   /* 12px — Lora 600, uppercase */
+--text-xs:     0.625rem  /* 10px — Lora 700, uppercase, wide tracking */
 ```
 
 **Eyebrow / overline pattern** — used before every section title:
@@ -113,9 +122,9 @@ Always add a short horizontal line before the text using `::before` with `width:
 
 ### Google Fonts import
 
-Place this in the document `<head>` or in `layout.tsx`:
+In the Next.js site, fonts are loaded via `next/font/google` in `app/layout.tsx` — never link to the Google Fonts CDN from `globals.css`. For static reference pages (the design-system showcase HTML), use:
 ```html
-<link href="https://fonts.googleapis.com/css2?family=Young+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Lora:ital,wght@0,400..700;1,400..700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,900,94.9,1&display=swap" rel="stylesheet">
 ```
 
 ### Badge system
@@ -137,12 +146,13 @@ Never mix the two types on the same element. Never use more than 2–3 badges pe
 ## Tech stack
 
 ```
-Framework:  Next.js 14 (App Router)
+Framework:  Next.js 16 (App Router)
 Language:   TypeScript
-Styling:    Tailwind CSS (with CSS variables from globals.css)
+Styling:    Tailwind CSS v4 (with CSS variables from globals.css)
 CMS:        Sanity (content managed via Sanity Studio at /studio)
 Hosting:    Vercel (auto-deploy from GitHub main branch)
 Forms:      Tally (embedded iframe for /plan-your-trip)
+Fonts:      next/font/google — Young Serif + Lora + Fraunces (logo only)
 ```
 
 **Tailwind + CSS variables:** Use Tailwind utility classes where possible. For design system values (colours, fonts), use the CSS variables via Tailwind's arbitrary value syntax: `bg-[var(--color-primary)]`, `text-[var(--color-ink)]`, `font-[var(--font-display)]`. Or extend `tailwind.config.ts` with the token mapping included in `globals.css`.
@@ -174,7 +184,7 @@ Build in this order — do not skip ahead. Each step depends on the previous.
 ### Phase 1 — Foundation
 1. `globals.css` — paste tokens, base styles, utility classes
 2. `layout.tsx` — font import, metadata, navbar, footer
-3. `Navbar` component — Forest Teal bg, logo Young Serif, links Geist, CTA button
+3. `Navbar` component — floating white pill that docks to a full-width bar on scroll; logo via `.logo-wordmark` (Fraunces), links Lora 600 uppercase, terracotta pill CTA
 4. `Footer` component — Ink bg, 4-column grid, logo, links
 
 ### Phase 2 — Homepage sections
@@ -233,7 +243,8 @@ Interactive elements must be identifiable by shape and label, not colour alone.
 |---|---|
 | Which background for a new section? | Warm White (`--color-bg`) — unless it follows another Warm White section |
 | Which font for a heading? | Young Serif (`--font-display`) |
-| Which font for a paragraph? | Geist Light (`--font-body`, weight 300) |
+| Which font for a paragraph? | Lora (`--font-body`, weight 400 — Lora has no 300) |
+| Which font for the logo? | Fraunces, via `.logo-wordmark` utility — never anywhere else |
 | Which colour for a button? | CTA buttons → `--color-cta`. All other buttons → `--color-primary` or outlined |
 | Can I add a new colour? | No. Use the existing palette. If something feels missing, ask first |
 | Can I use pure white `#fff`? | No. Always `var(--color-bg)` which is `#FAFAF4` |
