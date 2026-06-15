@@ -4,33 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>OffTheBoot — Colour System v1.0</title>
+<title>OffTheBoot — Colour System v2.0 "Abete"</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Epilogue:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* ── TOKENS ── */
 :root {
-  --forest-teal:   #2E5855;
-  --stone-gold:    #C4920A;
-  --terracotta:    #D4701A;
-  --ink:           #1E1C16;
-  --parchment:     #EDE5D0;
-  --warm-white:    #FAFAF4;
+  --forest-teal:   #1E2A1A;
+  --stone-gold:    #D6AE5C;
+  --terracotta:    #9B3940;
+  --ink:           #131C10;
+  --parchment:     #E8E2D2;
+  --warm-white:    #FCFCFC;
 
-  --yellow-butter: #FDF5CC;
-  --yellow-straw:  #F8EDA0;
-  --yellow-wheat:  #F5E8A8;
-  --yellow-pollen: #EDD878;
-
-  --green-mist:    #EAF3EC;
-  --green-sage:    #D8ECD8;
-  --green-fern:    #C0DEC0;
-  --green-meadow:  #9AC49A;
+  --fir-mist:      #E6EADB;
+  --fir-pale:      #DEE4D6;
+  --sage:          #A8BE97;
 
   --muted:         #6B6457;
-  --border:        #DDD5C2;
-  --page-bg:       #F7F4EE;
+  --border:        #E4E5DF;
+  --border-strong: #D6D7CF;
+  --page-bg:       #FCFCFC;
 }
 
 html { scroll-behavior: smooth; }
@@ -149,8 +144,8 @@ code, .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.82em; }
 .code-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #5A5248; margin-bottom: 1.25rem; }
 .code-line { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; line-height: 2; display: flex; gap: 1rem; align-items: center; }
 .code-comment { color: #4A4840; font-style: italic; }
-.code-var { color: #9AC49A; }
-.code-val { color: #F5E8A8; }
+.code-var { color: #A8BE97; }
+.code-val { color: #DEE4D6; }
 .code-swatch-dot { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
 
 /* ── CONTRAST TABLE ── */
@@ -226,7 +221,7 @@ code, .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.82em; }
 .phero-title { font-family: 'Syne', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--parchment); line-height: 1.0; letter-spacing: -0.03em; text-transform: uppercase; margin-bottom: 12px; }
 .phero-sub { font-size: 0.88rem; color: #5a5448; line-height: 1.8; margin-bottom: 1.5rem; max-width: 400px; }
 .phero-btn { display: inline-block; background: var(--terracotta); color: white; padding: 11px 24px; border-radius: 4px; font-size: 0.82rem; font-weight: 700; }
-.pjournal { background: var(--yellow-wheat); padding: 2rem 2.5rem; }
+.pjournal { background: var(--parchment); padding: 2rem 2.5rem; }
 .pjour-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #8a7820; margin-bottom: 8px; }
 .pjour-title { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; margin-bottom: 1.25rem; line-height: 1.1; }
 .pjour-cards { display: flex; gap: 10px; }
@@ -236,7 +231,7 @@ code, .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.82em; }
 .pjour-card-tag { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 3px; }
 .pjour-card-title { font-family: 'Syne', sans-serif; font-size: 0.75rem; font-weight: 800; color: var(--ink); line-height: 1.2; margin-bottom: 6px; }
 .pjour-badge { display: inline-flex; padding: 2px 6px; border-radius: 3px; font-size: 0.6rem; font-weight: 700; margin-right: 3px; }
-.pfeatures { background: var(--green-sage); padding: 1.75rem 2.5rem; display: flex; gap: 1.5rem; align-items: center; }
+.pfeatures { background: var(--fir-pale); padding: 1.75rem 2.5rem; display: flex; gap: 1.5rem; align-items: center; }
 .pfeat-left { flex: 1; }
 .pfeat-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #3a6848; margin-bottom: 8px; }
 .pfeat-title { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; line-height: 1.1; }
@@ -244,7 +239,7 @@ code, .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.82em; }
 .pfeat-stat { text-align: center; background: white; border-radius: 7px; padding: 12px 16px; }
 .pfeat-stat-val { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--forest-teal); }
 .pfeat-stat-label { font-size: 0.62rem; color: var(--muted); margin-top: 2px; }
-.pnewsletter { background: var(--yellow-butter); padding: 1.75rem 2.5rem; display: flex; align-items: center; gap: 2rem; }
+.pnewsletter { background: var(--fir-pale); padding: 1.75rem 2.5rem; display: flex; align-items: center; gap: 2rem; }
 .pnews-left { flex: 1; }
 .pnews-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #8a7820; margin-bottom: 6px; }
 .pnews-title { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 800; color: var(--ink); letter-spacing: -0.01em; line-height: 1.2; }
@@ -291,7 +286,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
     <span>Off the Boot</span>
     <div class="cover-brand-meta">
       <p>Colour System</p>
-      <p>Version 1.0 · April 2026</p>
+      <p>Version 2.0 "Abete" · June 2026</p>
       <p>Confidential — internal use</p>
     </div>
   </div>
@@ -301,17 +296,17 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
     <p class="cover-sub">This document defines the official colour palette for OffTheBoot. It covers all colours, their intended use, WCAG accessibility ratings, colour blindness behaviour, and best practices for implementation.</p>
   </div>
   <div class="cover-footer">
-    <div class="cover-version">v1.0 · Final · Approved</div>
-    <div style="font-size:0.72rem;color:#3A3830;">14 colours · 6 core · 8 tints · All WCAG AA verified</div>
+    <div class="cover-version">v2.0 "Abete" · Final · Approved</div>
+    <div style="font-size:0.72rem;color:#3A3830;">9 colours · 6 core · 3 fir/sage tints · All WCAG AA verified</div>
   </div>
   <div class="cover-stripe">
-    <span style="background:#2E5855;flex:3;"></span>
-    <span style="background:#C4920A;flex:1;"></span>
-    <span style="background:#D4701A;flex:1;"></span>
-    <span style="background:#FDF5CC;flex:1;"></span>
-    <span style="background:#F5E8A8;flex:1;"></span>
-    <span style="background:#EAF3EC;flex:1;"></span>
-    <span style="background:#D8ECD8;flex:1;"></span>
+    <span style="background:#1E2A1A;flex:3;"></span>
+    <span style="background:#D6AE5C;flex:1;"></span>
+    <span style="background:#9B3940;flex:1;"></span>
+    <span style="background:#E6EADB;flex:1;"></span>
+    <span style="background:#DEE4D6;flex:1;"></span>
+    <span style="background:#A8BE97;flex:1;"></span>
+    <span style="background:#E8E2D2;flex:1;"></span>
   </div>
 </div>
 
@@ -343,88 +338,88 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
 
     <div class="pal-grid">
 
-      <div class="pal-card" style="border-color:#2E5855;">
-        <div class="pal-swatch" style="background:#2E5855;">
+      <div class="pal-card" style="border-color:#1E2A1A;">
+        <div class="pal-swatch" style="background:#1E2A1A;">
           <div class="pal-swatch-inner">
-            <div class="pal-name" style="color:rgba(255,255,255,0.9);">Forest Teal</div>
-            <div class="pal-hex" style="color:rgba(255,255,255,0.55);">#2E5855</div>
+            <div class="pal-name" style="color:rgba(255,255,255,0.9);">Abete</div>
+            <div class="pal-hex" style="color:rgba(255,255,255,0.55);">#1E2A1A</div>
           </div>
         </div>
         <div class="pal-body">
           <div class="pal-role">Primary brand colour</div>
-          <div class="pal-use">Navbar, hero sections, primary buttons, footer accents, section dividers.</div>
+          <div class="pal-use">Dark fir green. Structural elements, dark strips, hero sections, primary buttons, accent-on-light, footer accents.</div>
         </div>
       </div>
 
-      <div class="pal-card" style="border-color:#C4920A;">
-        <div class="pal-swatch" style="background:#C4920A;">
+      <div class="pal-card" style="border-color:#D6AE5C;">
+        <div class="pal-swatch" style="background:#D6AE5C;">
           <div class="pal-swatch-inner">
-            <div class="pal-name" style="color:rgba(30,28,22,0.85);">Stone Gold</div>
-            <div class="pal-hex" style="color:rgba(30,28,22,0.55);">#C4920A</div>
+            <div class="pal-name" style="color:rgba(19,28,16,0.85);">Oro</div>
+            <div class="pal-hex" style="color:rgba(19,28,16,0.55);">#D6AE5C</div>
           </div>
         </div>
         <div class="pal-body">
           <div class="pal-role">Accent colour</div>
-          <div class="pal-use">Price badges, highlight labels, section accent tags, map markers. Always with Ink text on top.</div>
+          <div class="pal-use">Gold. Price/duration badge BACKGROUNDS only — always with Ink text on top. Never used as text on white.</div>
         </div>
       </div>
 
-      <div class="pal-card" style="border-color:#D4701A;">
-        <div class="pal-swatch" style="background:#D4701A;">
+      <div class="pal-card" style="border-color:#9B3940;">
+        <div class="pal-swatch" style="background:#9B3940;">
           <div class="pal-swatch-inner">
-            <div class="pal-name" style="color:rgba(255,255,255,0.9);">Terracotta</div>
-            <div class="pal-hex" style="color:rgba(255,255,255,0.55);">#D4701A</div>
+            <div class="pal-name" style="color:rgba(255,255,255,0.9);">Bordeaux</div>
+            <div class="pal-hex" style="color:rgba(255,255,255,0.55);">#9B3940</div>
           </div>
         </div>
         <div class="pal-body">
           <div class="pal-role">CTA colour</div>
-          <div class="pal-use">Primary call-to-action buttons only. Active links, selected states. Use sparingly — one CTA per section maximum.</div>
+          <div class="pal-use">Call-to-action buttons only (hover #7E2E34). Use sparingly — one CTA per section maximum.</div>
         </div>
       </div>
 
-      <div class="pal-card" style="border-color:#1E1C16;">
-        <div class="pal-swatch" style="background:#1E1C16;">
+      <div class="pal-card" style="border-color:#131C10;">
+        <div class="pal-swatch" style="background:#131C10;">
           <div class="pal-swatch-inner">
-            <div class="pal-name" style="color:rgba(255,255,255,0.9);">Ink</div>
-            <div class="pal-hex" style="color:rgba(255,255,255,0.55);">#1E1C16</div>
+            <div class="pal-name" style="color:rgba(255,255,255,0.9);">Nero bosco</div>
+            <div class="pal-hex" style="color:rgba(255,255,255,0.55);">#131C10</div>
           </div>
         </div>
         <div class="pal-body">
           <div class="pal-role">Text & dark background</div>
-          <div class="pal-use">All body text, headings, hero dark backgrounds, footer background. The primary text colour.</div>
+          <div class="pal-use">All body text, headings, the darkest section backgrounds, footer background. The primary text colour.</div>
         </div>
       </div>
 
-      <div class="pal-card" style="border-color:#C8B896;">
-        <div class="pal-swatch" style="background:#EDE5D0;">
+      <div class="pal-card" style="border-color:#D6D7CF;">
+        <div class="pal-swatch" style="background:#E8E2D2;">
           <div class="pal-swatch-inner">
-            <div class="pal-name" style="color:rgba(30,28,22,0.75);">Parchment</div>
-            <div class="pal-hex" style="color:rgba(30,28,22,0.5);">#EDE5D0</div>
+            <div class="pal-name" style="color:rgba(19,28,16,0.75);">Lino</div>
+            <div class="pal-hex" style="color:rgba(19,28,16,0.5);">#E8E2D2</div>
           </div>
         </div>
         <div class="pal-body">
-          <div class="pal-role">Surface & borders</div>
-          <div class="pal-use">Alternate section backgrounds, card borders, image placeholders, dividers. Warm neutral base.</div>
+          <div class="pal-role">Cream text on dark</div>
+          <div class="pal-use">Cream text on dark backgrounds ONLY — never a surface, except the one "Plan my trip" pricing strip which uses Lino as its background.</div>
         </div>
       </div>
 
-      <div class="pal-card" style="border-color:#DDD5C2;">
-        <div class="pal-swatch" style="background:#FAFAF4; border-bottom:0.5px solid #DDD5C2;">
+      <div class="pal-card" style="border-color:#E4E5DF;">
+        <div class="pal-swatch" style="background:#FCFCFC; border-bottom:0.5px solid #E4E5DF;">
           <div class="pal-swatch-inner">
-            <div class="pal-name" style="color:rgba(30,28,22,0.65);">Warm White</div>
-            <div class="pal-hex" style="color:rgba(30,28,22,0.4);">#FAFAF4</div>
+            <div class="pal-name" style="color:rgba(19,28,16,0.65);">Off-white</div>
+            <div class="pal-hex" style="color:rgba(19,28,16,0.4);">#FCFCFC</div>
           </div>
         </div>
         <div class="pal-body">
           <div class="pal-role">Background</div>
-          <div class="pal-use">Page backgrounds, card backgrounds, form inputs. Slightly warm — not pure white — to feel organic and human.</div>
+          <div class="pal-use">Page backgrounds, light sections, card backgrounds, form inputs. A clean off-white — never pure #ffffff.</div>
         </div>
       </div>
 
     </div>
 
-    <div style="background:#FAFAF4;border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;">
-      <p style="font-size:0.78rem;color:var(--muted);line-height:1.8;"><strong style="color:var(--ink);">Why these six?</strong> Each colour maps directly to a brand value. Forest Teal = nature and territory. Stone Gold = local traditions and craft. Terracotta = human warmth and Italian heritage. Ink = depth and authenticity. Parchment = history and slowness. Warm White = clarity and openness. No colour in this palette is arbitrary.</p>
+    <div style="background:#FCFCFC;border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;">
+      <p style="font-size:0.78rem;color:var(--muted);line-height:1.8;"><strong style="color:var(--ink);">Why these six?</strong> Each colour maps directly to a brand value. Abete = nature and territory. Oro = local traditions and craft. Bordeaux = human warmth and Italian heritage. Nero bosco = depth and authenticity. Lino = history and slowness. Off-white = clarity and openness. No colour in this palette is arbitrary.</p>
     </div>
   </section>
 
@@ -435,129 +430,57 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
     <div class="section-header">
       <div class="eyebrow">02 · Tints</div>
       <h2 class="section-title">Extended tints</h2>
-      <p class="section-desc">Eight light tints derived from Forest Teal and Stone Gold. Used exclusively as section backgrounds, badge fills, and decorative surfaces. Never as text colour or on interactive elements.</p>
+      <p class="section-desc">Three light fir/sage tints derived from Abete. Used exclusively as section backgrounds, badge fills, step circles, and decorative surfaces. Never as text colour or on interactive elements. The retired v1 yellow and green tint families are gone.</p>
     </div>
 
     <div class="tint-section">
-      <div class="tint-label">Yellow tints — from Stone Gold</div>
+      <div class="tint-label">Fir / sage tints — from Abete</div>
       <div class="tint-row">
 
         <div class="tint-card">
-          <div class="tint-swatch" style="background:#FDF5CC;">
+          <div class="tint-swatch" style="background:#E6EADB;">
             <div class="tint-swatch-inner">
-              <div style="font-size:0.65rem;font-weight:700;color:rgba(30,28,22,0.55);">Butter</div>
+              <div style="font-size:0.65rem;font-weight:700;color:rgba(19,28,16,0.55);">Fir mist</div>
             </div>
           </div>
           <div class="tint-body">
-            <div class="tint-name">Butter</div>
-            <div class="tint-hex">#FDF5CC</div>
-            <div class="tint-use">Newsletter sections, subtle highlights, very light banners. Barely-there warmth.</div>
+            <div class="tint-name">Fir mist</div>
+            <div class="tint-hex">#E6EADB</div>
+            <div class="tint-use">Lightest fir. Category/style badge backgrounds, step-number circles, image placeholders. Subtle hover states.</div>
           </div>
         </div>
 
         <div class="tint-card">
-          <div class="tint-swatch" style="background:#F8EDA0;">
+          <div class="tint-swatch" style="background:#DEE4D6;">
             <div class="tint-swatch-inner">
-              <div style="font-size:0.65rem;font-weight:700;color:rgba(30,28,22,0.55);">Straw</div>
+              <div style="font-size:0.65rem;font-weight:700;color:rgba(19,28,16,0.55);">Light fir</div>
             </div>
           </div>
           <div class="tint-body">
-            <div class="tint-name">Straw</div>
-            <div class="tint-hex">#F8EDA0</div>
-            <div class="tint-use">Journal section background (Nomádico-inspired). Warm and editorial, pairs with photography.</div>
+            <div class="tint-name">Light fir</div>
+            <div class="tint-hex">#DEE4D6</div>
+            <div class="tint-use">Light section backgrounds, newsletter, feature/values blocks, blog TL;DR. The primary light section colour.</div>
           </div>
         </div>
 
         <div class="tint-card">
-          <div class="tint-swatch" style="background:#F5E8A8;">
+          <div class="tint-swatch" style="background:#A8BE97;">
             <div class="tint-swatch-inner">
-              <div style="font-size:0.65rem;font-weight:700;color:rgba(30,28,22,0.55);">Wheat</div>
-            </div>
-          </div>
-          <div class="tint-body">
-            <div class="tint-name">Wheat</div>
-            <div class="tint-hex">#F5E8A8</div>
-            <div class="tint-use">Itinerary listing sections, hero alternates, CTA area backgrounds. The primary yellow section colour.</div>
-          </div>
-        </div>
-
-        <div class="tint-card">
-          <div class="tint-swatch" style="background:#EDD878;">
-            <div class="tint-swatch-inner">
-              <div style="font-size:0.65rem;font-weight:700;color:rgba(30,28,22,0.55);">Pollen</div>
-            </div>
-          </div>
-          <div class="tint-body">
-            <div class="tint-name">Pollen</div>
-            <div class="tint-hex">#EDD878</div>
-            <div class="tint-use">More saturated — use for attention banners, important callouts, featured content borders only.</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="tint-section">
-      <div class="tint-label">Green tints — from Forest Teal</div>
-      <div class="tint-row">
-
-        <div class="tint-card">
-          <div class="tint-swatch" style="background:#EAF3EC;">
-            <div class="tint-swatch-inner">
-              <div style="font-size:0.65rem;font-weight:700;color:rgba(30,28,22,0.55);">Mist</div>
-            </div>
-          </div>
-          <div class="tint-body">
-            <div class="tint-name">Mist</div>
-            <div class="tint-hex">#EAF3EC</div>
-            <div class="tint-use">Badge backgrounds (category, style tags). Card image placeholders. Subtle hover states on green elements.</div>
-          </div>
-        </div>
-
-        <div class="tint-card">
-          <div class="tint-swatch" style="background:#D8ECD8;">
-            <div class="tint-swatch-inner">
-              <div style="font-size:0.65rem;font-weight:700;color:rgba(30,28,22,0.55);">Sage</div>
+              <div style="font-size:0.65rem;font-weight:700;color:rgba(19,28,16,0.55);">Sage</div>
             </div>
           </div>
           <div class="tint-body">
             <div class="tint-name">Sage</div>
-            <div class="tint-hex">#D8ECD8</div>
-            <div class="tint-use">Feature/values sections, "why us" blocks, testimonial backgrounds. Calm and trustworthy.</div>
-          </div>
-        </div>
-
-        <div class="tint-card">
-          <div class="tint-swatch" style="background:#C0DEC0;">
-            <div class="tint-swatch-inner">
-              <div style="font-size:0.65rem;font-weight:700;color:rgba(30,28,22,0.55);">Fern</div>
-            </div>
-          </div>
-          <div class="tint-body">
-            <div class="tint-name">Fern</div>
-            <div class="tint-hex">#C0DEC0</div>
-            <div class="tint-use">Card image placeholder fills, map area backgrounds, decorative dividers. More visible than Mist.</div>
-          </div>
-        </div>
-
-        <div class="tint-card">
-          <div class="tint-swatch" style="background:#9AC49A;">
-            <div class="tint-swatch-inner">
-              <div style="font-size:0.65rem;font-weight:700;color:rgba(30,28,22,0.55);">Meadow</div>
-            </div>
-          </div>
-          <div class="tint-body">
-            <div class="tint-name">Meadow</div>
-            <div class="tint-hex">#9AC49A</div>
-            <div class="tint-use">Decorative graphic elements, illustration accents, progress bars. Do not use as a text background at small sizes.</div>
+            <div class="tint-hex">#A8BE97</div>
+            <div class="tint-use">Accents on dark backgrounds — hero italic, dots, dark-CTA accents. Do not use as a text background at small sizes.</div>
           </div>
         </div>
 
       </div>
     </div>
 
-    <div style="background:#FDF5CC;border:1px solid rgba(180,160,40,0.3);border-radius:10px;padding:1.25rem 1.5rem;border-left:3px solid #C4920A;">
-      <p style="font-size:0.78rem;color:#6a5810;line-height:1.8;"><strong style="color:var(--ink);">Tint rule:</strong> Tints are backgrounds, never foregrounds. Never use a tint colour as text. Always use Ink (#1E1C16) for text placed on any tint background — the contrast is guaranteed to pass AAA on all eight tints.</p>
+    <div style="background:#DEE4D6;border:1px solid var(--border-strong);border-radius:10px;padding:1.25rem 1.5rem;border-left:3px solid #1E2A1A;">
+      <p style="font-size:0.78rem;color:#2a3a26;line-height:1.8;"><strong style="color:var(--ink);">Tint rule:</strong> Tints are backgrounds, never foregrounds. Never use a tint colour as text. Always use Nero bosco (#131C10) for text placed on any tint background — the contrast is guaranteed to pass AAA on all three tints.</p>
     </div>
   </section>
 
@@ -574,42 +497,38 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
     <div class="code-box">
       <div class="code-label">globals.css · paste at the top of your stylesheet</div>
 
-      <div class="code-line"><span class="code-comment">/* ── OffTheBoot Colour System v1.0 ── */</span></div>
-      <div class="code-line"><span style="color:#F5E8A8;">:root {</span></div>
+      <div class="code-line"><span class="code-comment">/* ── OffTheBoot Colour System v2.0 "Abete" ── */</span></div>
+      <div class="code-line"><span style="color:#DEE4D6;">:root {</span></div>
       <br>
       <div class="code-line"><span class="code-comment">&nbsp;&nbsp;/* Core palette */</span></div>
-      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#2E5855;"></div><span class="code-var">--color-primary:</span><span class="code-val">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#2E5855;</span><span class="code-comment">&nbsp;/* Forest Teal */</span></div>
-      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#C4920A;"></div><span class="code-var">--color-accent:</span><span class="code-val">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#C4920A;</span><span class="code-comment">&nbsp;/* Stone Gold */</span></div>
-      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#D4701A;"></div><span class="code-var">--color-cta:</span><span class="code-val">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#D4701A;</span><span class="code-comment">&nbsp;/* Terracotta */</span></div>
-      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#1E1C16;"></div><span class="code-var">--color-ink:</span><span class="code-val">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#1E1C16;</span><span class="code-comment">&nbsp;/* Ink */</span></div>
-      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#EDE5D0;outline:1px solid #9a8a6a;"></div><span class="code-var">--color-parchment:</span><span class="code-val">&nbsp;&nbsp;&nbsp;#EDE5D0;</span><span class="code-comment">&nbsp;/* Parchment */</span></div>
-      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#FAFAF4;outline:1px solid #9a8a6a;"></div><span class="code-var">--color-bg:</span><span class="code-val">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#FAFAF4;</span><span class="code-comment">&nbsp;/* Warm White */</span></div>
+      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#1E2A1A;"></div><span class="code-var">--color-primary:</span><span class="code-val">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#1E2A1A;</span><span class="code-comment">&nbsp;/* Abete */</span></div>
+      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#D6AE5C;"></div><span class="code-var">--color-accent:</span><span class="code-val">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#D6AE5C;</span><span class="code-comment">&nbsp;/* Oro */</span></div>
+      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#9B3940;"></div><span class="code-var">--color-cta:</span><span class="code-val">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#9B3940;</span><span class="code-comment">&nbsp;/* Bordeaux */</span></div>
+      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#131C10;"></div><span class="code-var">--color-ink:</span><span class="code-val">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#131C10;</span><span class="code-comment">&nbsp;/* Nero bosco */</span></div>
+      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#E8E2D2;outline:1px solid #9a8a6a;"></div><span class="code-var">--color-parchment:</span><span class="code-val">&nbsp;&nbsp;&nbsp;#E8E2D2;</span><span class="code-comment">&nbsp;/* Lino */</span></div>
+      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#FCFCFC;outline:1px solid #9a8a6a;"></div><span class="code-var">--color-bg:</span><span class="code-val">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#FCFCFC;</span><span class="code-comment">&nbsp;/* Off-white */</span></div>
+      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#6B6457;outline:1px solid #9a8a6a;"></div><span class="code-var">--color-muted:</span><span class="code-val">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#6B6457;</span><span class="code-comment">&nbsp;/* Muted */</span></div>
+      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#E4E5DF;outline:1px solid #9a8a6a;"></div><span class="code-var">--color-border:</span><span class="code-val">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#E4E5DF;</span><span class="code-comment">&nbsp;/* Light border */</span></div>
+      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#D6D7CF;outline:1px solid #9a8a6a;"></div><span class="code-var">--color-border-strong:</span><span class="code-val">&nbsp;#D6D7CF;</span><span class="code-comment">&nbsp;/* Strong border */</span></div>
       <br>
-      <div class="code-line"><span class="code-comment">&nbsp;&nbsp;/* Yellow tints */</span></div>
-      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#FDF5CC;outline:1px solid #c8a840;"></div><span class="code-var">--color-yellow-butter:</span><span class="code-val">&nbsp;#FDF5CC;</span></div>
-      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#F8EDA0;outline:1px solid #c8a840;"></div><span class="code-var">--color-yellow-straw:</span><span class="code-val">&nbsp;&nbsp;#F8EDA0;</span></div>
-      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#F5E8A8;outline:1px solid #c8a840;"></div><span class="code-var">--color-yellow-wheat:</span><span class="code-val">&nbsp;&nbsp;#F5E8A8;</span></div>
-      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#EDD878;outline:1px solid #c8a840;"></div><span class="code-var">--color-yellow-pollen:</span><span class="code-val">&nbsp;#EDD878;</span></div>
+      <div class="code-line"><span class="code-comment">&nbsp;&nbsp;/* Fir / sage tints (names kept --color-teal-* in code) */</span></div>
+      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#E6EADB;outline:1px solid #7a8c6a;"></div><span class="code-var">--color-teal-mist:</span><span class="code-val">&nbsp;&nbsp;#E6EADB;</span><span class="code-comment">&nbsp;/* Fir mist */</span></div>
+      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#DEE4D6;outline:1px solid #7a8c6a;"></div><span class="code-var">--color-teal-pale:</span><span class="code-val">&nbsp;&nbsp;#DEE4D6;</span><span class="code-comment">&nbsp;/* Light fir */</span></div>
+      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#A8BE97;outline:1px solid #7a8c6a;"></div><span class="code-var">--color-teal-soft:</span><span class="code-val">&nbsp;&nbsp;#A8BE97;</span><span class="code-comment">&nbsp;/* Sage */</span></div>
       <br>
-      <div class="code-line"><span class="code-comment">&nbsp;&nbsp;/* Green tints */</span></div>
-      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#EAF3EC;outline:1px solid #4a8870;"></div><span class="code-var">--color-green-mist:</span><span class="code-val">&nbsp;&nbsp;&nbsp;&nbsp;#EAF3EC;</span></div>
-      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#D8ECD8;outline:1px solid #4a8870;"></div><span class="code-var">--color-green-sage:</span><span class="code-val">&nbsp;&nbsp;&nbsp;&nbsp;#D8ECD8;</span></div>
-      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#C0DEC0;outline:1px solid #4a8870;"></div><span class="code-var">--color-green-fern:</span><span class="code-val">&nbsp;&nbsp;&nbsp;&nbsp;#C0DEC0;</span></div>
-      <div class="code-line">&nbsp;&nbsp;<div class="code-swatch-dot" style="background:#9AC49A;outline:1px solid #4a8870;"></div><span class="code-var">--color-green-meadow:</span><span class="code-val">&nbsp;&nbsp;#9AC49A;</span></div>
-      <br>
-      <div class="code-line"><span style="color:#F5E8A8;">}</span></div>
+      <div class="code-line"><span style="color:#DEE4D6;">}</span></div>
     </div>
 
-    <div style="background:#FAFAF4;border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;">
+    <div style="background:#FCFCFC;border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;">
       <p style="font-size:0.78rem;color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--ink);">How to use in code — examples:</strong></p>
       <div class="code-box" style="margin-bottom:0;padding:1rem 1.5rem;">
         <div class="code-line"><span class="code-comment">/* ✓ Correct — always use variables */</span></div>
-        <div class="code-line"><span style="color:#9AC49A;">.btn-primary</span><span style="color:#F5E8A8;"> { background: </span><span class="code-val">var(--color-cta)</span><span style="color:#F5E8A8;">; color: white; }</span></div>
-        <div class="code-line"><span style="color:#9AC49A;">.section-journal</span><span style="color:#F5E8A8;"> { background: </span><span class="code-val">var(--color-yellow-wheat)</span><span style="color:#F5E8A8;">; }</span></div>
-        <div class="code-line"><span style="color:#9AC49A;">.badge-category</span><span style="color:#F5E8A8;"> { background: </span><span class="code-val">var(--color-green-mist)</span><span style="color:#F5E8A8;">; color: </span><span class="code-val">var(--color-primary)</span><span style="color:#F5E8A8;">; }</span></div>
+        <div class="code-line"><span style="color:#A8BE97;">.btn-cta</span><span style="color:#DEE4D6;"> { background: </span><span class="code-val">var(--color-cta)</span><span style="color:#DEE4D6;">; color: white; }</span></div>
+        <div class="code-line"><span style="color:#A8BE97;">.section-light</span><span style="color:#DEE4D6;"> { background: </span><span class="code-val">var(--color-teal-pale)</span><span style="color:#DEE4D6;">; }</span></div>
+        <div class="code-line"><span style="color:#A8BE97;">.badge-category</span><span style="color:#DEE4D6;"> { background: </span><span class="code-val">var(--color-teal-mist)</span><span style="color:#DEE4D6;">; color: </span><span class="code-val">var(--color-primary)</span><span style="color:#DEE4D6;">; }</span></div>
         <br>
         <div class="code-line"><span class="code-comment">/* ✗ Never hardcode hex values */</span></div>
-        <div class="code-line"><span style="color:#F09595;">.btn-primary { background: #D4701A; }</span><span class="code-comment">&nbsp;/* don't do this */</span></div>
+        <div class="code-line"><span style="color:#F09595;">.btn-cta { background: #9B3940; }</span><span class="code-comment">&nbsp;/* don't do this */</span></div>
       </div>
     </div>
   </section>
@@ -637,118 +556,118 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         <tr>
           <td>
             <div class="pair-demo">
-              <div class="pair-chip" style="background:#1E1C16;color:white;">Aa</div>
-              <div><div class="pair-label">Ink on Warm White</div></div>
+              <div class="pair-chip" style="background:#131C10;color:white;">Aa</div>
+              <div><div class="pair-label">Nero bosco on Off-white</div></div>
             </div>
           </td>
           <td><div class="pair-use">All body text, headings, UI text on page background</div></td>
-          <td><span class="ratio">18.1:1</span></td>
+          <td><span class="ratio">17.9:1</span></td>
           <td><span class="wcag-aaa">AAA</span></td>
         </tr>
         <tr>
           <td>
             <div class="pair-demo">
-              <div class="pair-chip" style="background:#1E1C16;color:#EDE5D0;">Aa</div>
-              <div><div class="pair-label">Ink on Parchment</div></div>
+              <div class="pair-chip" style="background:#131C10;color:#E8E2D2;">Aa</div>
+              <div><div class="pair-label">Nero bosco on Lino</div></div>
             </div>
           </td>
-          <td><div class="pair-use">Text on alternate surface sections</div></td>
-          <td><span class="ratio">11.4:1</span></td>
+          <td><div class="pair-use">Text on the pricing-strip beige surface</div></td>
+          <td><span class="ratio">14.0:1</span></td>
           <td><span class="wcag-aaa">AAA</span></td>
         </tr>
         <tr>
           <td>
             <div class="pair-demo">
-              <div class="pair-chip" style="background:#EDE5D0;color:#1E1C16;">Aa</div>
-              <div><div class="pair-label">Parchment on Ink</div></div>
+              <div class="pair-chip" style="background:#1E2A1A;color:#E8E2D2;">Aa</div>
+              <div><div class="pair-label">Lino on Abete</div></div>
             </div>
           </td>
-          <td><div class="pair-use">Hero section headings, footer text on dark bg</div></td>
-          <td><span class="ratio">11.4:1</span></td>
+          <td><div class="pair-use">Hero section headings, footer text on dark fir bg</div></td>
+          <td><span class="ratio">9.7:1</span></td>
           <td><span class="wcag-aaa">AAA</span></td>
         </tr>
         <tr>
           <td>
             <div class="pair-demo">
-              <div class="pair-chip" style="background:#2E5855;color:white;">Aa</div>
-              <div><div class="pair-label">White on Forest Teal</div></div>
+              <div class="pair-chip" style="background:#1E2A1A;color:white;">Aa</div>
+              <div><div class="pair-label">White on Abete</div></div>
             </div>
           </td>
-          <td><div class="pair-use">Navbar links, text on teal sections</div></td>
-          <td><span class="ratio">7.4:1</span></td>
+          <td><div class="pair-use">Text on dark fir sections, primary buttons</div></td>
+          <td><span class="ratio">13.6:1</span></td>
           <td><span class="wcag-aaa">AAA</span></td>
         </tr>
         <tr>
           <td>
             <div class="pair-demo">
-              <div class="pair-chip" style="background:#2E5855;color:#EDE5D0;">Aa</div>
-              <div><div class="pair-label">Parchment on Forest Teal</div></div>
+              <div class="pair-chip" style="background:#1E2A1A;color:#A8BE97;">Aa</div>
+              <div><div class="pair-label">Sage on Abete</div></div>
             </div>
           </td>
-          <td><div class="pair-use">Alternate text on teal sections, decorative headings</div></td>
-          <td><span class="ratio">5.1:1</span></td>
+          <td><div class="pair-use">Accent text on dark fir — hero italic, dots</div></td>
+          <td><span class="ratio">5.6:1</span></td>
           <td><span class="wcag-aa">AA</span></td>
         </tr>
         <tr>
           <td>
             <div class="pair-demo">
-              <div class="pair-chip" style="background:#D4701A;color:white;">Aa</div>
-              <div><div class="pair-label">White on Terracotta</div></div>
+              <div class="pair-chip" style="background:#9B3940;color:white;">Aa</div>
+              <div><div class="pair-label">White on Bordeaux</div></div>
             </div>
           </td>
           <td><div class="pair-use">CTA button label text</div></td>
-          <td><span class="ratio">4.6:1</span></td>
+          <td><span class="ratio">6.4:1</span></td>
           <td><span class="wcag-aa">AA</span></td>
         </tr>
         <tr>
           <td>
             <div class="pair-demo">
-              <div class="pair-chip" style="background:#C4920A;color:#1E1C16;">Aa</div>
-              <div><div class="pair-label">Ink on Stone Gold</div></div>
+              <div class="pair-chip" style="background:#D6AE5C;color:#131C10;">Aa</div>
+              <div><div class="pair-label">Nero bosco on Oro</div></div>
             </div>
           </td>
-          <td><div class="pair-use">Price badges, highlight labels on gold background</div></td>
-          <td><span class="ratio">7.6:1</span></td>
-          <td><span class="wcag-aa">AA</span></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="pair-demo">
-              <div class="pair-chip" style="background:#F5E8A8;color:#1E1C16;">Aa</div>
-              <div><div class="pair-label">Ink on Wheat tint</div></div>
-            </div>
-          </td>
-          <td><div class="pair-use">Text on yellow section backgrounds</div></td>
-          <td><span class="ratio">13.2:1</span></td>
+          <td><div class="pair-use">Price/duration badges on gold background</div></td>
+          <td><span class="ratio">8.6:1</span></td>
           <td><span class="wcag-aaa">AAA</span></td>
         </tr>
         <tr>
           <td>
             <div class="pair-demo">
-              <div class="pair-chip" style="background:#D8ECD8;color:#1E1C16;">Aa</div>
-              <div><div class="pair-label">Ink on Sage tint</div></div>
+              <div class="pair-chip" style="background:#DEE4D6;color:#131C10;">Aa</div>
+              <div><div class="pair-label">Nero bosco on Light fir</div></div>
             </div>
           </td>
-          <td><div class="pair-use">Text on green feature section backgrounds</div></td>
-          <td><span class="ratio">10.8:1</span></td>
+          <td><div class="pair-use">Text on light fir section backgrounds</div></td>
+          <td><span class="ratio">15.0:1</span></td>
           <td><span class="wcag-aaa">AAA</span></td>
         </tr>
         <tr>
           <td>
             <div class="pair-demo">
-              <div class="pair-chip" style="background:#EAF3EC;color:#2E5855;">Aa</div>
-              <div><div class="pair-label">Forest Teal on Mist tint</div></div>
+              <div class="pair-chip" style="background:#E6EADB;color:#131C10;">Aa</div>
+              <div><div class="pair-label">Nero bosco on Fir mist</div></div>
             </div>
           </td>
-          <td><div class="pair-use">Category badge text on green mist background</div></td>
-          <td><span class="ratio">6.1:1</span></td>
-          <td><span class="wcag-aa">AA</span></td>
+          <td><div class="pair-use">Text on fir-mist badge/placeholder backgrounds</div></td>
+          <td><span class="ratio">15.5:1</span></td>
+          <td><span class="wcag-aaa">AAA</span></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pair-demo">
+              <div class="pair-chip" style="background:#E6EADB;color:#1E2A1A;">Aa</div>
+              <div><div class="pair-label">Abete on Fir mist</div></div>
+            </div>
+          </td>
+          <td><div class="pair-use">Category badge text on fir-mist background</div></td>
+          <td><span class="ratio">11.4:1</span></td>
+          <td><span class="wcag-aaa">AAA</span></td>
         </tr>
       </tbody>
     </table>
 
     <div style="background:#FCEBEB;border:1px solid #F09595;border-radius:10px;padding:1.25rem 1.5rem;border-left:3px solid #E24B4A;">
-      <p style="font-size:0.78rem;color:#6B1A1A;line-height:1.8;"><strong>Critical — never do these:</strong> Never place Stone Gold (#C4920A) text on Warm White — contrast is only 2.4:1 (fail). Never use Terracotta (#D4701A) as a text colour on white backgrounds — contrast is 4.6:1 and marginal. Never use any tint colour as a text colour on white.</p>
+      <p style="font-size:0.78rem;color:#6B1A1A;line-height:1.8;"><strong>Critical — never do these:</strong> Never place Oro gold (#D6AE5C) text on Off-white — contrast is only 1.9:1 (fail). Oro exists only as a badge background with Nero bosco text on top. Never use any tint colour (Fir mist, Light fir, Sage) as a text colour on white.</p>
     </div>
   </section>
 
@@ -769,15 +688,15 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
           <div class="cb-desc">Green-red · ~6% of men</div>
         </div>
         <div class="cb-strip">
-          <div class="cb-sw" style="background:#3a6050;"></div>
-          <div class="cb-sw" style="background:#c09820;"></div>
-          <div class="cb-sw" style="background:#b87840;"></div>
-          <div class="cb-sw" style="background:#1E1C16;"></div>
-          <div class="cb-sw" style="background:#e2dcc8;"></div>
-          <div class="cb-sw" style="background:#fafaf4;outline:1px solid #ddd;"></div>
+          <div class="cb-sw" style="background:#2a3424;"></div>
+          <div class="cb-sw" style="background:#cab06a;"></div>
+          <div class="cb-sw" style="background:#6e4a40;"></div>
+          <div class="cb-sw" style="background:#131C10;"></div>
+          <div class="cb-sw" style="background:#e6e0d2;"></div>
+          <div class="cb-sw" style="background:#fcfcfc;outline:1px solid #ddd;"></div>
         </div>
         <div class="cb-body">
-          <div class="cb-note">Forest Teal and Terracotta shift toward similar brownish-green tones. Always pair the CTA button with a clear text label and distinct shape — not colour alone.</div>
+          <div class="cb-note">Abete and Bordeaux both read as deep, dark tones, well separated by luminance from Oro. Always pair the CTA button with a clear text label and distinct shape — not colour alone.</div>
         </div>
       </div>
 
@@ -787,15 +706,15 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
           <div class="cb-desc">Red weakness · ~2% of men</div>
         </div>
         <div class="cb-strip">
-          <div class="cb-sw" style="background:#3c6252;"></div>
-          <div class="cb-sw" style="background:#be9a22;"></div>
-          <div class="cb-sw" style="background:#ac7040;"></div>
-          <div class="cb-sw" style="background:#1E1C16;"></div>
-          <div class="cb-sw" style="background:#e2dcc8;"></div>
-          <div class="cb-sw" style="background:#fafaf4;outline:1px solid #ddd;"></div>
+          <div class="cb-sw" style="background:#2c3526;"></div>
+          <div class="cb-sw" style="background:#c4ac68;"></div>
+          <div class="cb-sw" style="background:#5e4842;"></div>
+          <div class="cb-sw" style="background:#131C10;"></div>
+          <div class="cb-sw" style="background:#e6e0d2;"></div>
+          <div class="cb-sw" style="background:#fcfcfc;outline:1px solid #ddd;"></div>
         </div>
         <div class="cb-body">
-          <div class="cb-note">Similar to deuteranopia. Stone Gold remains clearly distinct. The primary/CTA pair has acceptable luminance separation. Use text labels on all interactive elements.</div>
+          <div class="cb-note">Similar to deuteranopia. Oro remains clearly distinct. The Abete/Bordeaux pair has acceptable luminance separation. Use text labels on all interactive elements.</div>
         </div>
       </div>
 
@@ -805,15 +724,15 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
           <div class="cb-desc">Blue-yellow · very rare</div>
         </div>
         <div class="cb-strip">
-          <div class="cb-sw" style="background:#2e7870;"></div>
-          <div class="cb-sw" style="background:#c8a860;"></div>
-          <div class="cb-sw" style="background:#d47878;"></div>
-          <div class="cb-sw" style="background:#1E1C16;"></div>
-          <div class="cb-sw" style="background:#e6d8d8;"></div>
-          <div class="cb-sw" style="background:#fafaf4;outline:1px solid #ddd;"></div>
+          <div class="cb-sw" style="background:#24301e;"></div>
+          <div class="cb-sw" style="background:#d2b08a;"></div>
+          <div class="cb-sw" style="background:#a04848;"></div>
+          <div class="cb-sw" style="background:#131C10;"></div>
+          <div class="cb-sw" style="background:#e8e2d6;"></div>
+          <div class="cb-sw" style="background:#fcfcfc;outline:1px solid #ddd;"></div>
         </div>
         <div class="cb-body">
-          <div class="cb-note">The palette performs well. All six colours remain distinguishable. Stone Gold shifts slightly but remains separate from Forest Teal.</div>
+          <div class="cb-note">The palette performs well. All six colours remain distinguishable. Oro shifts slightly but remains separate from Abete and Bordeaux.</div>
         </div>
       </div>
 
@@ -823,21 +742,21 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
           <div class="cb-desc">Greyscale only · very rare</div>
         </div>
         <div class="cb-strip">
-          <div class="cb-sw" style="background:#585858;"></div>
-          <div class="cb-sw" style="background:#9a9a9a;"></div>
-          <div class="cb-sw" style="background:#7c7c7c;"></div>
-          <div class="cb-sw" style="background:#1E1C16;"></div>
-          <div class="cb-sw" style="background:#dedede;"></div>
-          <div class="cb-sw" style="background:#fafaf4;outline:1px solid #ddd;"></div>
+          <div class="cb-sw" style="background:#3e3e3e;"></div>
+          <div class="cb-sw" style="background:#b0b0b0;"></div>
+          <div class="cb-sw" style="background:#5e5e5e;"></div>
+          <div class="cb-sw" style="background:#131C10;"></div>
+          <div class="cb-sw" style="background:#e3e3e3;"></div>
+          <div class="cb-sw" style="background:#fcfcfc;outline:1px solid #ddd;"></div>
         </div>
         <div class="cb-body">
-          <div class="cb-note">Forest Teal (~88/255) is darker than Terracotta (~124/255) — a clear luminance difference. Stone Gold (~154/255) and Parchment (~222/255) are well separated. Good overall greyscale hierarchy.</div>
+          <div class="cb-note">Abete (~62/255) is darker than Bordeaux (~94/255) — a clear luminance difference. Oro (~176/255) and Lino (~227/255) are well separated. Good overall greyscale hierarchy.</div>
         </div>
       </div>
     </div>
 
-    <div style="background:var(--green-mist);border:1px solid var(--green-fern);border-radius:10px;padding:1.25rem 1.5rem;border-left:3px solid var(--forest-teal);">
-      <p style="font-size:0.78rem;color:#3a5848;line-height:1.8;"><strong style="color:var(--ink);">Universal design rule:</strong> Never rely on colour alone to communicate meaning. Every interactive element (button, link, form field) must be identifiable by shape, text, or position — independent of colour perception. This benefits not just colour blind users but also anyone on low-quality screens or in bright sunlight.</p>
+    <div style="background:var(--fir-mist);border:1px solid var(--border-strong);border-radius:10px;padding:1.25rem 1.5rem;border-left:3px solid var(--forest-teal);">
+      <p style="font-size:0.78rem;color:#2a3a26;line-height:1.8;"><strong style="color:var(--ink);">Universal design rule:</strong> Never rely on colour alone to communicate meaning. Every interactive element (button, link, form field) must be identifiable by shape, text, or position — independent of colour perception. This benefits not just colour blind users but also anyone on low-quality screens or in bright sunlight.</p>
     </div>
   </section>
 
@@ -856,21 +775,21 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
       <div class="rule-card do">
         <div class="rule-header">
           <div class="rule-icon do">✓</div>
-          <div class="rule-title">Use Terracotta only for the primary CTA</div>
+          <div class="rule-title">Use Bordeaux only for the primary CTA</div>
         </div>
         <div class="rule-body">
           <div class="rule-demo" style="padding:12px;background:var(--warm-white);border-radius:6px;display:flex;gap:8px;align-items:center;">
             <div class="demo-btn" style="background:var(--terracotta);color:white;">Plan your trip</div>
             <div class="demo-btn-sm" style="background:transparent;border:1.5px solid var(--forest-teal);color:var(--forest-teal);">Learn more</div>
           </div>
-          <div class="rule-desc">One Terracotta CTA per section. Secondary actions use Forest Teal or outlined styles. This preserves the visual weight and urgency of the primary action.</div>
+          <div class="rule-desc">One Bordeaux CTA per section. Secondary actions use Abete or outlined styles. This preserves the visual weight and urgency of the primary action.</div>
         </div>
       </div>
 
       <div class="rule-card dont">
         <div class="rule-header">
           <div class="rule-icon dont">✗</div>
-          <div class="rule-title">Don't use multiple Terracotta elements together</div>
+          <div class="rule-title">Don't use multiple Bordeaux elements together</div>
         </div>
         <div class="rule-body">
           <div class="rule-demo" style="padding:12px;background:var(--warm-white);border-radius:6px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
@@ -878,35 +797,35 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
             <div class="demo-btn" style="background:var(--terracotta);color:white;">Learn more</div>
             <div class="demo-btn" style="background:var(--terracotta);color:white;">Contact us</div>
           </div>
-          <div class="rule-desc">When everything is orange, nothing is orange. Three CTA-coloured buttons on one screen destroys the visual hierarchy. The eye has nowhere to go.</div>
+          <div class="rule-desc">When everything is bordeaux, nothing is bordeaux. Three CTA-coloured buttons on one screen destroys the visual hierarchy. The eye has nowhere to go.</div>
         </div>
       </div>
 
       <div class="rule-card do">
         <div class="rule-header">
           <div class="rule-icon do">✓</div>
-          <div class="rule-title">Use Stone Gold as a badge background with Ink text</div>
+          <div class="rule-title">Use Oro as a badge background with Nero bosco text</div>
         </div>
         <div class="rule-body">
           <div class="rule-demo" style="padding:12px;background:var(--warm-white);border-radius:6px;display:flex;gap:6px;align-items:center;">
             <div class="demo-badge" style="background:var(--stone-gold);color:var(--ink);">€1.200</div>
             <div class="demo-badge" style="background:var(--stone-gold);color:var(--ink);">7 days</div>
-            <div class="demo-badge" style="background:var(--green-mist);color:var(--forest-teal);">Slow travel</div>
+            <div class="demo-badge" style="background:var(--fir-mist);color:var(--forest-teal);">Slow travel</div>
           </div>
-          <div class="rule-desc">Gold on price/duration badges (7.6:1 contrast). Green Mist for category/style badges with Forest Teal text (6.1:1). Two badge systems — one for value, one for category.</div>
+          <div class="rule-desc">Oro on price/duration badges (8.6:1 contrast). Fir mist for category/style badges with Abete text (11.4:1). Two badge systems — one for value, one for category.</div>
         </div>
       </div>
 
       <div class="rule-card dont">
         <div class="rule-header">
           <div class="rule-icon dont">✗</div>
-          <div class="rule-title">Don't use Stone Gold as text on white</div>
+          <div class="rule-title">Don't use Oro as text on white</div>
         </div>
         <div class="rule-body">
           <div class="rule-demo" style="padding:12px;background:var(--warm-white);border-radius:6px;">
-            <span style="color:#C4920A;font-size:0.82rem;font-weight:700;">This text is Stone Gold on white — contrast 2.4:1 · FAIL</span>
+            <span style="color:#D6AE5C;font-size:0.82rem;font-weight:700;">This text is Oro gold on white — contrast 1.9:1 · FAIL</span>
           </div>
-          <div class="rule-desc">Stone Gold (#C4920A) as text colour on white or light backgrounds fails WCAG AA. It exists only as a background fill with dark text on top.</div>
+          <div class="rule-desc">Oro (#D6AE5C) as text colour on white or light backgrounds fails WCAG AA. It exists only as a badge background fill with dark text on top.</div>
         </div>
       </div>
 
@@ -917,13 +836,14 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         </div>
         <div class="rule-body">
           <div class="rule-demo" style="border-radius:6px;overflow:hidden;border:0.5px solid var(--border);">
-            <div style="background:var(--warm-white);padding:8px 12px;font-size:0.68rem;font-weight:600;color:var(--muted);">Warm White — Hero</div>
-            <div style="background:var(--yellow-wheat);padding:8px 12px;font-size:0.68rem;font-weight:600;color:#8a7820;">Wheat — Itineraries</div>
-            <div style="background:var(--green-sage);padding:8px 12px;font-size:0.68rem;font-weight:600;color:#3a6848;">Sage — Values</div>
-            <div style="background:var(--yellow-butter);padding:8px 12px;font-size:0.68rem;font-weight:600;color:#8a7820;">Butter — Newsletter</div>
-            <div style="background:var(--ink);padding:8px 12px;font-size:0.68rem;font-weight:600;color:#5a5248;">Ink — Footer</div>
+            <div style="background:var(--ink);padding:8px 12px;font-size:0.68rem;font-weight:600;color:#9aae89;">Nero bosco — Hero</div>
+            <div style="background:var(--forest-teal);padding:8px 12px;font-size:0.68rem;font-weight:600;color:#A8BE97;">Abete — Founders</div>
+            <div style="background:var(--warm-white);padding:8px 12px;font-size:0.68rem;font-weight:600;color:var(--muted);">Off-white — How it works</div>
+            <div style="background:var(--parchment);padding:8px 12px;font-size:0.68rem;font-weight:600;color:#5a5448;">Lino — Pricing</div>
+            <div style="background:var(--fir-pale);padding:8px 12px;font-size:0.68rem;font-weight:600;color:#3a4a32;">Light fir — Why us</div>
+            <div style="background:var(--ink);padding:8px 12px;font-size:0.68rem;font-weight:600;color:#5a6450;">Nero bosco — Footer</div>
           </div>
-          <div class="rule-desc">Use section backgrounds in a deliberate sequence. Avoid two consecutive sections with the same background. The rhythm of warm/cool/dark creates visual breathing.</div>
+          <div class="rule-desc">Use section backgrounds in a deliberate sequence. Avoid two consecutive sections with the same background (the dark hero → dark Abete founders pair is the one exception). The rhythm of light/dark creates visual breathing.</div>
         </div>
       </div>
 
@@ -935,44 +855,44 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         <div class="rule-body">
           <div class="rule-demo" style="padding:10px;background:var(--warm-white);border-radius:6px;">
             <div class="demo-card">
-              <div class="demo-card-img" style="background:var(--yellow-wheat);"></div>
+              <div class="demo-card-img" style="background:var(--fir-pale);"></div>
               <div class="demo-card-body">
                 <div style="display:flex;gap:4px;">
-                  <div class="demo-badge" style="background:var(--green-mist);color:var(--forest-teal);">Slow</div>
-                  <div class="demo-badge" style="background:var(--yellow-pollen);color:#6a5810;">€350</div>
+                  <div class="demo-badge" style="background:var(--fir-mist);color:var(--forest-teal);">Slow</div>
+                  <div class="demo-badge" style="background:var(--sage);color:var(--ink);">€350</div>
                   <div class="demo-badge" style="background:var(--stone-gold);color:var(--ink);">5 days</div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="rule-desc">Three different colour families on one small card creates visual noise. Stick to the badge system: green Mist for categories, Stone Gold for value/price/duration.</div>
+          <div class="rule-desc">Three different colour families on one small card creates visual noise. Stick to the badge system: Fir mist for categories, Oro for value/price/duration.</div>
         </div>
       </div>
 
       <div class="rule-card do">
         <div class="rule-header">
           <div class="rule-icon do">✓</div>
-          <div class="rule-title">Use Warm White as background, not pure white</div>
+          <div class="rule-title">Use Off-white as background, not pure white</div>
         </div>
         <div class="rule-body">
           <div class="rule-demo" style="padding:10px;background:var(--warm-white);border-radius:6px;display:flex;gap:8px;">
-            <div style="flex:1;background:#FAFAF4;border-radius:5px;padding:10px;border:0.5px solid var(--border);">
-              <div style="font-size:0.68rem;font-weight:700;color:var(--forest-teal);margin-bottom:3px;">✓ #FAFAF4</div>
-              <div style="font-size:0.65rem;color:var(--muted);">Warm, organic, human</div>
+            <div style="flex:1;background:#FCFCFC;border-radius:5px;padding:10px;border:0.5px solid var(--border);">
+              <div style="font-size:0.68rem;font-weight:700;color:var(--forest-teal);margin-bottom:3px;">✓ #FCFCFC</div>
+              <div style="font-size:0.65rem;color:var(--muted);">Soft, organic, human</div>
             </div>
             <div style="flex:1;background:#FFFFFF;border-radius:5px;padding:10px;border:0.5px solid var(--border);">
               <div style="font-size:0.68rem;font-weight:700;color:#E24B4A;margin-bottom:3px;">✗ #FFFFFF</div>
               <div style="font-size:0.65rem;color:var(--muted);">Cold, clinical, SaaS-like</div>
             </div>
           </div>
-          <div class="rule-desc">Pure white (#fff) makes the site feel like a tech app. Warm White (#FAFAF4) feels like paper, linen, Italy. A tiny difference with a large impact on brand perception.</div>
+          <div class="rule-desc">Pure white (#fff) makes the site feel like a tech app. Off-white (#FCFCFC) softens the page and lets the dark fir greens breathe. A tiny difference with a large impact on brand perception.</div>
         </div>
       </div>
 
       <div class="rule-card do">
         <div class="rule-header">
           <div class="rule-icon do">✓</div>
-          <div class="rule-title">Keep Forest Teal for structure, not decoration</div>
+          <div class="rule-title">Keep Abete for structure, not decoration</div>
         </div>
         <div class="rule-body">
           <div class="rule-demo" style="border-radius:6px;overflow:hidden;border:0.5px solid var(--border);">
@@ -981,10 +901,10 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
               <span style="background:var(--terracotta);color:white;padding:5px 10px;border-radius:3px;font-size:0.65rem;font-weight:700;">Plan your trip</span>
             </div>
             <div style="padding:10px 12px;background:var(--warm-white);">
-              <div style="font-size:0.68rem;color:var(--muted);">Forest Teal holds the navbar. It anchors the page without competing with content.</div>
+              <div style="font-size:0.68rem;color:var(--muted);">Abete holds the navbar. It anchors the page without competing with content.</div>
             </div>
           </div>
-          <div class="rule-desc">Forest Teal is the brand anchor — it goes on the navbar, hero, major structural elements, and footer accents. It is not a decorative accent. Its frequency gives it authority.</div>
+          <div class="rule-desc">Abete is the brand anchor — it goes on the navbar, hero, major structural elements, and footer accents. It is not a decorative accent. Its frequency gives it authority.</div>
         </div>
       </div>
 
@@ -1016,38 +936,38 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         </div>
         <div class="usecase-footer">
           <div class="usecase-name">Navigation bar</div>
-          <div class="usecase-desc">Forest Teal background, white text for links, Terracotta for the single CTA.</div>
+          <div class="usecase-desc">Abete background, white text for links, Bordeaux for the single CTA.</div>
           <div class="usecase-tokens">--color-primary · --color-cta · white</div>
         </div>
       </div>
 
       <div class="usecase-card">
         <div class="usecase-demo" style="background:var(--ink);display:flex;flex-direction:column;justify-content:center;gap:10px;">
-          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#5a8878;">Northeast Italy · Slow travel</div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#A8BE97;">Northeast Italy · Slow travel</div>
           <div style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:var(--parchment);line-height:1.0;letter-spacing:-0.03em;text-transform:uppercase;">Italy off the<br>beaten path.</div>
           <div class="demo-btn" style="background:var(--terracotta);color:white;align-self:flex-start;">Plan your trip</div>
         </div>
         <div class="usecase-footer">
           <div class="usecase-name">Hero dark section</div>
-          <div class="usecase-desc">Ink background, Parchment heading, muted teal overline, Terracotta CTA.</div>
+          <div class="usecase-desc">Nero bosco background, Lino heading, sage overline, Bordeaux CTA.</div>
           <div class="usecase-tokens">--color-ink · --color-parchment · --color-cta</div>
         </div>
       </div>
 
       <div class="usecase-card">
-        <div class="usecase-demo" style="background:var(--yellow-wheat);display:flex;flex-direction:column;justify-content:center;gap:8px;">
-          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#8a7820;">Journal</div>
-          <div style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:var(--ink);line-height:1.1;letter-spacing:-0.02em;">Deep inside OffTheBoot's world</div>
+        <div class="usecase-demo" style="background:var(--parchment);display:flex;flex-direction:column;justify-content:center;gap:8px;">
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#6B6457;">Pricing</div>
+          <div style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:var(--ink);line-height:1.1;letter-spacing:-0.02em;">Plan my trip — one flat fee</div>
           <div style="display:flex;gap:6px;">
             <div class="demo-card" style="flex:1;">
-              <div class="demo-card-img" style="background:var(--green-fern);"></div>
+              <div class="demo-card-img" style="background:var(--fir-mist);"></div>
               <div class="demo-card-body">
                 <div class="demo-card-tag">Culture</div>
                 <div class="demo-card-title" style="font-size:0.65rem;">Dolomiti, traditions and food</div>
               </div>
             </div>
             <div class="demo-card" style="flex:1;">
-              <div class="demo-card-img" style="background:var(--parchment);"></div>
+              <div class="demo-card-img" style="background:var(--fir-pale);"></div>
               <div class="demo-card-body">
                 <div class="demo-card-tag">Nature</div>
                 <div class="demo-card-title" style="font-size:0.65rem;">Best time to visit Veneto</div>
@@ -1056,15 +976,15 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
           </div>
         </div>
         <div class="usecase-footer">
-          <div class="usecase-name">Journal / blog section</div>
-          <div class="usecase-desc">Wheat background (Nomádico-inspired), Ink headings, Terracotta category tags, Fern image fills.</div>
-          <div class="usecase-tokens">--color-yellow-wheat · --color-ink · --color-cta</div>
+          <div class="usecase-name">Pricing strip</div>
+          <div class="usecase-desc">Lino beige background (the one allowed beige surface), Nero bosco headings, Bordeaux category tags, fir image fills.</div>
+          <div class="usecase-tokens">--color-parchment · --color-ink · --color-cta</div>
         </div>
       </div>
 
       <div class="usecase-card">
-        <div class="usecase-demo" style="background:var(--green-sage);display:flex;flex-direction:column;justify-content:center;gap:10px;">
-          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#3a6848;">Why OffTheBoot</div>
+        <div class="usecase-demo" style="background:var(--fir-pale);display:flex;flex-direction:column;justify-content:center;gap:10px;">
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#3a4a32;">Why OffTheBoot</div>
           <div style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:var(--ink);letter-spacing:-0.02em;">Locals who know.<br>Paths worth taking.</div>
           <div style="display:flex;gap:6px;">
             <div style="flex:1;background:white;border-radius:5px;padding:8px 10px;">
@@ -1079,17 +999,17 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         </div>
         <div class="usecase-footer">
           <div class="usecase-name">Feature / values section</div>
-          <div class="usecase-desc">Sage background, Ink headings, Forest Teal stat numbers, white stat cards.</div>
-          <div class="usecase-tokens">--color-green-sage · --color-ink · --color-primary</div>
+          <div class="usecase-desc">Light fir background, Nero bosco headings, Abete stat numbers, white stat cards.</div>
+          <div class="usecase-tokens">--color-teal-pale · --color-ink · --color-primary</div>
         </div>
       </div>
 
       <div class="usecase-card">
         <div class="usecase-demo" style="background:var(--warm-white);padding:16px;display:flex;flex-direction:column;gap:8px;justify-content:center;">
           <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;">
-            <div class="demo-badge" style="background:var(--green-mist);color:var(--forest-teal);">Slow travel</div>
-            <div class="demo-badge" style="background:var(--green-mist);color:var(--forest-teal);">No car needed</div>
-            <div class="demo-badge" style="background:var(--green-mist);color:var(--forest-teal);">Veneto</div>
+            <div class="demo-badge" style="background:var(--fir-mist);color:var(--forest-teal);">Slow travel</div>
+            <div class="demo-badge" style="background:var(--fir-mist);color:var(--forest-teal);">No car needed</div>
+            <div class="demo-badge" style="background:var(--fir-mist);color:var(--forest-teal);">Veneto</div>
           </div>
           <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;">
             <div class="demo-badge" style="background:var(--stone-gold);color:var(--ink);">€1.200 p.p.</div>
@@ -1099,14 +1019,14 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         </div>
         <div class="usecase-footer">
           <div class="usecase-name">Badge system</div>
-          <div class="usecase-desc">Green Mist + Forest Teal for category/style. Stone Gold + Ink for value/price/duration. Two systems, clear hierarchy.</div>
-          <div class="usecase-tokens">--color-green-mist / --color-primary · --color-accent / --color-ink</div>
+          <div class="usecase-desc">Fir mist + Abete for category/style. Oro + Nero bosco for value/price/duration. Two systems, clear hierarchy.</div>
+          <div class="usecase-tokens">--color-teal-mist / --color-primary · --color-accent / --color-ink</div>
         </div>
       </div>
 
       <div class="usecase-card">
-        <div class="usecase-demo" style="background:var(--yellow-butter);display:flex;flex-direction:column;justify-content:center;gap:10px;">
-          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#8a7820;">Newsletter</div>
+        <div class="usecase-demo" style="background:var(--fir-pale);display:flex;flex-direction:column;justify-content:center;gap:10px;">
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#3a4a32;">Newsletter</div>
           <div style="font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:800;color:var(--ink);letter-spacing:-0.01em;line-height:1.2;">Stories from authentic Italy.<br>Every week.</div>
           <div style="display:flex;gap:6px;">
             <div style="flex:1;background:white;border-radius:4px;padding:8px 10px;font-size:0.72rem;color:var(--muted);border:0.5px solid var(--border);">Your email</div>
@@ -1115,8 +1035,8 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         </div>
         <div class="usecase-footer">
           <div class="usecase-name">Newsletter / email capture</div>
-          <div class="usecase-desc">Butter background for lightness, Ink text, Terracotta CTA. The softest yellow — barely-there warmth.</div>
-          <div class="usecase-tokens">--color-yellow-butter · --color-ink · --color-cta</div>
+          <div class="usecase-desc">Light fir background, Nero bosco text, Bordeaux CTA. A soft fir tint — calm and grounded.</div>
+          <div class="usecase-tokens">--color-teal-pale · --color-ink · --color-cta</div>
         </div>
       </div>
 
@@ -1158,30 +1078,30 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
         <div class="pjour-title">Discover the authentic<br>Northeast</div>
         <div class="pjour-cards">
           <div class="pjour-card">
-            <div class="pjour-card-img" style="background:#B8D0C0;"></div>
+            <div class="pjour-card-img" style="background:#A8BE97;"></div>
             <div class="pjour-card-body">
               <div class="pjour-card-tag">Custom</div>
               <div class="pjour-card-title">Dolomiti in 7 days without a car</div>
-              <span class="pjour-badge" style="background:#EAF3EC;color:#2E5855;">Slow</span>
-              <span class="pjour-badge" style="background:#C4920A;color:#1E1C16;">€1.200</span>
+              <span class="pjour-badge" style="background:#E6EADB;color:#1E2A1A;">Slow</span>
+              <span class="pjour-badge" style="background:#D6AE5C;color:#131C10;">€1.200</span>
             </div>
           </div>
           <div class="pjour-card">
-            <div class="pjour-card-img" style="background:#EDE5D0;"></div>
+            <div class="pjour-card-img" style="background:#DEE4D6;"></div>
             <div class="pjour-card-body">
               <div class="pjour-card-tag">Self-organised</div>
               <div class="pjour-card-title">Authentic Friuli: wine & villages</div>
-              <span class="pjour-badge" style="background:#EAF3EC;color:#2E5855;">5 days</span>
-              <span class="pjour-badge" style="background:#C4920A;color:#1E1C16;">€350</span>
+              <span class="pjour-badge" style="background:#E6EADB;color:#1E2A1A;">5 days</span>
+              <span class="pjour-badge" style="background:#D6AE5C;color:#131C10;">€350</span>
             </div>
           </div>
           <div class="pjour-card">
-            <div class="pjour-card-img" style="background:#B8D0C0;"></div>
+            <div class="pjour-card-img" style="background:#A8BE97;"></div>
             <div class="pjour-card-body">
               <div class="pjour-card-tag">Custom</div>
               <div class="pjour-card-title">Venice without the tourists</div>
-              <span class="pjour-badge" style="background:#EAF3EC;color:#2E5855;">3 days</span>
-              <span class="pjour-badge" style="background:#C4920A;color:#1E1C16;">€800</span>
+              <span class="pjour-badge" style="background:#E6EADB;color:#1E2A1A;">3 days</span>
+              <span class="pjour-badge" style="background:#D6AE5C;color:#131C10;">€800</span>
             </div>
           </div>
         </div>
@@ -1242,12 +1162,12 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
   <div>
     <div class="footer-logo">Off the Boot</div>
     <div style="font-size:0.72rem;color:#5A5248;margin-top:0.5rem;line-height:1.8;">
-      Colour System v1.0 · Confirmed · April 2026<br>
+      Colour System v2.0 "Abete" · Confirmed · June 2026<br>
       Design System — Phase 01
     </div>
   </div>
   <div class="footer-meta">
-    14 colours · 6 core · 8 tints<br>
+    9 colours · 6 core · 3 fir/sage tints<br>
     All pairings WCAG 2.1 AA verified<br>
     Internal use only — OffTheBoot
   </div>

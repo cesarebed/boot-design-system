@@ -1,6 +1,8 @@
 /* ============================================================
-   OffTheBoot — Design System Tokens v1.1
-   Last updated: May 2026
+   OffTheBoot — Design System Tokens v2.0 ("Abete")
+   Last synced with the live site: 2026-06-13
+   (v1 "Forest Teal" archived in the boot-website repo at
+   .superdesign/design-system-v1-teal-reference.md)
 
    USAGE RULES:
    - Always use variables. Never hardcode hex values, font names,
@@ -16,63 +18,58 @@
      tokens into `globals.css`.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Young+Serif&family=Lora:ital,wght@0,400..700;1,400..700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,900,94.9,1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Satisfy&display=swap');
 
 :root {
 
   /* ----------------------------------------------------------
-     COLOURS — Core palette
+     COLOURS — Core palette ("Abete")
      ---------------------------------------------------------- */
 
-  --color-primary:        #2E5855;   /* Forest Teal — navbar, hero bg, primary buttons, footer accents */
-  --color-accent:         #C4920A;   /* Stone Gold  — price/duration badges ONLY. Never as text on white */
-  --color-cta:            #D4701A;   /* Terracotta  — primary CTA buttons ONLY. One per section max */
-  --color-ink:            #1E1C16;   /* Ink         — all body text, headings, dark section backgrounds */
-  --color-parchment:      #EDE5D0;   /* Parchment   — tagline strip, alternate surfaces, borders */
-  --color-bg:             #FAFAF4;   /* Warm White  — page background. NEVER use pure #ffffff */
-  --color-muted:          #6B6457;   /* Muted Ink   — secondary text, meta, placeholders */
-  --color-border:         #E8E0D0;   /* Light border — card borders, dividers */
-  --color-border-strong:  #DDD5C2;   /* Strong border — section dividers, input borders */
+  --color-primary:        #1E2A1A;   /* Abete      — dark fir green: structural, dark strips, primary buttons */
+  --color-accent:         #D6AE5C;   /* Oro        — gold, price/duration badges ONLY. Never as text on white */
+  --color-cta:            #9B3940;   /* Bordeaux   — CTA buttons ONLY. One per section max (hover #7E2E34) */
+  --color-ink:            #131C10;   /* Nero bosco — all body text + darkest section backgrounds, footer */
+  --color-parchment:      #E8E2D2;   /* Lino       — CREAM TEXT ON DARK ONLY. Never a surface/background */
+  --color-bg:             #FCFCFC;   /* Off-white  — page background + light sections. Not pure #ffffff */
+  --color-muted:          #6B6457;   /* Muted      — secondary text, meta, placeholders */
+  --color-border:         #E4E5DF;   /* Light border — card borders, dividers */
+  --color-border-strong:  #D6D7CF;   /* Strong border — section dividers, input borders */
 
   /* ----------------------------------------------------------
-     COLOURS — Yellow tints (backgrounds only, never as text)
+     COLOURS — Fir / sage tints (light surfaces & accents)
+     Token names kept as --color-teal-* in code to avoid churn;
+     values are fir/sage. Yellow & green tints are RETIRED.
      ---------------------------------------------------------- */
 
-  --color-yellow-butter:  #FDF5CC;   /* Lightest — newsletter sections, subtle highlights */
-  --color-yellow-straw:   #F8EDA0;   /* Light    — journal/blog section backgrounds */
-  --color-yellow-wheat:   #F5E8A8;   /* Mid      — itinerary sections, CTA areas. Primary yellow bg */
-  --color-yellow-pollen:  #EDD878;   /* Saturated — attention banners, featured callouts only */
+  --color-teal-mist:      #E6EADB;   /* Lightest fir — badge bg, step-number circles, image placeholders */
+  --color-teal-pale:      #DEE4D6;   /* Light fir surface — light section backgrounds, newsletter, blog TL;DR */
+  --color-teal-soft:      #A8BE97;   /* Sage — accents on dark backgrounds (hero italic, dots, dark-CTA accent) */
 
-  /* ----------------------------------------------------------
-     COLOURS — Green tints (backgrounds only, never as text)
-     ---------------------------------------------------------- */
-
-  --color-green-mist:     #EAF3EC;   /* Lightest — category/style badge backgrounds */
-  --color-green-sage:     #D8ECD8;   /* Light    — values/features section backgrounds */
-  --color-green-fern:     #C0DEC0;   /* Mid      — card image placeholders, decorative elements */
-  --color-green-meadow:   #9AC49A;   /* Saturated — graphic accents, hero italic accent colour */
+  /* Beige note: the ONLY warm-beige surface is the "Plan my trip"
+     strip, which uses --color-parchment (Lino) as its background. */
 
   /* ----------------------------------------------------------
      TYPOGRAPHY — Families
      ---------------------------------------------------------- */
 
-  --font-display:   'Young Serif', Georgia, serif;
-  --font-body:      'Lora', Georgia, serif;
-  --font-logo:      'Fraunces', Georgia, serif;   /* Logo wordmark ONLY — use via .logo-wordmark */
+  --font-display:   'Newsreader', Georgia, serif;            /* headings, stat numbers — weight 600 */
+  --font-body:      'Source Sans 3', system-ui, -apple-system, sans-serif;
+  --font-logo:      'Satisfy', 'Brush Script MT', cursive;   /* Logo wordmark ONLY — use via .logo-wordmark */
 
   /* ----------------------------------------------------------
-     TYPOGRAPHY — Scale
+     TYPOGRAPHY — Scale (bumped one notch, 2026-06)
      Use clamp() in components for fluid sizing where needed.
      ---------------------------------------------------------- */
 
-  --text-hero:      4rem;       /* 64px — hero display. One use per page */
-  --text-h1:        2.5rem;     /* 40px — major section headings */
-  --text-h2:        1.75rem;    /* 28px — sub-section, card titles, blog post titles */
-  --text-h3:        1.25rem;    /* 20px — accent headings, always italic, always Forest Teal */
-  --text-body:      1rem;       /* 16px — all body copy */
-  --text-ui:        0.875rem;   /* 14px — nav links, UI elements, card metadata */
-  --text-label:     0.75rem;    /* 12px — button text, overlines */
-  --text-xs:        0.625rem;   /* 10px — section eyebrows, badge text, timestamps */
+  --text-hero:      4.25rem;    /* 68px — hero display. One use per page */
+  --text-h1:        2.75rem;    /* 44px — major section headings */
+  --text-h2:        2rem;       /* 32px — sub-section, card titles, blog post titles */
+  --text-h3:        1.375rem;   /* 22px — accent headings, always italic, in --color-primary */
+  --text-body:      1.0625rem;  /* 17px — all body copy */
+  --text-ui:        0.9375rem;  /* 15px — nav links, UI elements, card metadata */
+  --text-label:     0.8125rem;  /* 13px — button text, overlines */
+  --text-xs:        0.6875rem;  /* 11px — section eyebrows, badge text, timestamps */
 
   /* ----------------------------------------------------------
      TYPOGRAPHY — Line heights
@@ -88,7 +85,7 @@
      TYPOGRAPHY — Letter spacing
      ---------------------------------------------------------- */
 
-  --ls-tight:       -0.02em;    /* Hero, H1 — tighten large Young Serif */
+  --ls-tight:       -0.02em;    /* Hero, H1 — tighten large display type */
   --ls-snug:        -0.01em;    /* H2 — slight tightening */
   --ls-normal:      0em;        /* Body, UI — default */
   --ls-wide:        0.10em;     /* Button labels, CTA text */
@@ -96,13 +93,14 @@
   --ls-widest:      0.20em;     /* Hero eyebrow overlines */
 
   /* ----------------------------------------------------------
-     TYPOGRAPHY — Font weights (Lora body font)
-     Young Serif is always weight 400 — no exceptions.
-     Fraunces is logo-only at weight 900 with variation axes.
-     Lora has no weight 300 — body uses 400 as its lightest weight.
+     TYPOGRAPHY — Font weights (Source Sans 3 body font)
+     Newsreader (display) is always weight 600 — no exceptions.
+     Satisfy is logo-only at weight 400.
+     Source Sans 3 has a 300 cut, but it is intentionally NOT
+     loaded — --fw-light maps to 400 as the lightest body weight.
      ---------------------------------------------------------- */
 
-  --fw-light:       400;        /* Body text, descriptions, footer links (Lora has no 300) */
+  --fw-light:       400;        /* Body text, descriptions, footer links */
   --fw-regular:     400;        /* Nav links, general UI text */
   --fw-medium:      500;        /* Card metadata, secondary UI */
   --fw-semibold:    600;        /* Buttons, emphasis text */
@@ -131,13 +129,13 @@
 
   --container-max:  1120px;     /* Max width for .container */
   --container-px:   2.5rem;     /* Horizontal padding on .container */
-  --navbar-height:  60px;       /* Fixed navbar height */
+  --navbar-height:  84px;       /* Navbar height (desktop; 70px mobile) */
 
   /* ----------------------------------------------------------
      BORDERS & RADIUS
      ---------------------------------------------------------- */
 
-  --radius-sm:      3px;        /* Buttons, badges, tags */
+  --radius-sm:      3px;        /* Incidental small UI only — buttons & cards are squared (radius 0) */
   --radius-md:      4px;        /* Cards, inputs */
   --radius-lg:      8px;        /* Larger cards, modals */
   --radius-xl:      12px;       /* Feature blocks */
@@ -192,7 +190,7 @@ body {
 /* All headings use the display font */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 400;             /* Young Serif has one weight */
+  font-weight: 600;             /* Newsreader display weight */
   line-height: var(--lh-snug);
 }
 
@@ -237,10 +235,11 @@ img, video {
   font-size: var(--text-hero);
   line-height: var(--lh-tight);
   letter-spacing: var(--ls-tight);
-  font-weight: 400;
+  font-weight: 600;
 }
 
-/* Eyebrow / overline — always Geist, always uppercase */
+/* Eyebrow / overline — always body font, always uppercase.
+   (Used on inner pages; the homepage no longer uses eyebrows.) */
 .text-eyebrow {
   font-family: var(--font-body);
   font-size: var(--text-xs);
@@ -261,7 +260,7 @@ img, video {
   flex-shrink: 0;
 }
 
-/* Italic accent — H3 style, always Forest Teal */
+/* Italic accent — H3 style, in --color-primary (Abete) */
 .text-accent {
   font-family: var(--font-display);
   font-size: var(--text-h3);
@@ -270,15 +269,13 @@ img, video {
   line-height: var(--lh-snug);
 }
 
-/* Logo wordmark — Fraunces, weight 900, SOFT 94.9, WONK 1, optical sizing auto.
+/* Logo wordmark — Satisfy script, weight 400.
    Use ONLY for the OffTheBoot wordmark in navbar + footer. */
 .logo-wordmark {
-  font-family: var(--font-logo), Georgia, serif;
-  font-weight: 900;
+  font-family: var(--font-logo);
+  font-weight: 400;
   font-style: normal;
-  font-optical-sizing: auto;
-  font-variation-settings: 'SOFT' 94.9, 'WONK' 1;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   line-height: 1;
 }
 
@@ -286,19 +283,20 @@ img, video {
    COMPONENT UTILITIES
    ============================================================ */
 
-/* Buttons — pill shape, uppercase, semibold Lora */
+/* Buttons — squared, 2px border, hover inverts fill to outline.
+   Never pills/rounded. */
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: var(--text-label);
   font-weight: var(--fw-semibold);
   letter-spacing: var(--ls-wide);
   text-transform: uppercase;
-  padding: 13px 28px;
-  border-radius: 999px; /* pill */
-  border: none;
+  padding: 13px 26px;
+  border-radius: 0;            /* squared house style — never pills/rounded */
+  border: 2px solid transparent;
   cursor: pointer;
   text-decoration: none;
   transition: all var(--transition-normal);
@@ -309,41 +307,44 @@ img, video {
 .btn-cta {
   background: var(--color-cta);
   color: white;
+  border-color: var(--color-cta);
 }
-.btn-cta:hover {
-  background: #c0621f;
-  transform: translateY(-1px);
+.btn-cta:hover {            /* fill drops out, outline remains */
+  background: transparent;
+  color: var(--color-cta);
 }
 
 .btn-primary {
   background: var(--color-primary);
   color: white;
+  border-color: var(--color-primary);
 }
 .btn-primary:hover {
-  background: #244845;
-  transform: translateY(-1px);
+  background: transparent;
+  color: var(--color-primary);
 }
 
 .btn-outline {
   background: transparent;
   color: var(--color-ink);
-  border: 1.5px solid var(--color-border-strong);
+  border-color: var(--color-ink);
 }
 .btn-outline:hover {
-  border-color: var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-bg);
 }
 
 .btn-ghost {
   background: transparent;
-  color: var(--color-muted);
-  padding: 13px 0;
+  color: var(--color-ink);
+  font-weight: var(--fw-bold);
+  padding: 6px 0;
   border: none;
   border-radius: 0;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 2px solid var(--color-ink);
 }
 .btn-ghost:hover {
-  color: var(--color-ink);
-  border-color: var(--color-ink);
+  opacity: 0.6;
 }
 
 /* Badges */
@@ -360,7 +361,7 @@ img, video {
 }
 
 .badge-category {
-  background: var(--color-green-mist);
+  background: var(--color-teal-mist);
   color: var(--color-primary);
 }
 
@@ -371,15 +372,16 @@ img, video {
 
 /* ============================================================
    SECTION PRIMITIVES — canonical backgrounds for page sections
-   The live site rotates these four to avoid two adjacent
-   sections sharing a background.
+   The live site alternates light & dark so two adjacent
+   sections never share a background.
    ============================================================ */
 
 .section            { padding: 5.5rem 0; }
 .section-warm       { background: var(--color-bg); }
-.section-sage       { background: var(--color-green-sage); }
-.section-parchment  { background: var(--color-parchment); }
+.section-teal-pale  { background: var(--color-teal-pale); }
+.section-parchment  { background: var(--color-teal-pale); }
 .section-ink        { background: var(--color-ink); color: var(--color-parchment); }
+.section-primary    { background: var(--color-primary); color: var(--color-parchment); }
 
 .section-header { margin-bottom: 3rem; max-width: 700px; }
 .section-header.center {
@@ -394,23 +396,25 @@ img, video {
   line-height: var(--lh-snug);
   letter-spacing: var(--ls-snug);
   color: var(--color-ink);
-  font-weight: 400;
+  font-weight: 600;
 }
-.section-ink .section-title { color: var(--color-parchment); }
+.section-ink .section-title,
+.section-primary .section-title { color: var(--color-parchment); }
 
 .section-lead {
   font-family: var(--font-body);
   font-weight: var(--fw-light);
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   line-height: var(--lh-relaxed);
   color: var(--color-muted);
   margin-top: 1rem;
   max-width: 640px;
 }
-.section-ink .section-lead { color: rgba(237, 229, 208, 0.75); }
+.section-ink .section-lead,
+.section-primary .section-lead { color: rgba(232, 226, 210, 0.75); }
 
 @media (min-width: 900px) {
-  .section-lead { font-size: 1.125rem; }
+  .section-lead { font-size: 1.1875rem; }
 }
 
 @media (max-width: 900px) {
@@ -419,8 +423,8 @@ img, video {
 
 /* Desktop comfort bump for body/content text — headings unchanged */
 @media (min-width: 900px) {
-  body { font-size: 1.0625rem; }
-  p    { font-size: 1.0625rem; }
+  body { font-size: 1.125rem; }
+  p    { font-size: 1.125rem; }
 }
 
 /* ============================================================
@@ -429,7 +433,7 @@ img, video {
    ============================================================
 
    import type { Config } from 'tailwindcss'
-   
+
    const config: Config = {
      theme: {
        extend: {
@@ -439,17 +443,16 @@ img, video {
            cta:        'var(--color-cta)',
            ink:        'var(--color-ink)',
            parchment:  'var(--color-parchment)',
-           'warm-white': 'var(--color-bg)',
+           'off-white': 'var(--color-bg)',
            muted:      'var(--color-muted)',
-           'yellow-wheat':  'var(--color-yellow-wheat)',
-           'yellow-butter': 'var(--color-yellow-butter)',
-           'green-sage':    'var(--color-green-sage)',
-           'green-mist':    'var(--color-green-mist)',
+           'teal-mist': 'var(--color-teal-mist)',
+           'teal-pale': 'var(--color-teal-pale)',
+           'teal-soft': 'var(--color-teal-soft)',
          },
          fontFamily: {
-           display: 'var(--font-display)',  // Young Serif
-           body:    'var(--font-body)',     // Lora
-           logo:    'var(--font-logo)',     // Fraunces — wordmark only
+           display: 'var(--font-display)',  // Newsreader
+           body:    'var(--font-body)',     // Source Sans 3
+           logo:    'var(--font-logo)',     // Satisfy — wordmark only
          },
          borderRadius: {
            sm: 'var(--radius-sm)',
@@ -466,7 +469,7 @@ img, video {
        },
      },
    }
-   
+
    export default config
 
    ============================================================ */

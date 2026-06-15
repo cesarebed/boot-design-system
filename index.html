@@ -37,7 +37,7 @@
     font-size: var(--text-xs);
     text-transform: uppercase;
     letter-spacing: 0.18em;
-    color: var(--color-green-meadow);
+    color: var(--color-teal-soft);
     margin-bottom: 1.5rem;
   }
 
@@ -52,7 +52,13 @@
 
   .hero h1 em {
     font-style: italic;
-    color: var(--color-green-meadow);
+    color: var(--color-teal-soft);
+  }
+
+  .logo-wordmark {
+    font-family: 'Satisfy', cursive;
+    font-weight: 400;
+    font-style: normal;
   }
 
   .hero p {
@@ -64,7 +70,7 @@
 
   /* ── Tagline strip ── */
   .strip {
-    background: var(--color-parchment);
+    background: var(--color-teal-pale);
     padding: 1.25rem 1.5rem;
     text-align: center;
     font-size: var(--text-ui);
@@ -127,7 +133,7 @@
   .card:hover {
     transform: translateY(-2px);
     border-color: var(--color-border-strong);
-    background: #fff;
+    background: var(--color-bg);
   }
 
   .card-tag {
@@ -187,10 +193,10 @@
       var(--color-accent) 40%,
       var(--color-cta) 40%,
       var(--color-cta) 60%,
-      var(--color-yellow-wheat) 60%,
-      var(--color-yellow-wheat) 80%,
-      var(--color-green-sage) 80%,
-      var(--color-green-sage) 100%
+      var(--color-teal-pale) 60%,
+      var(--color-teal-pale) 80%,
+      var(--color-teal-soft) 80%,
+      var(--color-teal-soft) 100%
     );
   }
 
@@ -200,7 +206,7 @@
     top: 1rem; right: 1.25rem;
     font-family: var(--font-display);
     font-size: 3rem;
-    color: var(--color-green-sage);
+    color: var(--color-teal-soft);
     line-height: 1;
   }
 
@@ -226,7 +232,7 @@
     top: 1rem; right: 1.25rem;
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     font-size: 2rem;
-    color: var(--color-green-sage);
+    color: var(--color-teal-soft);
     line-height: 1;
   }
 
@@ -235,7 +241,7 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 6px;
-    background: var(--color-green-meadow);
+    background: var(--color-teal-soft);
   }
 
   /* ── Footer ── */
@@ -248,7 +254,7 @@
   }
 
   footer a {
-    color: var(--color-green-meadow);
+    color: var(--color-teal-soft);
     text-decoration: none;
   }
 
@@ -268,8 +274,8 @@
 
   <header class="hero">
     <div class="hero-inner">
-      <div class="eyebrow">Design System · v1.0 · April 2026</div>
-      <h1>OffTheBoot<br><em>design system.</em></h1>
+      <div class="eyebrow">Design System · v2.0 "Abete" · Synced 2026-06-13</div>
+      <h1><span class="logo-wordmark">OffTheBoot</span><br><em>design system.</em></h1>
       <p>The shared visual language behind OffTheBoot — colours, typography, tokens, and reference mockups. Pick a section to explore.</p>
     </div>
   </header>
@@ -289,14 +295,14 @@
       <a class="card card--palette" href="palette_system.html">
         <span class="card-tag">01 · Colour</span>
         <h3>Palette System</h3>
-        <p>Core palette, yellow and green tint families, usage rules, and accessibility notes for every surface and text context.</p>
+        <p>Core palette, fir and sage tint families, usage rules, and accessibility notes for every surface and text context.</p>
         <span class="card-link">View palette</span>
       </a>
 
       <a class="card card--typography" href="typography_system.html">
         <span class="card-tag">02 · Typography</span>
         <h3>Typography System</h3>
-        <p>Young Serif for display, Geist for body. Scale, line heights, tracking rules, and the italic accent pattern.</p>
+        <p>Newsreader for display, Source Sans 3 for body, Satisfy for the logo wordmark. Scale, line heights, tracking rules, and the italic accent pattern.</p>
         <span class="card-link">View typography</span>
       </a>
 

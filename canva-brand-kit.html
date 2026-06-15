@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>OffTheBoot — Canva Brand Kit Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Satisfy&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="tokens.css">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -30,7 +33,7 @@
   .hero-inner { max-width: 1100px; margin: 0 auto; }
   .back-link {
     display: inline-block;
-    color: var(--color-green-meadow);
+    color: var(--color-teal-soft);
     text-decoration: none;
     font-size: var(--text-ui);
     margin-bottom: 2rem;
@@ -41,7 +44,7 @@
     font-size: var(--text-xs);
     text-transform: uppercase;
     letter-spacing: 0.18em;
-    color: var(--color-green-meadow);
+    color: var(--color-teal-soft);
     margin-bottom: 1rem;
   }
   .hero h1 {
@@ -52,7 +55,7 @@
     letter-spacing: -0.02em;
     margin-bottom: 1.25rem;
   }
-  .hero h1 em { font-style: italic; color: var(--color-green-meadow); }
+  .hero h1 em { font-style: italic; color: var(--color-teal-soft); }
   .hero p {
     max-width: 62ch;
     color: var(--color-parchment);
@@ -251,7 +254,7 @@
     padding: 1.5rem;
     background: #fff;
   }
-  .tone-card.yes { background: var(--color-green-sage); border-color: transparent; }
+  .tone-card.yes { background: var(--color-teal-pale); border-color: transparent; }
   .tone-card.no  { background: var(--color-parchment);  border-color: transparent; }
   .tone-card h4 {
     font-family: var(--font-display);
@@ -331,7 +334,7 @@
     text-align: center;
     font-size: var(--text-ui);
   }
-  footer a { color: var(--color-green-meadow); text-decoration: none; }
+  footer a { color: var(--color-teal-soft); text-decoration: none; }
   footer a:hover { text-decoration: underline; }
 
   .toast {
@@ -356,7 +359,7 @@
   <header class="hero">
     <div class="hero-inner">
       <a href="index.html" class="back-link">← Back to design system</a>
-      <div class="eyebrow">Canva · Brand Kit Reference</div>
+      <div class="eyebrow">Canva · Brand Kit Reference · v2.0 "Abete" · synced 2026-06-13</div>
       <h1>Everything you need<br>to set up the <em>Canva Brand Kit.</em></h1>
       <p>A one-page summary of every value you need to plug into Canva → <strong>Brand → Brand Kit</strong>. Click any colour swatch to copy its hex. Fonts link straight to Google Fonts for upload or selection inside Canva.</p>
     </div>
@@ -379,9 +382,9 @@
         <ol>
           <li>In Canva, open <strong>Brand → Brand Kit</strong> (create one called <em>OffTheBoot</em>).</li>
           <li>Under <strong>Brand colours</strong>, create the four palettes below and paste each hex. Name each palette as shown.</li>
-          <li>Under <strong>Brand fonts</strong>, set <em>Young Serif</em> for headings and <em>Lora</em> for body / subheadings. The wordmark uses <em>Fraunces</em> at weight 900 with SOFT 94.9 / WONK 1 — Canva typically doesn't expose variable font axes, so upload pre-rendered wordmark SVGs to <strong>Logos</strong> instead of trying to set Fraunces as a brand font. If Young Serif or Lora aren't in Canva's library, upload the <code>.ttf</code> or <code>.otf</code> from Google Fonts.</li>
+          <li>Under <strong>Brand fonts</strong>, set <em>Newsreader</em> for headings and <em>Source Sans 3</em> for body / subheadings. The wordmark uses <em>Satisfy</em> — Canva does carry it, but the safest route is to upload pre-rendered wordmark SVGs to <strong>Logos</strong> rather than relying on the live font. If Newsreader or Source Sans 3 aren't in Canva's library, upload the <code>.ttf</code> or <code>.otf</code> from Google Fonts.</li>
           <li>Paste the brand voice bullets below into <strong>Brand voice</strong> so Canva's Magic Write respects the tone.</li>
-          <li>Upload the OffTheBoot logo (when ready) under <strong>Logos</strong>. Use the primary on Warm White and a parchment-coloured version on Ink.</li>
+          <li>Upload the OffTheBoot logo (when ready) under <strong>Logos</strong>. Use the primary on Off-white and a Lino-coloured version on Ink.</li>
         </ol>
       </div>
     </section>
@@ -391,7 +394,7 @@
       <div class="section-head">
         <span class="kicker">01 · Colour</span>
         <h2>Brand colours</h2>
-        <p>Click any swatch to copy its hex code. Create four separate palettes in Canva — don't merge them into one long list, the grouping is what keeps usage rules readable.</p>
+        <p>Click any swatch to copy its hex code. Create three separate palettes in Canva — don't merge them into one long list, the grouping is what keeps usage rules readable.</p>
       </div>
 
       <div class="palette-group">
@@ -407,15 +410,9 @@
       </div>
 
       <div class="palette-group">
-        <h3>Palette 3 — Yellow tints</h3>
-        <p class="sub">Backgrounds only. Never use as text colour.</p>
-        <div class="swatches" id="palette-yellows"></div>
-      </div>
-
-      <div class="palette-group">
-        <h3>Palette 4 — Green tints</h3>
-        <p class="sub">Backgrounds and decorative accents only.</p>
-        <div class="swatches" id="palette-greens"></div>
+        <h3>Palette 3 — Fir &amp; sage tints</h3>
+        <p class="sub">Light surfaces and accents only. Never use as text colour on white.</p>
+        <div class="swatches" id="palette-tints"></div>
       </div>
     </section>
 
@@ -424,47 +421,47 @@
       <div class="section-head">
         <span class="kicker">02 · Typography</span>
         <h2>Brand fonts</h2>
-        <p>Three families — never introduce a fourth. Young Serif and Lora are the two you assign in Canva's Brand Kit; Fraunces is logo-only and lives in your uploaded wordmark SVGs.</p>
+        <p>Three families — never introduce a fourth. Newsreader and Source Sans 3 are the two you assign in Canva's Brand Kit; Satisfy is logo-only and lives in your uploaded wordmark SVGs.</p>
       </div>
 
       <div class="font-block display">
         <div class="label">Heading font</div>
-        <div class="preview">Young Serif <em>regular.</em></div>
+        <div class="preview">Newsreader <em>headings.</em></div>
         <dl>
-          <dt>Family</dt><dd>Young Serif</dd>
-          <dt>Weight</dt><dd>400 only (no bold variant exists)</dd>
+          <dt>Family</dt><dd>Newsreader</dd>
+          <dt>Weight</dt><dd>600 (display / headings)</dd>
           <dt>Style</dt><dd>Regular + Italic</dd>
           <dt>Canva role</dt><dd>Heading</dd>
           <dt>Tracking</dt><dd>−0.02em at 40px+ · −0.01em at 28px</dd>
-          <dt>Download</dt><dd><a href="https://fonts.google.com/specimen/Young+Serif" target="_blank" rel="noopener">fonts.google.com/specimen/Young+Serif</a></dd>
+          <dt>Download</dt><dd><a href="https://fonts.google.com/specimen/Newsreader" target="_blank" rel="noopener">fonts.google.com/specimen/Newsreader</a></dd>
         </dl>
-        <p class="font-note">Use italic for pull quotes, testimonials and H3 accents. Never use Young Serif for body text, buttons, labels or nav.</p>
+        <p class="font-note">Use italic for pull quotes, testimonials and H3 accents. Never use Newsreader for body text, buttons, labels or nav.</p>
       </div>
 
       <div class="font-block body">
         <div class="label">Body font</div>
-        <div class="preview">Lora — used for paragraphs, nav, buttons, labels, and every piece of UI copy across OffTheBoot.</div>
+        <div class="preview">Source Sans 3 — used for paragraphs, nav, buttons, labels, and every piece of UI copy across OffTheBoot.</div>
         <dl>
-          <dt>Family</dt><dd>Lora</dd>
-          <dt>Weights</dt><dd>400 (body / nav) · 500 (meta) · 600 (buttons) · 700 (labels / overlines) — italics available at every weight</dd>
+          <dt>Family</dt><dd>Source Sans 3</dd>
+          <dt>Weights</dt><dd>400 (body / nav) · 500 (meta) · 600 (buttons) · 700 (labels / overlines) — italic available at 400</dd>
           <dt>Canva role</dt><dd>Subheading + Body</dd>
           <dt>Tracking</dt><dd>0 for body · 0.10em for buttons · 0.16–0.18em for uppercase labels</dd>
-          <dt>Download</dt><dd><a href="https://fonts.google.com/specimen/Lora" target="_blank" rel="noopener">fonts.google.com/specimen/Lora</a></dd>
+          <dt>Download</dt><dd><a href="https://fonts.google.com/specimen/Source+Sans+3" target="_blank" rel="noopener">fonts.google.com/specimen/Source+Sans+3</a></dd>
         </dl>
-        <p class="font-note">Never use Lora for page headings or section titles. Lora has no weight 300 — 400 is the lightest weight in the kit.</p>
+        <p class="font-note">Never use Source Sans 3 for page headings or section titles.</p>
       </div>
 
       <div class="font-block body">
         <div class="label">Logo wordmark font</div>
-        <div class="preview" style="font-family:'Fraunces',serif;font-weight:900;font-optical-sizing:auto;font-variation-settings:'SOFT' 94.9, 'WONK' 1;letter-spacing:-0.02em;">OffTheBoot</div>
+        <div class="preview" style="font-family:'Satisfy',cursive;font-weight:400;letter-spacing:-0.01em;">OffTheBoot</div>
         <dl>
-          <dt>Family</dt><dd>Fraunces</dd>
-          <dt>Locked settings</dt><dd>weight 900 · SOFT 94.9 · WONK 1 · optical sizing auto</dd>
-          <dt>Canva role</dt><dd>None — upload pre-rendered SVG wordmarks instead</dd>
-          <dt>Tracking</dt><dd>−0.02em</dd>
-          <dt>Download</dt><dd><a href="https://fonts.google.com/specimen/Fraunces" target="_blank" rel="noopener">fonts.google.com/specimen/Fraunces</a></dd>
+          <dt>Family</dt><dd>Satisfy</dd>
+          <dt>Weight</dt><dd>400 (only weight)</dd>
+          <dt>Canva role</dt><dd>Logo only — upload pre-rendered SVG wordmarks instead</dd>
+          <dt>Tracking</dt><dd>−0.01em</dd>
+          <dt>Download</dt><dd><a href="https://fonts.google.com/specimen/Satisfy" target="_blank" rel="noopener">fonts.google.com/specimen/Satisfy</a></dd>
         </dl>
-        <p class="font-note">Logo wordmark ONLY (navbar + footer). Never use Fraunces for headings, body, buttons or anything else — and never use Young Serif or Lora <em>as</em> the wordmark.</p>
+        <p class="font-note">Logo wordmark ONLY (navbar + footer). Never use Satisfy for headings, body, buttons or anything else — and never use Newsreader or Source Sans 3 <em>as</em> the wordmark.</p>
       </div>
     </section>
 
@@ -512,20 +509,20 @@
         <div class="tone-card no">
           <h4>Don't</h4>
           <ul>
-            <li>Use pure white <code style="font-family:ui-monospace;font-size:0.9em">#FFFFFF</code> — always use Warm White <code style="font-family:ui-monospace;font-size:0.9em">#FAFAF4</code></li>
-            <li>Put Stone Gold <code style="font-family:ui-monospace;font-size:0.9em">#C4920A</code> as text on white — fails WCAG contrast</li>
-            <li>Use more than one Terracotta CTA element per layout</li>
-            <li>Use yellow or green tints as text colour — backgrounds only</li>
-            <li>Mix more than three fonts in a design (Young Serif + Lora + Fraunces is the maximum, and Fraunces is wordmark-only)</li>
+            <li>Use pure white <code style="font-family:ui-monospace;font-size:0.9em">#FFFFFF</code> — always use Off-white <code style="font-family:ui-monospace;font-size:0.9em">#FCFCFC</code></li>
+            <li>Put Oro <code style="font-family:ui-monospace;font-size:0.9em">#D6AE5C</code> as text on white — fails WCAG contrast</li>
+            <li>Use more than one Bordeaux CTA element per layout</li>
+            <li>Use Lino or the fir/sage tints as text colour on white — surfaces only</li>
+            <li>Mix more than three fonts in a design (Newsreader + Source Sans 3 + Satisfy is the maximum, and Satisfy is wordmark-only)</li>
           </ul>
         </div>
         <div class="tone-card yes">
           <h4>Do</h4>
           <ul>
-            <li>Alternate section backgrounds (Ink → Parchment → Warm White → Sage…)</li>
-            <li>Pair every section title with a small uppercase eyebrow in Muted Ink</li>
-            <li>Keep Young Serif at one weight — vary size and tracking, not weight</li>
-            <li>Use italic Young Serif for pull quotes and H3 accents</li>
+            <li>Alternate section backgrounds (Ink → Off-white → Abete → Light fir…)</li>
+            <li>Pair every section title with a small uppercase eyebrow in Muted</li>
+            <li>Keep Newsreader headings at weight 600 — vary size and tracking</li>
+            <li>Use italic Newsreader for pull quotes and H3 accents</li>
             <li>Keep tracking tight on large serif titles (−0.02em at 40px+)</li>
           </ul>
         </div>
@@ -543,29 +540,22 @@
 <script>
   const palettes = {
     core: [
-      { name: "Forest Teal",  hex: "#2E5855", use: "Primary — navbar, structural" },
-      { name: "Stone Gold",   hex: "#C4920A", use: "Accent — price/duration badges" },
-      { name: "Terracotta",   hex: "#D4701A", use: "CTA — buttons only, one per section" },
+      { name: "Abete",     hex: "#1E2A1A", use: "Primary — dark fir green, structural, primary buttons" },
+      { name: "Oro",       hex: "#D6AE5C", use: "Accent — price/duration badges only" },
+      { name: "Bordeaux",  hex: "#9B3940", use: "CTA — buttons only (hover #7E2E34), one per section" },
     ],
     neutrals: [
-      { name: "Ink",           hex: "#1E1C16", use: "Text + dark backgrounds" },
-      { name: "Warm White",    hex: "#FAFAF4", use: "Page background (never #fff)" },
-      { name: "Parchment",     hex: "#EDE5D0", use: "Tagline strip, surfaces" },
-      { name: "Muted Ink",     hex: "#6B6457", use: "Secondary text, eyebrows" },
-      { name: "Border Light",  hex: "#E8E0D0", use: "Card borders" },
-      { name: "Border Strong", hex: "#DDD5C2", use: "Dividers, input borders" },
+      { name: "Nero bosco",    hex: "#131C10", use: "Text + darkest backgrounds, footer" },
+      { name: "Off-white",     hex: "#FCFCFC", use: "Page background (never #fff)" },
+      { name: "Lino",          hex: "#E8E2D2", use: "Cream text on dark only — never a surface" },
+      { name: "Muted",         hex: "#6B6457", use: "Secondary text, eyebrows" },
+      { name: "Border Light",  hex: "#E4E5DF", use: "Card borders" },
+      { name: "Border Strong", hex: "#D6D7CF", use: "Dividers, input borders" },
     ],
-    yellows: [
-      { name: "Yellow Butter", hex: "#FDF5CC", use: "Newsletter bg" },
-      { name: "Yellow Straw",  hex: "#F8EDA0", use: "Journal/blog bg" },
-      { name: "Yellow Wheat",  hex: "#F5E8A8", use: "Itinerary bg — primary yellow" },
-      { name: "Yellow Pollen", hex: "#EDD878", use: "Featured callouts" },
-    ],
-    greens: [
-      { name: "Green Mist",   hex: "#EAF3EC", use: "Category badges" },
-      { name: "Green Sage",   hex: "#D8ECD8", use: "Values/features bg" },
-      { name: "Green Fern",   hex: "#C0DEC0", use: "Card image placeholder" },
-      { name: "Green Meadow", hex: "#9AC49A", use: "Italic accent colour" },
+    tints: [
+      { name: "Fir mist",  hex: "#E6EADB", use: "Category badges, step circles, placeholders" },
+      { name: "Light fir", hex: "#DEE4D6", use: "Light section backgrounds, newsletter, blog TL;DR" },
+      { name: "Sage",      hex: "#A8BE97", use: "Accents on dark — hero italic, dots" },
     ],
   };
 
@@ -610,8 +600,7 @@
 
   renderPalette("core",     "palette-core");
   renderPalette("neutrals", "palette-neutrals");
-  renderPalette("yellows",  "palette-yellows");
-  renderPalette("greens",   "palette-greens");
+  renderPalette("tints",    "palette-tints");
 </script>
 
 </body>
